@@ -1,0 +1,302 @@
+[
+    {
+        "id": "TRANS-001",
+        "dept": "Sales",
+        "title": "AI Competitive Switch-Kit",
+        "pain_point": "APAC customers switching to GlobalStack because we lack a migration path from Zenith Labs.",
+        "impact_usd": 2450000.0,
+        "complexity_points": 40,
+        "strategic_alignment": "CRITICAL",
+        "tech_spec": "RAG-based agent trained on competitor pricing models and migration friction."
+    },
+    {
+        "id": "TRANS-014",
+        "dept": "Legal",
+        "title": "Automated Contract Reviewer",
+        "pain_point": "NorthAm compliance overhaul causing 12-day bottlenecks in contract closing.",
+        "impact_usd": 850000.0,
+        "complexity_points": 25,
+        "strategic_alignment": "High",
+        "tech_spec": "LLM-based entity extraction and non-compete flagging to automate first-pass reviews."
+    },
+    {
+        "id": "TRANS-032",
+        "dept": "Marketing",
+        "title": "EMEA Growth Multiplier",
+        "pain_point": "Under-capitalizing on massive EMEA Professional tier momentum.",
+        "impact_usd": 1200000.0,
+        "complexity_points": 15,
+        "strategic_alignment": "Medium",
+        "tech_spec": "Predictive analytics to identify and target lookalike accounts in the EU Professional segment."
+    },
+    {
+        "id": "TRANS-004",
+        "dept": "Engineering",
+        "title": "Automated screening for CI/CD",
+        "pain_point": "Manual friction in vendor onboarding causing delays.",
+        "impact_usd": 84089.75,
+        "complexity_points": 26,
+        "strategic_alignment": "Low",
+        "tech_spec": "Modular AI automation to replace manual data entry."
+    },
+    {
+        "id": "TRANS-005",
+        "dept": "Operations",
+        "title": "Automated screening for CI/CD",
+        "pain_point": "Manual friction in payroll causing delays.",
+        "impact_usd": 174331.24,
+        "complexity_points": 5,
+        "strategic_alignment": "High",
+        "tech_spec": "Modular AI automation to replace manual data entry."
+    },
+    {
+        "id": "TRANS-006",
+        "dept": "Engineering",
+        "title": "Risk scoring for vendor onboarding",
+        "pain_point": "Manual friction in payroll causing delays.",
+        "impact_usd": 34102.51,
+        "complexity_points": 21,
+        "strategic_alignment": "High",
+        "tech_spec": "Modular AI automation to replace manual data entry."
+    },
+    {
+        "id": "TRANS-007",
+        "dept": "Marketing",
+        "title": "Automated screening for vendor onboarding",
+        "pain_point": "Manual friction in hiring causing delays.",
+        "impact_usd": 135919.15,
+        "complexity_points": 30,
+        "strategic_alignment": "Low",
+        "tech_spec": "Modular AI automation to replace manual data entry."
+    },
+    {
+        "id": "TRANS-008",
+        "dept": "Operations",
+        "title": "Latency optimization for vendor onboarding",
+        "pain_point": "Manual friction in hiring causing delays.",
+        "impact_usd": 171314.54,
+        "complexity_points": 16,
+        "strategic_alignment": "Low",
+        "tech_spec": "Modular AI automation to replace manual data entry."
+    },
+    {
+        "id": "TRANS-009",
+        "dept": "Legal",
+        "title": "Risk scoring for hiring",
+        "pain_point": "Manual friction in CI/CD causing delays.",
+        "impact_usd": 156090.82,
+        "complexity_points": 38,
+        "strategic_alignment": "Medium",
+        "tech_spec": "Modular AI automation to replace manual data entry."
+    },
+    {
+        "id": "TRANS-010",
+        "dept": "Engineering",
+        "title": "Automated screening for vendor onboarding",
+        "pain_point": "Manual friction in vendor onboarding causing delays.",
+        "impact_usd": 102530.18,
+        "complexity_points": 19,
+        "strategic_alignment": "Low",
+        "tech_spec": "Modular AI automation to replace manual data entry."
+    },
+    {
+        "id": "TRANS-011",
+        "dept": "Engineering",
+        "title": "Automated screening for SEO",
+        "pain_point": "Manual friction in CI/CD causing delays.",
+        "impact_usd": 124803.06,
+        "complexity_points": 15,
+        "strategic_alignment": "High",
+        "tech_spec": "Modular AI automation to replace manual data entry."
+    },
+    {
+        "id": "TRANS-012",
+        "dept": "Marketing",
+        "title": "Risk scoring for SEO",
+        "pain_point": "Manual friction in payroll causing delays.",
+        "impact_usd": 84872.15,
+        "complexity_points": 17,
+        "strategic_alignment": "Low",
+        "tech_spec": "Modular AI automation to replace manual data entry."
+    },
+    {
+        "id": "TRANS-013",
+        "dept": "HR",
+        "title": "Automated screening for hiring",
+        "pain_point": "Manual friction in vendor onboarding causing delays.",
+        "impact_usd": 65519.01,
+        "complexity_points": 40,
+        "strategic_alignment": "Low",
+        "tech_spec": "Modular AI automation to replace manual data entry."
+    },
+    {
+        "id": "TRANS-014",
+        "dept": "Marketing",
+        "title": "Latency optimization for SEO",
+        "pain_point": "Manual friction in CI/CD causing delays.",
+        "impact_usd": 117018.15,
+        "complexity_points": 17,
+        "strategic_alignment": "Medium",
+        "tech_spec": "Modular AI automation to replace manual data entry."
+    },
+    {
+        "id": "TRANS-015",
+        "dept": "Legal",
+        "title": "Automated screening for SEO",
+        "pain_point": "Manual friction in CI/CD causing delays.",
+        "impact_usd": 85141.54,
+        "complexity_points": 11,
+        "strategic_alignment": "Low",
+        "tech_spec": "Modular AI automation to replace manual data entry."
+    },
+    {
+        "id": "TRANS-016",
+        "dept": "HR",
+        "title": "Latency optimization for SEO",
+        "pain_point": "Manual friction in hiring causing delays.",
+        "impact_usd": 148470.76,
+        "complexity_points": 21,
+        "strategic_alignment": "Low",
+        "tech_spec": "Modular AI automation to replace manual data entry."
+    },
+    {
+        "id": "TRANS-017",
+        "dept": "Operations",
+        "title": "Latency optimization for payroll",
+        "pain_point": "Manual friction in payroll causing delays.",
+        "impact_usd": 110106.98,
+        "complexity_points": 20,
+        "strategic_alignment": "Medium",
+        "tech_spec": "Modular AI automation to replace manual data entry."
+    },
+    {
+        "id": "TRANS-018",
+        "dept": "Legal",
+        "title": "Risk scoring for vendor onboarding",
+        "pain_point": "Manual friction in hiring causing delays.",
+        "impact_usd": 97115.23,
+        "complexity_points": 21,
+        "strategic_alignment": "High",
+        "tech_spec": "Modular AI automation to replace manual data entry."
+    },
+    {
+        "id": "TRANS-019",
+        "dept": "Legal",
+        "title": "Legacy migration for CI/CD",
+        "pain_point": "Manual friction in SEO causing delays.",
+        "impact_usd": 85988.16,
+        "complexity_points": 27,
+        "strategic_alignment": "Low",
+        "tech_spec": "Modular AI automation to replace manual data entry."
+    },
+    {
+        "id": "TRANS-020",
+        "dept": "Operations",
+        "title": "Automated screening for SEO",
+        "pain_point": "Manual friction in CI/CD causing delays.",
+        "impact_usd": 65966.33,
+        "complexity_points": 30,
+        "strategic_alignment": "Low",
+        "tech_spec": "Modular AI automation to replace manual data entry."
+    },
+    {
+        "id": "TRANS-021",
+        "dept": "Marketing",
+        "title": "Automated screening for vendor onboarding",
+        "pain_point": "Manual friction in CI/CD causing delays.",
+        "impact_usd": 96248.87,
+        "complexity_points": 27,
+        "strategic_alignment": "High",
+        "tech_spec": "Modular AI automation to replace manual data entry."
+    },
+    {
+        "id": "TRANS-022",
+        "dept": "Operations",
+        "title": "Latency optimization for CI/CD",
+        "pain_point": "Manual friction in CI/CD causing delays.",
+        "impact_usd": 99839.89,
+        "complexity_points": 17,
+        "strategic_alignment": "High",
+        "tech_spec": "Modular AI automation to replace manual data entry."
+    },
+    {
+        "id": "TRANS-023",
+        "dept": "Engineering",
+        "title": "Latency optimization for CI/CD",
+        "pain_point": "Manual friction in CI/CD causing delays.",
+        "impact_usd": 52442.65,
+        "complexity_points": 20,
+        "strategic_alignment": "Low",
+        "tech_spec": "Modular AI automation to replace manual data entry."
+    },
+    {
+        "id": "TRANS-024",
+        "dept": "Marketing",
+        "title": "Legacy migration for hiring",
+        "pain_point": "Manual friction in hiring causing delays.",
+        "impact_usd": 167230.1,
+        "complexity_points": 48,
+        "strategic_alignment": "Low",
+        "tech_spec": "Modular AI automation to replace manual data entry."
+    },
+    {
+        "id": "TRANS-025",
+        "dept": "Legal",
+        "title": "Automated screening for vendor onboarding",
+        "pain_point": "Manual friction in hiring causing delays.",
+        "impact_usd": 155681.7,
+        "complexity_points": 28,
+        "strategic_alignment": "Low",
+        "tech_spec": "Modular AI automation to replace manual data entry."
+    },
+    {
+        "id": "TRANS-026",
+        "dept": "Marketing",
+        "title": "Risk scoring for vendor onboarding",
+        "pain_point": "Manual friction in SEO causing delays.",
+        "impact_usd": 98528.86,
+        "complexity_points": 37,
+        "strategic_alignment": "Medium",
+        "tech_spec": "Modular AI automation to replace manual data entry."
+    },
+    {
+        "id": "TRANS-027",
+        "dept": "Legal",
+        "title": "Legacy migration for vendor onboarding",
+        "pain_point": "Manual friction in CI/CD causing delays.",
+        "impact_usd": 28663.71,
+        "complexity_points": 32,
+        "strategic_alignment": "Medium",
+        "tech_spec": "Modular AI automation to replace manual data entry."
+    },
+    {
+        "id": "TRANS-028",
+        "dept": "Operations",
+        "title": "Automated screening for vendor onboarding",
+        "pain_point": "Manual friction in SEO causing delays.",
+        "impact_usd": 82994.71,
+        "complexity_points": 48,
+        "strategic_alignment": "High",
+        "tech_spec": "Modular AI automation to replace manual data entry."
+    },
+    {
+        "id": "TRANS-029",
+        "dept": "Legal",
+        "title": "Automated screening for vendor onboarding",
+        "pain_point": "Manual friction in payroll causing delays.",
+        "impact_usd": 70504.2,
+        "complexity_points": 5,
+        "strategic_alignment": "High",
+        "tech_spec": "Modular AI automation to replace manual data entry."
+    },
+    {
+        "id": "TRANS-030",
+        "dept": "Engineering",
+        "title": "Risk scoring for vendor onboarding",
+        "pain_point": "Manual friction in hiring causing delays.",
+        "impact_usd": 72069.79,
+        "complexity_points": 44,
+        "strategic_alignment": "Medium",
+        "tech_spec": "Modular AI automation to replace manual data entry."
+    }
+]

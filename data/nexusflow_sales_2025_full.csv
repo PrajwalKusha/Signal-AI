@@ -1,0 +1,1001 @@
+Date,Region,Account_Name,Deal_Size_USD,Product_Tier,Sales_Rep,Contract_End_Date
+1/1/25,NorthAm,Client_NorthAm_741,131280.91,Professional,Hiroshi Tanaka,1/1/26
+1/1/25,LATAM,Apex Solutions,93130.78,Professional,Sarah Chen,1/1/26
+1/1/25,LATAM,Client_LATAM_632,47282.22,Starter,Chloe Dubois,1/1/26
+1/3/25,NorthAm,Client_NorthAm_347,26469.64,Starter,Aria Montgomery,1/3/26
+1/3/25,APAC,Client_APAC_909,145624.61,Professional,Chloe Dubois,1/3/26
+1/4/25,NorthAm,Client_NorthAm_997,343757.47,Enterprise,Sarah Chen,1/4/26
+1/4/25,NorthAm,Client_NorthAm_932,261379.21,Enterprise,Lukas Weber,1/4/26
+1/4/25,EMEA,Horizon Fintech,335062.63,Enterprise,Hiroshi Tanaka,1/4/26
+1/4/25,LATAM,Quantum Logistics,293923.7,Enterprise,Hiroshi Tanaka,1/4/26
+1/5/25,APAC,Client_APAC_639,40820.93,Starter,Hiroshi Tanaka,1/5/26
+1/5/25,APAC,Client_APAC_836,87068.59,Professional,Chloe Dubois,1/5/26
+1/6/25,APAC,Client_APAC_467,423192.15,Enterprise,Aria Montgomery,1/6/26
+1/7/25,LATAM,Global Maritime,110346.64,Professional,Sarah Chen,1/7/26
+1/7/25,LATAM,Client_LATAM_771,24489.27,Starter,Hiroshi Tanaka,1/7/26
+1/7/25,APAC,AeroDynamics,110832.82,Professional,Hiroshi Tanaka,1/7/26
+1/8/25,LATAM,Vortex Media,49767.71,Starter,Marcus Thorne,1/8/26
+1/9/25,APAC,Client_APAC_428,87672.32,Professional,Chloe Dubois,1/9/26
+1/9/25,EMEA,Client_EMEA_493,23026.9,Starter,Sarah Chen,1/9/26
+1/10/25,LATAM,Titan Manufacturing,37272.77,Starter,Aria Montgomery,1/10/26
+1/11/25,LATAM,Solaris Energy,145991.92,Professional,Sarah Chen,1/11/26
+1/11/25,EMEA,Zenith Labs,34206.83,Starter,Marcus Thorne,1/11/26
+1/13/25,LATAM,Client_LATAM_895,40107.63,Starter,Sarah Chen,1/13/26
+1/14/25,NorthAm,Apex Solutions,283924.87,Enterprise,Hiroshi Tanaka,1/14/26
+1/14/25,EMEA,Phoenix Biotech,43699.54,Starter,Aria Montgomery,1/14/26
+1/15/25,NorthAm,Solaris Energy,100535.74,Professional,Sarah Chen,1/15/26
+1/15/25,NorthAm,Client_NorthAm_401,43130.67,Starter,Chloe Dubois,1/15/26
+1/16/25,LATAM,Client_LATAM_403,322417.91,Enterprise,Lukas Weber,1/16/26
+1/16/25,EMEA,Client_EMEA_608,99239.7,Professional,Sarah Chen,1/16/26
+1/16/25,NorthAm,Nova Systems,303783.22,Enterprise,Lukas Weber,1/16/26
+1/17/25,EMEA,Client_EMEA_377,487205.88,Enterprise,Hiroshi Tanaka,1/17/26
+1/17/25,EMEA,Global Maritime,99790.29,Professional,Chloe Dubois,1/17/26
+1/18/25,LATAM,Client_LATAM_494,425821.57,Enterprise,Chloe Dubois,1/18/26
+1/18/25,APAC,Client_APAC_745,27833.83,Starter,Aria Montgomery,1/18/26
+1/18/25,EMEA,Client_EMEA_765,25186.37,Starter,Hiroshi Tanaka,1/18/26
+1/19/25,LATAM,Client_LATAM_456,145562.61,Professional,Marcus Thorne,1/19/26
+1/19/25,LATAM,Client_LATAM_674,27447.9,Starter,Aria Montgomery,1/19/26
+1/19/25,EMEA,Client_EMEA_805,129935.85,Professional,Chloe Dubois,1/19/26
+1/20/25,EMEA,Client_EMEA_821,487517.15,Enterprise,Aria Montgomery,1/20/26
+1/20/25,EMEA,Client_EMEA_455,145374.58,Professional,Marcus Thorne,1/20/26
+1/20/25,LATAM,Zenith Labs,44497.6,Starter,Marcus Thorne,1/20/26
+1/20/25,LATAM,Client_LATAM_831,442812.42,Enterprise,Aria Montgomery,1/20/26
+1/21/25,EMEA,Client_EMEA_910,83559.88,Professional,Lukas Weber,1/21/26
+1/22/25,LATAM,Client_LATAM_314,297059.87,Enterprise,Chloe Dubois,1/22/26
+1/22/25,APAC,Client_APAC_372,318638.84,Enterprise,Hiroshi Tanaka,1/22/26
+1/23/25,LATAM,Global Maritime,47767.25,Starter,Lukas Weber,1/23/26
+1/23/25,LATAM,OmniHealth,493278.94,Enterprise,Sarah Chen,1/23/26
+1/24/25,LATAM,Client_LATAM_677,45980.97,Starter,Hiroshi Tanaka,1/24/26
+1/24/25,EMEA,Global Maritime,139872.24,Professional,Sarah Chen,1/24/26
+1/24/25,NorthAm,Client_NorthAm_968,275806.25,Enterprise,Aria Montgomery,1/24/26
+1/24/25,NorthAm,Client_NorthAm_849,39415.96,Starter,Chloe Dubois,1/24/26
+1/25/25,LATAM,Client_LATAM_883,481092.72,Enterprise,Hiroshi Tanaka,1/25/26
+1/25/25,EMEA,Client_EMEA_495,350566.34,Enterprise,Sarah Chen,1/25/26
+1/26/25,EMEA,Client_EMEA_866,344659.4,Enterprise,Chloe Dubois,1/26/26
+1/26/25,APAC,Client_APAC_786,318494.37,Enterprise,Marcus Thorne,1/26/26
+1/28/25,NorthAm,Client_NorthAm_546,138707.23,Professional,Marcus Thorne,1/28/26
+1/29/25,EMEA,Client_EMEA_724,254982,Enterprise,Marcus Thorne,1/29/26
+1/29/25,EMEA,Vortex Media,32034.94,Starter,Aria Montgomery,1/29/26
+1/29/25,LATAM,Client_LATAM_670,341921.94,Enterprise,Marcus Thorne,1/29/26
+1/29/25,EMEA,Client_EMEA_719,338701.16,Enterprise,Hiroshi Tanaka,1/29/26
+1/30/25,NorthAm,Client_NorthAm_373,351552.56,Enterprise,Chloe Dubois,1/30/26
+1/30/25,LATAM,Client_LATAM_480,430820.02,Enterprise,Aria Montgomery,1/30/26
+1/30/25,NorthAm,Solaris Energy,264291.32,Enterprise,Aria Montgomery,1/30/26
+1/30/25,LATAM,Client_LATAM_505,117099.43,Professional,Lukas Weber,1/30/26
+1/31/25,LATAM,Client_LATAM_657,407142.67,Enterprise,Aria Montgomery,1/31/26
+2/1/25,EMEA,Client_EMEA_702,44710.2,Starter,Marcus Thorne,2/1/26
+2/1/25,LATAM,Horizon Fintech,128026.82,Professional,Hiroshi Tanaka,2/1/26
+2/1/25,NorthAm,Client_NorthAm_468,91180.18,Professional,Aria Montgomery,2/1/26
+2/2/25,LATAM,Client_LATAM_627,44745.43,Starter,Hiroshi Tanaka,2/2/26
+2/2/25,NorthAm,Client_NorthAm_594,341448.26,Enterprise,Marcus Thorne,2/2/26
+2/3/25,EMEA,Nebula Cloud,328669.47,Enterprise,Chloe Dubois,2/3/26
+2/3/25,EMEA,Client_EMEA_924,443395.57,Enterprise,Chloe Dubois,2/3/26
+2/3/25,LATAM,Nebula Cloud,120391.48,Professional,Sarah Chen,2/3/26
+2/3/25,NorthAm,Client_NorthAm_825,111914.84,Professional,Aria Montgomery,2/3/26
+2/4/25,LATAM,Client_LATAM_309,101197.43,Professional,Chloe Dubois,2/4/26
+2/4/25,APAC,Client_APAC_357,39713.13,Starter,Chloe Dubois,2/4/26
+2/4/25,NorthAm,Client_NorthAm_769,107814.85,Professional,Lukas Weber,2/4/26
+2/4/25,NorthAm,Client_NorthAm_656,82787.88,Professional,Marcus Thorne,2/4/26
+2/5/25,EMEA,Vortex Media,34258.47,Starter,Chloe Dubois,2/5/26
+2/5/25,APAC,Solaris Energy,115658.4,Professional,Chloe Dubois,2/5/26
+2/5/25,LATAM,Client_LATAM_572,284794.78,Enterprise,Hiroshi Tanaka,2/5/26
+2/7/25,APAC,Client_APAC_912,489246.93,Enterprise,Marcus Thorne,2/7/26
+2/7/25,APAC,Client_APAC_933,322459.15,Enterprise,Sarah Chen,2/7/26
+2/7/25,NorthAm,Client_NorthAm_482,129026.94,Professional,Aria Montgomery,2/7/26
+2/7/25,APAC,Client_APAC_945,312671.9,Enterprise,Sarah Chen,2/7/26
+2/7/25,NorthAm,Client_NorthAm_551,106600,Professional,Marcus Thorne,2/7/26
+2/8/25,LATAM,AeroDynamics,262647.08,Enterprise,Sarah Chen,2/8/26
+2/8/25,NorthAm,Client_NorthAm_957,257798.56,Enterprise,Chloe Dubois,2/8/26
+2/8/25,EMEA,Client_EMEA_693,23269.19,Starter,Lukas Weber,2/8/26
+2/8/25,NorthAm,Client_NorthAm_525,24124.75,Starter,Hiroshi Tanaka,2/8/26
+2/8/25,NorthAm,Client_NorthAm_704,47074.88,Starter,Marcus Thorne,2/8/26
+2/9/25,APAC,Vortex Media,30075.43,Starter,Aria Montgomery,2/9/26
+2/10/25,LATAM,Client_LATAM_767,24436.35,Starter,Chloe Dubois,2/10/26
+2/10/25,LATAM,Client_LATAM_507,117494.49,Professional,Sarah Chen,2/10/26
+2/10/25,APAC,Client_APAC_397,48690.55,Starter,Chloe Dubois,2/10/26
+2/10/25,LATAM,Client_LATAM_301,103765.93,Professional,Chloe Dubois,2/10/26
+2/11/25,LATAM,Global Maritime,391306.73,Enterprise,Lukas Weber,2/11/26
+2/11/25,APAC,Nebula Cloud,345002.35,Enterprise,Lukas Weber,2/11/26
+2/11/25,LATAM,Client_LATAM_474,340446.22,Enterprise,Chloe Dubois,2/11/26
+2/12/25,LATAM,Client_LATAM_368,38073.6,Starter,Hiroshi Tanaka,2/12/26
+2/13/25,EMEA,Client_EMEA_558,292395.73,Enterprise,Lukas Weber,2/13/26
+2/13/25,NorthAm,Summit Ventures,132121.23,Professional,Sarah Chen,2/13/26
+2/14/25,APAC,Client_APAC_754,400053.88,Enterprise,Chloe Dubois,2/14/26
+2/14/25,NorthAm,Client_NorthAm_390,149971.65,Professional,Hiroshi Tanaka,2/14/26
+2/14/25,NorthAm,Client_NorthAm_928,43826.44,Starter,Marcus Thorne,2/14/26
+2/15/25,EMEA,Client_EMEA_454,430779.42,Enterprise,Chloe Dubois,2/15/26
+2/15/25,APAC,Client_APAC_739,98564.87,Professional,Sarah Chen,2/15/26
+2/16/25,LATAM,Client_LATAM_414,491671.66,Enterprise,Hiroshi Tanaka,2/16/26
+2/16/25,LATAM,Client_LATAM_962,80741.42,Professional,Lukas Weber,2/16/26
+2/17/25,EMEA,Nebula Cloud,38060.56,Starter,Lukas Weber,2/17/26
+2/17/25,NorthAm,Client_NorthAm_687,32391.7,Starter,Lukas Weber,2/17/26
+2/17/25,LATAM,Client_LATAM_626,424322.24,Enterprise,Chloe Dubois,2/17/26
+2/17/25,LATAM,Client_LATAM_624,319556.42,Enterprise,Chloe Dubois,2/17/26
+2/17/25,EMEA,Client_EMEA_399,288548.57,Enterprise,Lukas Weber,2/17/26
+2/17/25,LATAM,Client_LATAM_990,475496.19,Enterprise,Marcus Thorne,2/17/26
+2/17/25,APAC,Client_APAC_851,87968.24,Professional,Marcus Thorne,2/17/26
+2/18/25,NorthAm,Client_NorthAm_637,22338.16,Starter,Hiroshi Tanaka,2/18/26
+2/18/25,LATAM,Client_LATAM_701,23643.6,Starter,Marcus Thorne,2/18/26
+2/18/25,APAC,Apex Solutions,126557.55,Professional,Aria Montgomery,2/18/26
+2/19/25,APAC,Titan Manufacturing,98516.46,Professional,Lukas Weber,2/19/26
+2/19/25,EMEA,Client_EMEA_923,251832.65,Enterprise,Lukas Weber,2/19/26
+2/19/25,NorthAm,Client_NorthAm_752,118476.38,Professional,Lukas Weber,2/19/26
+2/20/25,NorthAm,Horizon Fintech,128580.08,Professional,Marcus Thorne,2/20/26
+2/20/25,APAC,Client_APAC_580,42405.59,Starter,Lukas Weber,2/20/26
+2/21/25,NorthAm,Client_NorthAm_330,469098.19,Enterprise,Aria Montgomery,2/21/26
+2/21/25,APAC,Client_APAC_845,364187.81,Enterprise,Marcus Thorne,2/21/26
+2/21/25,APAC,Client_APAC_750,32278.4,Starter,Marcus Thorne,2/21/26
+2/21/25,EMEA,Client_EMEA_718,316631.75,Enterprise,Marcus Thorne,2/21/26
+2/21/25,LATAM,Apex Solutions,124497.91,Professional,Hiroshi Tanaka,2/21/26
+2/22/25,NorthAm,Client_NorthAm_641,141669.23,Professional,Aria Montgomery,2/22/26
+2/22/25,LATAM,Client_LATAM_824,326528.77,Enterprise,Lukas Weber,2/22/26
+2/23/25,APAC,Client_APAC_358,30568.97,Starter,Sarah Chen,2/23/26
+2/23/25,NorthAm,Client_NorthAm_746,142155.19,Professional,Marcus Thorne,2/23/26
+2/24/25,APAC,Client_APAC_458,149236.96,Professional,Hiroshi Tanaka,2/24/26
+2/24/25,EMEA,Client_EMEA_563,146417.64,Professional,Sarah Chen,2/24/26
+2/24/25,NorthAm,Client_NorthAm_553,33342.08,Starter,Aria Montgomery,2/24/26
+2/24/25,APAC,Client_APAC_409,23675.66,Starter,Hiroshi Tanaka,2/24/26
+2/24/25,EMEA,Client_EMEA_694,101982.33,Professional,Hiroshi Tanaka,2/24/26
+2/24/25,EMEA,Client_EMEA_300,108031.49,Professional,Lukas Weber,2/24/26
+2/24/25,LATAM,Nova Systems,44123.3,Starter,Marcus Thorne,2/24/26
+2/25/25,EMEA,Summit Ventures,36088.57,Starter,Marcus Thorne,2/25/26
+2/25/25,LATAM,Client_LATAM_417,41825.24,Starter,Aria Montgomery,2/25/26
+2/25/25,NorthAm,Client_NorthAm_987,45787.75,Starter,Lukas Weber,2/25/26
+2/25/25,APAC,Quantum Logistics,278721.33,Enterprise,Aria Montgomery,2/25/26
+2/26/25,APAC,AeroDynamics,398283.56,Enterprise,Chloe Dubois,2/26/26
+2/27/25,APAC,Phoenix Biotech,84054.76,Professional,Marcus Thorne,2/27/26
+2/27/25,NorthAm,Client_NorthAm_492,403730.8,Enterprise,Hiroshi Tanaka,2/27/26
+2/28/25,NorthAm,Client_NorthAm_380,374760.99,Enterprise,Marcus Thorne,2/28/26
+2/28/25,EMEA,Solaris Energy,120507.93,Professional,Sarah Chen,2/28/26
+2/28/25,EMEA,Quantum Logistics,97937.06,Professional,Chloe Dubois,2/28/26
+2/28/25,LATAM,Stellar Retail,25156.2,Starter,Aria Montgomery,2/28/26
+2/28/25,LATAM,Nebula Cloud,44964.3,Starter,Chloe Dubois,2/28/26
+3/1/25,EMEA,Vortex Media,29130.94,Starter,Sarah Chen,3/1/26
+3/1/25,LATAM,Client_LATAM_663,263757.15,Enterprise,Lukas Weber,3/1/26
+3/2/25,EMEA,Client_EMEA_976,130417.9,Professional,Aria Montgomery,3/2/26
+3/2/25,LATAM,Client_LATAM_512,38132.05,Starter,Chloe Dubois,3/2/26
+3/3/25,APAC,Client_APAC_695,29249.23,Starter,Hiroshi Tanaka,3/3/26
+3/3/25,LATAM,Client_LATAM_879,44736.62,Starter,Hiroshi Tanaka,3/3/26
+3/3/25,LATAM,Client_LATAM_907,28373.37,Starter,Hiroshi Tanaka,3/3/26
+3/4/25,LATAM,Apex Solutions,40027.33,Starter,Hiroshi Tanaka,3/4/26
+3/4/25,NorthAm,Client_NorthAm_349,39168.55,Starter,Hiroshi Tanaka,3/4/26
+3/4/25,LATAM,Stellar Retail,26363.17,Starter,Chloe Dubois,3/4/26
+3/5/25,APAC,Summit Ventures,416723.23,Enterprise,Aria Montgomery,3/5/26
+3/6/25,EMEA,Client_EMEA_621,41341.85,Starter,Marcus Thorne,3/6/26
+3/6/25,APAC,Summit Ventures,36600.77,Starter,Sarah Chen,3/6/26
+3/6/25,LATAM,Vortex Media,436416.32,Enterprise,Sarah Chen,3/6/26
+3/6/25,EMEA,Global Maritime,26214.72,Starter,Lukas Weber,3/6/26
+3/7/25,EMEA,Client_EMEA_734,487197.03,Enterprise,Sarah Chen,3/7/26
+3/8/25,LATAM,Client_LATAM_394,457847.7,Enterprise,Sarah Chen,3/8/26
+3/8/25,APAC,Stellar Retail,33255.07,Starter,Chloe Dubois,3/8/26
+3/8/25,APAC,Client_APAC_726,479695.2,Enterprise,Marcus Thorne,3/8/26
+3/9/25,LATAM,Nova Systems,44224.91,Starter,Hiroshi Tanaka,3/9/26
+3/9/25,EMEA,Client_EMEA_829,397423.21,Enterprise,Sarah Chen,3/9/26
+3/10/25,APAC,Quantum Logistics,42272.5,Starter,Sarah Chen,3/10/26
+3/10/25,LATAM,Client_LATAM_471,42432.05,Starter,Hiroshi Tanaka,3/10/26
+3/11/25,NorthAm,Solaris Energy,103791.27,Professional,Hiroshi Tanaka,3/11/26
+3/11/25,LATAM,Client_LATAM_620,46011.43,Starter,Aria Montgomery,3/11/26
+3/11/25,NorthAm,Client_NorthAm_383,142907.53,Professional,Marcus Thorne,3/11/26
+3/11/25,LATAM,Zenith Labs,126934.04,Professional,Aria Montgomery,3/11/26
+3/12/25,EMEA,Client_EMEA_329,45332.85,Starter,Aria Montgomery,3/12/26
+3/12/25,NorthAm,Client_NorthAm_451,351726.86,Enterprise,Marcus Thorne,3/12/26
+3/12/25,EMEA,Client_EMEA_436,499530.72,Enterprise,Aria Montgomery,3/12/26
+3/12/25,LATAM,Solaris Energy,45833.09,Starter,Sarah Chen,3/12/26
+3/12/25,LATAM,Client_LATAM_642,49788.2,Starter,Chloe Dubois,3/12/26
+3/13/25,EMEA,Client_EMEA_604,123358.7,Professional,Hiroshi Tanaka,3/13/26
+3/13/25,LATAM,Phoenix Biotech,33878.84,Starter,Aria Montgomery,3/13/26
+3/13/25,EMEA,Client_EMEA_648,85897.41,Professional,Chloe Dubois,3/13/26
+3/13/25,NorthAm,Client_NorthAm_545,493580.83,Enterprise,Chloe Dubois,3/13/26
+3/14/25,APAC,Client_APAC_323,128893.6,Professional,Chloe Dubois,3/14/26
+3/14/25,EMEA,Client_EMEA_942,38506.55,Starter,Marcus Thorne,3/14/26
+3/14/25,LATAM,Client_LATAM_601,89650.71,Professional,Lukas Weber,3/14/26
+3/14/25,APAC,Client_APAC_584,111873.28,Professional,Aria Montgomery,3/14/26
+3/14/25,NorthAm,Client_NorthAm_939,37181.56,Starter,Sarah Chen,3/14/26
+3/14/25,NorthAm,Client_NorthAm_728,490139.69,Enterprise,Aria Montgomery,3/14/26
+3/15/25,NorthAm,Client_NorthAm_643,252118.69,Enterprise,Lukas Weber,3/15/26
+3/15/25,APAC,Client_APAC_407,433549.94,Enterprise,Aria Montgomery,3/15/26
+3/15/25,LATAM,Client_LATAM_775,46687.23,Starter,Hiroshi Tanaka,3/15/26
+3/15/25,NorthAm,Phoenix Biotech,450000,Enterprise,Sarah Chen,3/15/26
+3/15/25,LATAM,Stellar Retail,42229.07,Starter,Marcus Thorne,3/15/26
+3/16/25,NorthAm,Client_NorthAm_897,301000.23,Enterprise,Aria Montgomery,3/16/26
+3/17/25,NorthAm,Titan Manufacturing,38729.52,Starter,Aria Montgomery,3/17/26
+3/18/25,LATAM,Client_LATAM_348,27129.21,Starter,Aria Montgomery,3/18/26
+3/18/25,APAC,Client_APAC_960,142400.63,Professional,Marcus Thorne,3/18/26
+3/18/25,EMEA,Client_EMEA_975,38060.61,Starter,Aria Montgomery,3/18/26
+3/18/25,NorthAm,Client_NorthAm_844,430890.9,Enterprise,Sarah Chen,3/18/26
+3/18/25,NorthAm,Client_NorthAm_863,48031.14,Starter,Chloe Dubois,3/18/26
+3/19/25,NorthAm,Client_NorthAm_761,30313.74,Starter,Chloe Dubois,3/19/26
+3/19/25,EMEA,Client_EMEA_814,32275.76,Starter,Aria Montgomery,3/19/26
+3/20/25,EMEA,Titan Manufacturing,399102.26,Enterprise,Hiroshi Tanaka,3/20/26
+3/20/25,NorthAm,Client_NorthAm_927,103220.08,Professional,Chloe Dubois,3/20/26
+3/21/25,EMEA,Solaris Energy,86492.21,Professional,Sarah Chen,3/21/26
+3/21/25,APAC,Horizon Fintech,94744.08,Professional,Lukas Weber,3/21/26
+3/22/25,EMEA,Client_EMEA_936,31729.78,Starter,Chloe Dubois,3/22/26
+3/24/25,NorthAm,Client_NorthAm_747,334487.65,Enterprise,Sarah Chen,3/24/26
+3/25/25,EMEA,Client_EMEA_791,26753.36,Starter,Chloe Dubois,3/25/26
+3/26/25,APAC,Phoenix Biotech,456060.08,Enterprise,Chloe Dubois,3/26/26
+3/26/25,LATAM,Zenith Labs,27956.09,Starter,Hiroshi Tanaka,3/26/26
+3/27/25,EMEA,Client_EMEA_766,21280.28,Starter,Marcus Thorne,3/27/26
+3/27/25,LATAM,Client_LATAM_742,104586.18,Professional,Hiroshi Tanaka,3/27/26
+3/28/25,NorthAm,Client_NorthAm_830,125537.83,Professional,Chloe Dubois,3/28/26
+3/29/25,EMEA,Client_EMEA_807,112954.66,Professional,Sarah Chen,3/29/26
+3/29/25,LATAM,Client_LATAM_432,27265.9,Starter,Chloe Dubois,3/29/26
+3/29/25,NorthAm,Client_NorthAm_538,125143.51,Professional,Hiroshi Tanaka,3/29/26
+3/30/25,EMEA,Client_EMEA_720,29540.13,Starter,Lukas Weber,3/30/26
+3/30/25,APAC,Client_APAC_708,28249.45,Starter,Marcus Thorne,3/30/26
+3/31/25,NorthAm,Client_NorthAm_847,136111.73,Professional,Aria Montgomery,3/31/26
+3/31/25,LATAM,Client_LATAM_733,128194.89,Professional,Chloe Dubois,3/31/26
+3/31/25,LATAM,Horizon Fintech,360557.35,Enterprise,Chloe Dubois,3/31/26
+3/31/25,LATAM,Client_LATAM_463,102954.87,Professional,Lukas Weber,3/31/26
+3/31/25,APAC,Vortex Media,138360.76,Professional,Lukas Weber,3/31/26
+4/1/25,EMEA,Client_EMEA_884,275888.49,Enterprise,Marcus Thorne,4/1/26
+4/1/25,LATAM,AeroDynamics,42096.93,Starter,Marcus Thorne,4/1/26
+4/1/25,APAC,Client_APAC_817,251178.38,Enterprise,Sarah Chen,4/1/26
+4/2/25,EMEA,Client_EMEA_964,370875.85,Enterprise,Chloe Dubois,4/2/26
+4/2/25,APAC,Client_APAC_542,37611.08,Starter,Marcus Thorne,4/2/26
+4/3/25,LATAM,Client_LATAM_981,409405.68,Enterprise,Lukas Weber,4/3/26
+4/3/25,APAC,Client_APAC_369,85604.82,Professional,Sarah Chen,4/3/26
+4/3/25,NorthAm,Client_NorthAm_816,124172.29,Professional,Aria Montgomery,4/3/26
+4/3/25,EMEA,Client_EMEA_332,260923.11,Enterprise,Hiroshi Tanaka,4/3/26
+4/5/25,NorthAm,Client_NorthAm_524,459767.12,Enterprise,Sarah Chen,4/5/26
+4/5/25,NorthAm,Vortex Media,87986.1,Professional,Hiroshi Tanaka,4/5/26
+4/7/25,LATAM,Client_LATAM_651,83819.84,Professional,Chloe Dubois,4/7/26
+4/8/25,APAC,Zenith Labs,441867.69,Enterprise,Chloe Dubois,4/8/26
+4/8/25,NorthAm,Client_NorthAm_508,127157.03,Professional,Hiroshi Tanaka,4/8/26
+4/8/25,NorthAm,Global Maritime,32931.54,Starter,Chloe Dubois,4/8/26
+4/8/25,APAC,Client_APAC_364,140605.88,Professional,Sarah Chen,4/8/26
+4/8/25,APAC,Client_APAC_880,21395.01,Starter,Hiroshi Tanaka,4/8/26
+4/9/25,EMEA,Client_EMEA_785,20992.13,Starter,Marcus Thorne,4/9/26
+4/9/25,NorthAm,Client_NorthAm_460,131178.35,Professional,Marcus Thorne,4/9/26
+4/9/25,LATAM,AeroDynamics,419329.49,Enterprise,Hiroshi Tanaka,4/9/26
+4/10/25,APAC,Client_APAC_948,102984.23,Professional,Hiroshi Tanaka,4/10/26
+4/11/25,APAC,Client_APAC_956,269115.59,Enterprise,Chloe Dubois,4/11/26
+4/11/25,LATAM,Client_LATAM_595,40121.04,Starter,Aria Montgomery,4/11/26
+4/11/25,EMEA,Client_EMEA_905,92419.81,Professional,Hiroshi Tanaka,4/11/26
+4/12/25,LATAM,Client_LATAM_946,88975.06,Professional,Aria Montgomery,4/12/26
+4/12/25,LATAM,Client_LATAM_592,347208.95,Enterprise,Hiroshi Tanaka,4/12/26
+4/12/25,EMEA,Client_EMEA_305,440053.82,Enterprise,Marcus Thorne,4/12/26
+4/13/25,NorthAm,Client_NorthAm_755,25124.97,Starter,Marcus Thorne,4/13/26
+4/13/25,APAC,Client_APAC_840,339480.46,Enterprise,Marcus Thorne,4/13/26
+4/13/25,EMEA,Client_EMEA_388,20788.52,Starter,Hiroshi Tanaka,4/13/26
+4/13/25,APAC,Client_APAC_896,40501.71,Starter,Aria Montgomery,4/13/26
+4/13/25,NorthAm,Client_NorthAm_362,116076.85,Professional,Aria Montgomery,4/13/26
+4/14/25,EMEA,Client_EMEA_476,45634.58,Starter,Aria Montgomery,4/14/26
+4/15/25,APAC,Summit Ventures,481918.19,Enterprise,Marcus Thorne,4/15/26
+4/15/25,LATAM,Client_LATAM_513,29648.45,Starter,Lukas Weber,4/15/26
+4/16/25,LATAM,Horizon Fintech,146224.34,Professional,Lukas Weber,4/16/26
+4/16/25,LATAM,Client_LATAM_585,86833.61,Professional,Hiroshi Tanaka,4/16/26
+4/16/25,APAC,Client_APAC_998,87460.83,Professional,Aria Montgomery,4/16/26
+4/16/25,EMEA,Client_EMEA_617,30524.46,Starter,Lukas Weber,4/16/26
+4/16/25,APAC,Client_APAC_792,378320.31,Enterprise,Hiroshi Tanaka,4/16/26
+4/17/25,EMEA,OmniHealth,85683.12,Professional,Chloe Dubois,4/17/26
+4/17/25,LATAM,Client_LATAM_842,80191.66,Professional,Marcus Thorne,4/17/26
+4/19/25,LATAM,Summit Ventures,133286.08,Professional,Aria Montgomery,4/19/26
+4/19/25,EMEA,Zenith Labs,102968.56,Professional,Aria Montgomery,4/19/26
+4/19/25,EMEA,Zenith Labs,306061.22,Enterprise,Hiroshi Tanaka,4/19/26
+4/20/25,APAC,Client_APAC_328,95858.01,Professional,Marcus Thorne,4/20/26
+4/20/25,LATAM,Quantum Logistics,414712.69,Enterprise,Marcus Thorne,4/20/26
+4/20/25,APAC,Client_APAC_915,100550.21,Professional,Aria Montgomery,4/20/26
+4/20/25,APAC,Client_APAC_382,300044.59,Enterprise,Hiroshi Tanaka,4/20/26
+4/21/25,APAC,Client_APAC_415,28440.69,Starter,Sarah Chen,4/21/26
+4/21/25,EMEA,Apex Solutions,135205.06,Professional,Marcus Thorne,4/21/26
+4/22/25,NorthAm,Client_NorthAm_646,42573.37,Starter,Marcus Thorne,4/22/26
+4/22/25,LATAM,Client_LATAM_527,123248.47,Professional,Sarah Chen,4/22/26
+4/23/25,NorthAm,Titan Manufacturing,38933.09,Starter,Chloe Dubois,4/23/26
+4/23/25,NorthAm,Client_NorthAm_716,136605.77,Professional,Sarah Chen,4/23/26
+4/24/25,LATAM,Client_LATAM_342,109042.78,Professional,Sarah Chen,4/24/26
+4/24/25,LATAM,Solaris Energy,326551.51,Enterprise,Marcus Thorne,4/24/26
+4/24/25,APAC,Client_APAC_809,46142.97,Starter,Chloe Dubois,4/24/26
+4/25/25,NorthAm,Client_NorthAm_489,33890.12,Starter,Aria Montgomery,4/25/26
+4/25/25,LATAM,Client_LATAM_873,133719.15,Professional,Lukas Weber,4/25/26
+4/25/25,LATAM,Client_LATAM_972,114080.31,Professional,Aria Montgomery,4/25/26
+4/25/25,EMEA,AeroDynamics,419174.87,Enterprise,Sarah Chen,4/25/26
+4/26/25,APAC,Client_APAC_504,451444.04,Enterprise,Marcus Thorne,4/26/26
+4/26/25,APAC,Client_APAC_535,413433.93,Enterprise,Sarah Chen,4/26/26
+4/26/25,EMEA,Solaris Energy,21386.41,Starter,Sarah Chen,4/26/26
+4/27/25,NorthAm,Client_NorthAm_672,27336.54,Starter,Sarah Chen,4/27/26
+4/28/25,NorthAm,OmniHealth,22125.72,Starter,Aria Montgomery,4/28/26
+4/28/25,LATAM,Client_LATAM_520,374825.37,Enterprise,Marcus Thorne,4/28/26
+4/28/25,LATAM,Client_LATAM_993,121233.37,Professional,Aria Montgomery,4/28/26
+4/28/25,NorthAm,Client_NorthAm_974,320202.38,Enterprise,Chloe Dubois,4/28/26
+4/30/25,EMEA,Client_EMEA_496,35116.88,Starter,Marcus Thorne,4/30/26
+4/30/25,NorthAm,Client_NorthAm_995,141373.64,Professional,Lukas Weber,4/30/26
+4/30/25,LATAM,Global Maritime,42341.15,Starter,Aria Montgomery,4/30/26
+5/1/25,NorthAm,Client_NorthAm_867,136088.29,Professional,Hiroshi Tanaka,5/1/26
+5/1/25,APAC,Quantum Logistics,22711.38,Starter,Chloe Dubois,5/1/26
+5/2/25,APAC,AeroDynamics,27961.03,Starter,Marcus Thorne,5/2/26
+5/2/25,EMEA,Client_EMEA_615,422283.4,Enterprise,Lukas Weber,5/2/26
+5/2/25,APAC,Stellar Retail,303559.2,Enterprise,Hiroshi Tanaka,5/2/26
+5/2/25,APAC,Client_APAC_691,144822.94,Professional,Aria Montgomery,5/2/26
+5/2/25,APAC,Client_APAC_900,261744.97,Enterprise,Chloe Dubois,5/2/26
+5/3/25,EMEA,Client_EMEA_963,361555.11,Enterprise,Marcus Thorne,5/3/26
+5/3/25,LATAM,Client_LATAM_652,96875.72,Professional,Sarah Chen,5/3/26
+5/3/25,APAC,Client_APAC_600,31199.18,Starter,Marcus Thorne,5/3/26
+5/3/25,NorthAm,Client_NorthAm_662,47738.83,Starter,Sarah Chen,5/3/26
+5/3/25,EMEA,Stellar Retail,289133.15,Enterprise,Sarah Chen,5/3/26
+5/3/25,APAC,Beacon Tech,127018.32,Professional,Marcus Thorne,5/3/26
+5/4/25,LATAM,Client_LATAM_544,332932.46,Enterprise,Lukas Weber,5/4/26
+5/4/25,NorthAm,Client_NorthAm_802,415132.58,Enterprise,Hiroshi Tanaka,5/4/26
+5/4/25,LATAM,Client_LATAM_353,40046.45,Starter,Chloe Dubois,5/4/26
+5/4/25,APAC,Client_APAC_788,111227.24,Professional,Lukas Weber,5/4/26
+5/6/25,EMEA,Phoenix Biotech,98896.35,Professional,Hiroshi Tanaka,5/6/26
+5/6/25,APAC,Client_APAC_710,141794.5,Professional,Hiroshi Tanaka,5/6/26
+5/6/25,EMEA,Client_EMEA_682,20717.31,Starter,Hiroshi Tanaka,5/6/26
+5/6/25,NorthAm,Phoenix Biotech,97070.44,Professional,Hiroshi Tanaka,5/6/26
+5/7/25,LATAM,Client_LATAM_491,99295.48,Professional,Marcus Thorne,5/7/26
+5/7/25,LATAM,Client_LATAM_622,120419.79,Professional,Marcus Thorne,5/7/26
+5/7/25,LATAM,Client_LATAM_562,298887.06,Enterprise,Lukas Weber,5/7/26
+5/7/25,APAC,Client_APAC_440,306216.76,Enterprise,Aria Montgomery,5/7/26
+5/8/25,EMEA,Client_EMEA_823,328023.07,Enterprise,Aria Montgomery,5/8/26
+5/8/25,NorthAm,Client_NorthAm_465,96486.49,Professional,Hiroshi Tanaka,5/8/26
+5/8/25,NorthAm,Client_NorthAm_740,135091.4,Professional,Aria Montgomery,5/8/26
+5/9/25,NorthAm,Client_NorthAm_338,468529.24,Enterprise,Hiroshi Tanaka,5/9/26
+5/10/25,APAC,Client_APAC_533,85531.35,Professional,Hiroshi Tanaka,5/10/26
+5/10/25,EMEA,Client_EMEA_943,40129.34,Starter,Marcus Thorne,5/10/26
+5/11/25,NorthAm,Client_NorthAm_671,430694.59,Enterprise,Chloe Dubois,5/11/26
+5/13/25,EMEA,Client_EMEA_808,413608.66,Enterprise,Aria Montgomery,5/13/26
+5/13/25,NorthAm,Client_NorthAm_790,107059.6,Professional,Sarah Chen,5/13/26
+5/13/25,APAC,Nebula Cloud,129082.86,Professional,Lukas Weber,5/13/26
+5/14/25,APAC,Client_APAC_801,35518.81,Starter,Marcus Thorne,5/14/26
+5/14/25,EMEA,OmniHealth,259564.3,Enterprise,Aria Montgomery,5/14/26
+5/15/25,LATAM,Horizon Fintech,340499.11,Enterprise,Hiroshi Tanaka,5/15/26
+5/15/25,EMEA,Apex Solutions,467629.64,Enterprise,Sarah Chen,5/15/26
+5/16/25,APAC,Vortex Media,349370.83,Enterprise,Chloe Dubois,5/16/26
+5/16/25,APAC,Client_APAC_966,40057.57,Starter,Sarah Chen,5/16/26
+5/16/25,EMEA,Quantum Logistics,36841.04,Starter,Chloe Dubois,5/16/26
+5/16/25,EMEA,Client_EMEA_908,45380.43,Starter,Lukas Weber,5/16/26
+5/16/25,EMEA,Client_EMEA_402,404527.11,Enterprise,Hiroshi Tanaka,5/16/26
+5/16/25,NorthAm,Client_NorthAm_696,44227.91,Starter,Marcus Thorne,5/16/26
+5/16/25,EMEA,AeroDynamics,141548.92,Professional,Sarah Chen,5/16/26
+5/17/25,NorthAm,Summit Ventures,292784.66,Enterprise,Chloe Dubois,5/17/26
+5/17/25,APAC,Client_APAC_466,130601.78,Professional,Lukas Weber,5/17/26
+5/17/25,NorthAm,Titan Manufacturing,41080.96,Starter,Aria Montgomery,5/17/26
+5/17/25,EMEA,Nebula Cloud,345635.43,Enterprise,Sarah Chen,5/17/26
+5/18/25,NorthAm,Client_NorthAm_667,44213.24,Starter,Aria Montgomery,5/18/26
+5/18/25,APAC,Client_APAC_777,44521.58,Starter,Aria Montgomery,5/18/26
+5/18/25,LATAM,Client_LATAM_623,85286.14,Professional,Hiroshi Tanaka,5/18/26
+5/19/25,NorthAm,Client_NorthAm_554,25621.75,Starter,Sarah Chen,5/19/26
+5/20/25,EMEA,Phoenix Biotech,336293.21,Enterprise,Sarah Chen,5/20/26
+5/20/25,NorthAm,Client_NorthAm_668,148253.54,Professional,Chloe Dubois,5/20/26
+5/21/25,APAC,Client_APAC_443,40298.67,Starter,Lukas Weber,5/21/26
+5/21/25,APAC,Client_APAC_530,44394.72,Starter,Lukas Weber,5/21/26
+5/21/25,EMEA,Client_EMEA_818,42934.51,Starter,Lukas Weber,5/21/26
+5/21/25,NorthAm,Client_NorthAm_310,85193.35,Professional,Lukas Weber,5/21/26
+5/21/25,EMEA,Client_EMEA_398,403607.07,Enterprise,Aria Montgomery,5/21/26
+5/22/25,NorthAm,Zenith Labs,271403.24,Enterprise,Marcus Thorne,5/22/26
+5/22/25,APAC,Apex Solutions,28887.39,Starter,Marcus Thorne,5/22/26
+5/22/25,LATAM,AeroDynamics,318649.36,Enterprise,Marcus Thorne,5/22/26
+5/23/25,EMEA,Horizon Fintech,148218.26,Professional,Lukas Weber,5/23/26
+5/23/25,EMEA,Solaris Energy,408696.18,Enterprise,Hiroshi Tanaka,5/23/26
+5/24/25,NorthAm,Solaris Energy,304317.42,Enterprise,Aria Montgomery,5/24/26
+5/24/25,EMEA,Client_EMEA_618,100484.43,Professional,Chloe Dubois,5/24/26
+5/25/25,LATAM,Client_LATAM_514,125410.49,Professional,Lukas Weber,5/25/26
+5/25/25,NorthAm,Client_NorthAm_920,378577.27,Enterprise,Aria Montgomery,5/25/26
+5/25/25,APAC,Client_APAC_799,370434.6,Enterprise,Sarah Chen,5/25/26
+5/25/25,NorthAm,Client_NorthAm_839,25959.4,Starter,Hiroshi Tanaka,5/25/26
+5/26/25,NorthAm,Client_NorthAm_340,33479.58,Starter,Aria Montgomery,5/26/26
+5/26/25,APAC,Horizon Fintech,40183.87,Starter,Marcus Thorne,5/26/26
+5/27/25,EMEA,Nebula Cloud,304751.13,Enterprise,Aria Montgomery,5/27/26
+5/27/25,APAC,Client_APAC_773,106813.04,Professional,Aria Montgomery,5/27/26
+5/27/25,NorthAm,Client_NorthAm_312,403752.1,Enterprise,Sarah Chen,5/27/26
+5/28/25,NorthAm,Client_NorthAm_445,125918.04,Professional,Hiroshi Tanaka,5/28/26
+5/28/25,APAC,Client_APAC_453,84141.38,Professional,Chloe Dubois,5/28/26
+5/28/25,LATAM,AeroDynamics,40660.34,Starter,Hiroshi Tanaka,5/28/26
+5/29/25,NorthAm,Client_NorthAm_457,37038.86,Starter,Aria Montgomery,5/29/26
+5/29/25,EMEA,Client_EMEA_497,329725.92,Enterprise,Lukas Weber,5/29/26
+5/29/25,APAC,Client_APAC_890,495333.87,Enterprise,Marcus Thorne,5/29/26
+5/30/25,NorthAm,Client_NorthAm_756,101584.74,Professional,Sarah Chen,5/30/26
+5/31/25,LATAM,Client_LATAM_887,32382.36,Starter,Marcus Thorne,5/31/26
+6/1/25,APAC,Client_APAC_470,304782.15,Enterprise,Marcus Thorne,6/1/26
+6/1/25,APAC,Client_APAC_804,107179.24,Professional,Hiroshi Tanaka,6/1/26
+6/1/25,LATAM,Client_LATAM_583,44939.53,Starter,Sarah Chen,6/1/26
+6/1/25,APAC,Client_APAC_846,86986.62,Professional,Sarah Chen,6/1/26
+6/2/25,LATAM,Titan Manufacturing,132326.1,Professional,Lukas Weber,6/2/26
+6/2/25,APAC,Client_APAC_441,422559.98,Enterprise,Marcus Thorne,6/2/26
+6/2/25,EMEA,Beacon Tech,42875.32,Starter,Aria Montgomery,6/2/26
+6/3/25,LATAM,Client_LATAM_503,34205.56,Starter,Lukas Weber,6/3/26
+6/3/25,EMEA,Client_EMEA_386,481831.11,Enterprise,Chloe Dubois,6/3/26
+6/3/25,LATAM,Summit Ventures,80652.08,Professional,Sarah Chen,6/3/26
+6/4/25,LATAM,Client_LATAM_404,32182.78,Starter,Chloe Dubois,6/4/26
+6/5/25,EMEA,Client_EMEA_573,90790.03,Professional,Chloe Dubois,6/5/26
+6/5/25,NorthAm,Client_NorthAm_697,24449.71,Starter,Aria Montgomery,6/5/26
+6/5/25,APAC,Nebula Cloud,43572.76,Starter,Hiroshi Tanaka,6/5/26
+6/5/25,APAC,Client_APAC_778,140076.43,Professional,Hiroshi Tanaka,6/5/26
+6/5/25,NorthAm,Quantum Logistics,36742.19,Starter,Sarah Chen,6/5/26
+6/6/25,APAC,Client_APAC_795,139611.03,Professional,Hiroshi Tanaka,6/6/26
+6/6/25,LATAM,Client_LATAM_954,293942.54,Enterprise,Sarah Chen,6/6/26
+6/6/25,APAC,Stellar Retail,41638.53,Starter,Sarah Chen,6/6/26
+6/7/25,NorthAm,Client_NorthAm_685,49493.47,Starter,Lukas Weber,6/7/26
+6/7/25,APAC,Client_APAC_515,141796.84,Professional,Lukas Weber,6/7/26
+6/8/25,LATAM,Client_LATAM_325,453296.2,Enterprise,Aria Montgomery,6/8/26
+6/8/25,APAC,OmniHealth,92698.39,Professional,Sarah Chen,6/8/26
+6/9/25,LATAM,Titan Manufacturing,93883.08,Professional,Chloe Dubois,6/9/26
+6/9/25,APAC,Client_APAC_678,33702.39,Starter,Lukas Weber,6/9/26
+6/9/25,LATAM,Quantum Logistics,343355.13,Enterprise,Chloe Dubois,6/9/26
+6/10/25,LATAM,Client_LATAM_848,273749.62,Enterprise,Sarah Chen,6/10/26
+6/10/25,EMEA,Client_EMEA_951,42194.49,Starter,Chloe Dubois,6/10/26
+6/10/25,NorthAm,Client_NorthAm_859,381204.48,Enterprise,Chloe Dubois,6/10/26
+6/11/25,APAC,Apex Solutions,41485.75,Starter,Chloe Dubois,6/11/26
+6/11/25,NorthAm,Nova Systems,487719.39,Enterprise,Lukas Weber,6/11/26
+6/11/25,NorthAm,Client_NorthAm_931,88281.4,Professional,Chloe Dubois,6/11/26
+6/12/25,EMEA,Client_EMEA_654,109460.45,Professional,Lukas Weber,6/12/26
+6/12/25,LATAM,Zenith Labs,404364.87,Enterprise,Sarah Chen,6/12/26
+6/12/25,EMEA,Client_EMEA_736,276027.56,Enterprise,Lukas Weber,6/12/26
+6/12/25,NorthAm,Client_NorthAm_392,127607.63,Professional,Hiroshi Tanaka,6/12/26
+6/13/25,APAC,Client_APAC_675,31184.25,Starter,Lukas Weber,6/13/26
+6/13/25,EMEA,Client_EMEA_517,108975.11,Professional,Aria Montgomery,6/13/26
+6/14/25,EMEA,Client_EMEA_822,20123.72,Starter,Chloe Dubois,6/14/26
+6/14/25,EMEA,Nova Systems,392949.41,Enterprise,Marcus Thorne,6/14/26
+6/14/25,NorthAm,OmniHealth,32349.35,Starter,Aria Montgomery,6/14/26
+6/15/25,EMEA,Client_EMEA_730,48460.81,Starter,Chloe Dubois,6/15/26
+6/15/25,NorthAm,Client_NorthAm_892,113625.89,Professional,Lukas Weber,6/15/26
+6/15/25,NorthAm,Client_NorthAm_727,37598.28,Starter,Marcus Thorne,6/15/26
+6/15/25,NorthAm,Global Maritime,137744.9,Professional,Lukas Weber,6/15/26
+6/15/25,APAC,Zenith Labs,26867.73,Starter,Sarah Chen,6/15/26
+6/16/25,APAC,Client_APAC_770,479290.48,Enterprise,Hiroshi Tanaka,6/16/26
+6/16/25,EMEA,Vortex Media,104837.75,Professional,Marcus Thorne,6/16/26
+6/16/25,NorthAm,Apex Solutions,24722.3,Starter,Marcus Thorne,6/16/26
+6/17/25,LATAM,Phoenix Biotech,388603.12,Enterprise,Aria Montgomery,6/17/26
+6/18/25,APAC,Client_APAC_850,98781.66,Professional,Lukas Weber,6/18/26
+6/19/25,EMEA,Client_EMEA_776,34256.55,Starter,Chloe Dubois,6/19/26
+6/19/25,APAC,Client_APAC_365,33108.54,Starter,Aria Montgomery,6/19/26
+6/19/25,NorthAm,Client_NorthAm_539,307441.62,Enterprise,Sarah Chen,6/19/26
+6/19/25,LATAM,Client_LATAM_953,105111.91,Professional,Hiroshi Tanaka,6/19/26
+6/20/25,APAC,Client_APAC_511,48114.79,Starter,Marcus Thorne,6/20/26
+6/20/25,LATAM,Vortex Media,452687.33,Enterprise,Chloe Dubois,6/20/26
+6/20/25,LATAM,Client_LATAM_564,103431.54,Professional,Hiroshi Tanaka,6/20/26
+6/20/25,EMEA,Client_EMEA_302,38996.74,Starter,Lukas Weber,6/20/26
+6/20/25,LATAM,Client_LATAM_424,287235.17,Enterprise,Hiroshi Tanaka,6/20/26
+6/21/25,NorthAm,Client_NorthAm_684,462251.5,Enterprise,Hiroshi Tanaka,6/21/26
+6/22/25,APAC,Client_APAC_800,465372.9,Enterprise,Aria Montgomery,6/22/26
+6/22/25,APAC,Client_APAC_462,439320.69,Enterprise,Chloe Dubois,6/22/26
+6/23/25,EMEA,Client_EMEA_359,495204.8,Enterprise,Hiroshi Tanaka,6/23/26
+6/23/25,NorthAm,Solaris Energy,307528.68,Enterprise,Lukas Weber,6/23/26
+6/23/25,APAC,Client_APAC_422,38073.89,Starter,Marcus Thorne,6/23/26
+6/24/25,LATAM,Client_LATAM_547,124388.61,Professional,Sarah Chen,6/24/26
+6/24/25,APAC,Client_APAC_876,386922.65,Enterprise,Aria Montgomery,6/24/26
+6/25/25,EMEA,Solaris Energy,463228.2,Enterprise,Chloe Dubois,6/25/26
+6/25/25,LATAM,Client_LATAM_827,91541.85,Professional,Marcus Thorne,6/25/26
+6/26/25,APAC,Stellar Retail,344302.51,Enterprise,Lukas Weber,6/26/26
+6/26/25,EMEA,Client_EMEA_393,396946.5,Enterprise,Chloe Dubois,6/26/26
+6/26/25,EMEA,Client_EMEA_941,139602.12,Professional,Chloe Dubois,6/26/26
+6/26/25,LATAM,Client_LATAM_408,35449.4,Starter,Aria Montgomery,6/26/26
+6/27/25,APAC,Client_APAC_738,46559.61,Starter,Chloe Dubois,6/27/26
+6/28/25,NorthAm,Client_NorthAm_614,134294.22,Professional,Sarah Chen,6/28/26
+6/29/25,EMEA,Vortex Media,445308.26,Enterprise,Sarah Chen,6/29/26
+6/30/25,EMEA,Client_EMEA_722,459174.21,Enterprise,Marcus Thorne,6/30/26
+6/30/25,EMEA,Client_EMEA_523,36396.39,Starter,Chloe Dubois,6/30/26
+7/1/25,EMEA,Client_EMEA_578,261074.17,Enterprise,Lukas Weber,7/1/26
+7/1/25,NorthAm,Solaris Energy,82961.16,Professional,Chloe Dubois,7/1/26
+7/3/25,APAC,Phoenix Biotech,255484.9,Enterprise,Aria Montgomery,7/3/26
+7/3/25,NorthAm,Client_NorthAm_605,93658.99,Professional,Marcus Thorne,7/3/26
+7/3/25,NorthAm,Client_NorthAm_965,26952.5,Starter,Hiroshi Tanaka,7/3/26
+7/4/25,NorthAm,Client_NorthAm_577,39728.05,Starter,Marcus Thorne,7/4/26
+7/4/25,APAC,Client_APAC_634,39935.26,Starter,Aria Montgomery,7/4/26
+7/4/25,EMEA,Beacon Tech,310947.11,Professional,Sarah Chen,7/4/26
+7/5/25,LATAM,Apex Solutions,358871.79,Enterprise,Marcus Thorne,7/5/26
+7/5/25,NorthAm,Client_NorthAm_327,92618.4,Professional,Aria Montgomery,7/5/26
+7/5/25,LATAM,Beacon Tech,439997.63,Enterprise,Hiroshi Tanaka,7/5/26
+7/6/25,NorthAm,Beacon Tech,127744.67,Professional,Marcus Thorne,7/6/26
+7/6/25,EMEA,Beacon Tech,227197.18,Professional,Aria Montgomery,7/6/26
+7/6/25,EMEA,Solaris Energy,29801.57,Starter,Aria Montgomery,7/6/26
+7/6/25,EMEA,Client_EMEA_333,239867.89,Professional,Lukas Weber,7/6/26
+7/7/25,APAC,OmniHealth,47421.47,Starter,Aria Montgomery,7/7/26
+7/7/25,LATAM,Client_LATAM_379,99508.28,Professional,Chloe Dubois,7/7/26
+7/8/25,LATAM,Client_LATAM_625,120736.89,Professional,Aria Montgomery,7/8/26
+7/8/25,APAC,Beacon Tech,455604.33,Enterprise,Hiroshi Tanaka,7/8/26
+7/8/25,EMEA,Client_EMEA_679,323797.21,Professional,Lukas Weber,7/8/26
+7/8/25,EMEA,Horizon Fintech,490933.69,Enterprise,Lukas Weber,7/8/26
+7/8/25,APAC,OmniHealth,28276.44,Starter,Hiroshi Tanaka,7/8/26
+7/9/25,EMEA,Client_EMEA_759,236233.72,Professional,Sarah Chen,7/9/26
+7/9/25,APAC,Vortex Media,45012.35,Starter,Hiroshi Tanaka,7/9/26
+7/10/25,NorthAm,Summit Ventures,367869.22,Enterprise,Marcus Thorne,7/10/26
+7/10/25,EMEA,Phoenix Biotech,396616.27,Enterprise,Sarah Chen,7/10/26
+7/10/25,LATAM,Client_LATAM_378,24130.85,Starter,Lukas Weber,7/10/26
+7/10/25,NorthAm,Client_NorthAm_703,314705.16,Enterprise,Lukas Weber,7/10/26
+7/10/25,LATAM,Client_LATAM_688,395192.66,Enterprise,Sarah Chen,7/10/26
+7/11/25,EMEA,Client_EMEA_344,47924.78,Starter,Aria Montgomery,7/11/26
+7/11/25,LATAM,Client_LATAM_729,334140.27,Enterprise,Sarah Chen,7/11/26
+7/11/25,EMEA,Beacon Tech,266783.33,Enterprise,Hiroshi Tanaka,7/11/26
+7/11/25,NorthAm,Client_NorthAm_877,34772.66,Starter,Marcus Thorne,7/11/26
+7/11/25,LATAM,Titan Manufacturing,35934.99,Starter,Marcus Thorne,7/11/26
+7/12/25,LATAM,Client_LATAM_549,37576.25,Starter,Chloe Dubois,7/12/26
+7/12/25,NorthAm,Client_NorthAm_743,125567.87,Professional,Lukas Weber,7/12/26
+7/13/25,LATAM,Client_LATAM_486,48924.33,Starter,Chloe Dubois,7/13/26
+7/13/25,NorthAm,Stellar Retail,457351.17,Enterprise,Aria Montgomery,7/13/26
+7/14/25,EMEA,Client_EMEA_559,29033.94,Starter,Aria Montgomery,7/14/26
+7/14/25,NorthAm,Client_NorthAm_550,449513.79,Enterprise,Aria Montgomery,7/14/26
+7/14/25,APAC,Phoenix Biotech,138443.76,Professional,Aria Montgomery,7/14/26
+7/14/25,LATAM,Client_LATAM_444,100331.69,Professional,Marcus Thorne,7/14/26
+7/14/25,EMEA,Horizon Fintech,458338.55,Enterprise,Lukas Weber,7/14/26
+7/15/25,EMEA,Stellar Retail,216043.78,Professional,Lukas Weber,7/15/26
+7/15/25,NorthAm,Client_NorthAm_919,117816.61,Professional,Aria Montgomery,7/15/26
+7/15/25,LATAM,Client_LATAM_901,101885.78,Professional,Chloe Dubois,7/15/26
+7/16/25,LATAM,Client_LATAM_606,114420.81,Professional,Chloe Dubois,7/16/26
+7/16/25,LATAM,Client_LATAM_411,44404.34,Starter,Marcus Thorne,7/16/26
+7/16/25,LATAM,Client_LATAM_602,39065.05,Starter,Hiroshi Tanaka,7/16/26
+7/16/25,EMEA,Horizon Fintech,436573.14,Enterprise,Lukas Weber,7/16/26
+7/16/25,LATAM,Summit Ventures,31440.93,Starter,Marcus Thorne,7/16/26
+7/17/25,NorthAm,Client_NorthAm_557,107145.97,Professional,Hiroshi Tanaka,7/17/26
+7/17/25,LATAM,OmniHealth,382278.59,Enterprise,Hiroshi Tanaka,7/17/26
+7/17/25,LATAM,Client_LATAM_420,456327.83,Enterprise,Aria Montgomery,7/17/26
+7/18/25,NorthAm,Client_NorthAm_381,129282.65,Professional,Aria Montgomery,7/18/26
+7/18/25,LATAM,Client_LATAM_319,121852.01,Professional,Chloe Dubois,7/18/26
+7/18/25,EMEA,Client_EMEA_506,247484.18,Professional,Marcus Thorne,7/18/26
+7/18/25,LATAM,Client_LATAM_763,466723.5,Enterprise,Chloe Dubois,7/18/26
+7/18/25,APAC,Client_APAC_356,81136.96,Professional,Chloe Dubois,7/18/26
+7/18/25,APAC,Client_APAC_715,29566.33,Starter,Sarah Chen,7/18/26
+7/20/25,EMEA,Client_EMEA_324,484500.55,Enterprise,Chloe Dubois,7/20/26
+7/21/25,NorthAm,Client_NorthAm_940,132380.76,Professional,Marcus Thorne,7/21/26
+7/21/25,APAC,Client_APAC_426,376828.75,Enterprise,Aria Montgomery,7/21/26
+7/21/25,APAC,Client_APAC_692,99036.91,Professional,Hiroshi Tanaka,7/21/26
+7/21/25,APAC,Client_APAC_569,25994,Starter,Lukas Weber,7/21/26
+7/22/25,LATAM,Client_LATAM_707,40496.39,Starter,Hiroshi Tanaka,7/22/26
+7/22/25,APAC,Client_APAC_481,26537.04,Starter,Chloe Dubois,7/22/26
+7/22/25,APAC,Client_APAC_343,49835.76,Starter,Hiroshi Tanaka,7/22/26
+7/22/25,NorthAm,Apex Solutions,88651.21,Professional,Lukas Weber,7/22/26
+7/23/25,APAC,Client_APAC_567,128647.04,Professional,Chloe Dubois,7/23/26
+7/23/25,LATAM,Client_LATAM_757,98550.31,Professional,Chloe Dubois,7/23/26
+7/24/25,LATAM,Client_LATAM_366,148160.65,Professional,Aria Montgomery,7/24/26
+7/24/25,EMEA,Stellar Retail,40628.67,Starter,Chloe Dubois,7/24/26
+7/24/25,LATAM,Client_LATAM_852,128293.17,Professional,Hiroshi Tanaka,7/24/26
+7/25/25,NorthAm,Client_NorthAm_423,24111.09,Starter,Sarah Chen,7/25/26
+7/25/25,NorthAm,Client_NorthAm_464,34323.62,Starter,Marcus Thorne,7/25/26
+7/26/25,APAC,Client_APAC_418,21534.73,Starter,Hiroshi Tanaka,7/26/26
+7/26/25,EMEA,Client_EMEA_784,257237.04,Enterprise,Lukas Weber,7/26/26
+7/26/25,NorthAm,Client_NorthAm_828,41815.06,Starter,Marcus Thorne,7/26/26
+7/27/25,EMEA,Nova Systems,356761.29,Professional,Marcus Thorne,7/27/26
+7/27/25,LATAM,Client_LATAM_534,497558.26,Enterprise,Marcus Thorne,7/27/26
+7/27/25,LATAM,Client_LATAM_700,387530.22,Enterprise,Chloe Dubois,7/27/26
+7/28/25,LATAM,Client_LATAM_782,455254.35,Enterprise,Aria Montgomery,7/28/26
+7/28/25,EMEA,Phoenix Biotech,49286.18,Starter,Marcus Thorne,7/28/26
+7/28/25,LATAM,Quantum Logistics,422652.33,Enterprise,Marcus Thorne,7/28/26
+7/28/25,LATAM,Client_LATAM_930,108311.36,Professional,Chloe Dubois,7/28/26
+7/28/25,APAC,Quantum Logistics,353943.56,Enterprise,Hiroshi Tanaka,7/28/26
+7/29/25,EMEA,Client_EMEA_484,49350,Starter,Chloe Dubois,7/29/26
+7/29/25,APAC,Client_APAC_841,36444.16,Starter,Sarah Chen,7/29/26
+7/29/25,LATAM,Nova Systems,367478.12,Enterprise,Lukas Weber,7/29/26
+7/29/25,NorthAm,Client_NorthAm_878,93714.5,Professional,Lukas Weber,7/29/26
+7/29/25,APAC,Client_APAC_996,41274.47,Starter,Sarah Chen,7/29/26
+7/30/25,LATAM,Client_LATAM_858,27848.39,Starter,Sarah Chen,7/30/26
+7/31/25,APAC,Client_APAC_450,275136.23,Enterprise,Hiroshi Tanaka,7/31/26
+7/31/25,APAC,Global Maritime,109119.28,Professional,Hiroshi Tanaka,7/31/26
+8/1/25,EMEA,Titan Manufacturing,43595.38,Starter,Marcus Thorne,8/1/26
+8/1/25,LATAM,Client_LATAM_406,103813.48,Professional,Marcus Thorne,8/1/26
+8/1/25,NorthAm,Horizon Fintech,108568.11,Professional,Lukas Weber,8/1/26
+8/2/25,EMEA,Horizon Fintech,362628.62,Enterprise,Hiroshi Tanaka,8/2/26
+8/2/25,APAC,Client_APAC_429,407315.12,Enterprise,Chloe Dubois,8/2/26
+8/3/25,EMEA,Client_EMEA_337,24151.96,Starter,Lukas Weber,8/3/26
+8/3/25,LATAM,Global Maritime,105903.72,Professional,Marcus Thorne,8/3/26
+8/3/25,NorthAm,Client_NorthAm_838,404424.49,Enterprise,Chloe Dubois,8/3/26
+8/3/25,EMEA,Client_EMEA_434,226253.8,Professional,Chloe Dubois,8/3/26
+8/3/25,EMEA,Client_EMEA_712,312286.94,Enterprise,Lukas Weber,8/3/26
+8/3/25,EMEA,Quantum Logistics,238736.04,Professional,Lukas Weber,8/3/26
+8/3/25,LATAM,Client_LATAM_686,41349.57,Starter,Marcus Thorne,8/3/26
+8/4/25,APAC,Client_APAC_561,105278.74,Professional,Sarah Chen,8/4/26
+8/4/25,APAC,Client_APAC_810,120989.95,Professional,Aria Montgomery,8/4/26
+8/4/25,APAC,Client_APAC_992,35894.5,Starter,Chloe Dubois,8/4/26
+8/5/25,LATAM,Client_LATAM_574,49721.02,Starter,Hiroshi Tanaka,8/5/26
+8/5/25,APAC,OmniHealth,30006.7,Starter,Sarah Chen,8/5/26
+8/5/25,LATAM,Apex Solutions,83791.98,Professional,Chloe Dubois,8/5/26
+8/5/25,EMEA,Zenith Labs,422466.91,Enterprise,Chloe Dubois,8/5/26
+8/6/25,APAC,Beacon Tech,93945.19,Professional,Aria Montgomery,8/6/26
+8/6/25,APAC,OmniHealth,111762.17,Professional,Chloe Dubois,8/6/26
+8/7/25,APAC,Client_APAC_999,109649.31,Professional,Lukas Weber,8/7/26
+8/7/25,EMEA,Client_EMEA_371,337886.75,Enterprise,Hiroshi Tanaka,8/7/26
+8/8/25,APAC,Nova Systems,39426.3,Starter,Lukas Weber,8/8/26
+8/8/25,LATAM,Client_LATAM_820,106832.15,Professional,Hiroshi Tanaka,8/8/26
+8/11/25,EMEA,Global Maritime,352241.08,Professional,Sarah Chen,8/11/26
+8/12/25,APAC,Client_APAC_952,127570.61,Professional,Marcus Thorne,8/12/26
+8/12/25,NorthAm,Nova Systems,93305.51,Professional,Lukas Weber,8/12/26
+8/13/25,LATAM,Phoenix Biotech,49194.4,Starter,Sarah Chen,8/13/26
+8/13/25,EMEA,Client_EMEA_318,346213.38,Professional,Aria Montgomery,8/13/26
+8/13/25,NorthAm,Nebula Cloud,472355.72,Enterprise,Sarah Chen,8/13/26
+8/13/25,LATAM,Client_LATAM_935,82157.34,Professional,Chloe Dubois,8/13/26
+8/14/25,EMEA,Client_EMEA_612,315646.1,Professional,Sarah Chen,8/14/26
+8/14/25,LATAM,Client_LATAM_336,115203.47,Professional,Hiroshi Tanaka,8/14/26
+8/15/25,APAC,Solaris Energy,326345.06,Enterprise,Hiroshi Tanaka,8/15/26
+8/15/25,APAC,Client_APAC_780,109174.09,Professional,Chloe Dubois,8/15/26
+8/15/25,APAC,Apex Solutions,409734.68,Enterprise,Aria Montgomery,8/15/26
+8/15/25,NorthAm,Client_NorthAm_477,429229.49,Enterprise,Marcus Thorne,8/15/26
+8/16/25,NorthAm,Client_NorthAm_384,416959.95,Enterprise,Aria Montgomery,8/16/26
+8/16/25,EMEA,Titan Manufacturing,356795.86,Professional,Sarah Chen,8/16/26
+8/16/25,EMEA,Client_EMEA_705,23675.83,Starter,Aria Montgomery,8/16/26
+8/16/25,LATAM,Client_LATAM_834,27582.15,Starter,Lukas Weber,8/16/26
+8/17/25,EMEA,Client_EMEA_709,38575.3,Starter,Lukas Weber,8/17/26
+8/18/25,NorthAm,Client_NorthAm_868,102124.31,Professional,Hiroshi Tanaka,8/18/26
+8/18/25,LATAM,Client_LATAM_555,22688.57,Starter,Sarah Chen,8/18/26
+8/18/25,EMEA,Client_EMEA_334,327366.97,Enterprise,Marcus Thorne,8/18/26
+8/19/25,NorthAm,Client_NorthAm_316,85903.04,Professional,Chloe Dubois,8/19/26
+8/19/25,LATAM,Client_LATAM_548,36591.13,Starter,Aria Montgomery,8/19/26
+8/19/25,EMEA,Client_EMEA_410,21518.16,Starter,Sarah Chen,8/19/26
+8/20/25,EMEA,Zenith Labs,431810.75,Enterprise,Sarah Chen,8/20/26
+8/20/25,NorthAm,Client_NorthAm_875,26652.41,Starter,Chloe Dubois,8/20/26
+8/21/25,APAC,Quantum Logistics,147012.23,Professional,Chloe Dubois,8/21/26
+8/21/25,NorthAm,Client_NorthAm_405,289520.11,Enterprise,Sarah Chen,8/21/26
+8/21/25,NorthAm,Client_NorthAm_986,31563.86,Starter,Hiroshi Tanaka,8/21/26
+8/21/25,EMEA,Client_EMEA_479,364199.62,Enterprise,Hiroshi Tanaka,8/21/26
+8/21/25,NorthAm,Apex Solutions,480977.76,Enterprise,Marcus Thorne,8/21/26
+8/21/25,LATAM,Stellar Retail,23432.42,Starter,Chloe Dubois,8/21/26
+8/22/25,NorthAm,Phoenix Biotech,352494.65,Enterprise,Marcus Thorne,8/22/26
+8/23/25,NorthAm,Client_NorthAm_361,83066.44,Professional,Marcus Thorne,8/23/26
+8/24/25,APAC,Quantum Logistics,95604.65,Professional,Marcus Thorne,8/24/26
+8/24/25,NorthAm,Client_NorthAm_631,33238.58,Starter,Marcus Thorne,8/24/26
+8/24/25,APAC,Client_APAC_796,29064.35,Starter,Hiroshi Tanaka,8/24/26
+8/25/25,LATAM,Client_LATAM_311,31062.13,Starter,Sarah Chen,8/25/26
+8/25/25,NorthAm,Client_NorthAm_706,32994.69,Starter,Lukas Weber,8/25/26
+8/25/25,EMEA,Client_EMEA_571,331655.34,Professional,Aria Montgomery,8/25/26
+8/25/25,EMEA,Beacon Tech,31373.12,Starter,Aria Montgomery,8/25/26
+8/25/25,APAC,Nova Systems,126678.85,Professional,Aria Montgomery,8/25/26
+8/25/25,EMEA,Client_EMEA_590,222987.9,Professional,Chloe Dubois,8/25/26
+8/26/25,LATAM,Client_LATAM_787,420293.59,Enterprise,Sarah Chen,8/26/26
+8/26/25,NorthAm,Client_NorthAm_811,140647.54,Professional,Sarah Chen,8/26/26
+8/26/25,LATAM,AeroDynamics,114601.46,Professional,Sarah Chen,8/26/26
+8/27/25,APAC,Client_APAC_760,36927.4,Starter,Aria Montgomery,8/27/26
+8/27/25,APAC,Global Maritime,289493.91,Enterprise,Lukas Weber,8/27/26
+8/27/25,LATAM,Summit Ventures,317098.88,Enterprise,Lukas Weber,8/27/26
+8/27/25,NorthAm,Client_NorthAm_516,440407.24,Enterprise,Hiroshi Tanaka,8/27/26
+8/28/25,NorthAm,Nova Systems,45804.22,Starter,Marcus Thorne,8/28/26
+8/29/25,EMEA,Client_EMEA_335,351117.87,Professional,Chloe Dubois,8/29/26
+8/29/25,NorthAm,AeroDynamics,263021.4,Enterprise,Lukas Weber,8/29/26
+8/30/25,EMEA,Client_EMEA_473,42642.19,Starter,Chloe Dubois,8/30/26
+8/30/25,APAC,Client_APAC_673,92527.27,Professional,Marcus Thorne,8/30/26
+8/30/25,EMEA,Client_EMEA_346,362150.37,Enterprise,Hiroshi Tanaka,8/30/26
+8/30/25,APAC,Client_APAC_717,493494.97,Enterprise,Marcus Thorne,8/30/26
+8/30/25,LATAM,Client_LATAM_983,44910.91,Starter,Marcus Thorne,8/30/26
+8/31/25,APAC,Client_APAC_789,138635.76,Professional,Marcus Thorne,8/31/26
+9/1/25,LATAM,Client_LATAM_452,438977.76,Enterprise,Marcus Thorne,9/1/26
+9/1/25,NorthAm,Client_NorthAm_989,438095.79,Enterprise,Lukas Weber,9/1/26
+9/1/25,EMEA,Client_EMEA_764,205264.45,Professional,Aria Montgomery,9/1/26
+9/1/25,LATAM,Phoenix Biotech,138790.4,Professional,Marcus Thorne,9/1/26
+9/1/25,NorthAm,Titan Manufacturing,142029.58,Professional,Hiroshi Tanaka,9/1/26
+9/1/25,LATAM,Nebula Cloud,121556.62,Professional,Lukas Weber,9/1/26
+9/2/25,LATAM,Client_LATAM_437,112176.45,Professional,Marcus Thorne,9/2/26
+9/2/25,NorthAm,Client_NorthAm_725,94102.51,Professional,Lukas Weber,9/2/26
+9/2/25,LATAM,Client_LATAM_853,278264.14,Enterprise,Marcus Thorne,9/2/26
+9/2/25,NorthAm,Client_NorthAm_640,22679.93,Starter,Hiroshi Tanaka,9/2/26
+9/3/25,NorthAm,Client_NorthAm_711,31490.46,Starter,Aria Montgomery,9/3/26
+9/3/25,LATAM,Client_LATAM_391,85162.55,Professional,Lukas Weber,9/3/26
+9/3/25,EMEA,Client_EMEA_446,28133.98,Starter,Lukas Weber,9/3/26
+9/3/25,EMEA,Client_EMEA_360,41481.35,Starter,Sarah Chen,9/3/26
+9/3/25,LATAM,Client_LATAM_575,480873.94,Enterprise,Lukas Weber,9/3/26
+9/4/25,NorthAm,Client_NorthAm_973,359974.68,Enterprise,Marcus Thorne,9/4/26
+9/4/25,APAC,Stellar Retail,451058.13,Enterprise,Aria Montgomery,9/4/26
+9/4/25,APAC,Client_APAC_862,410351.11,Enterprise,Chloe Dubois,9/4/26
+9/4/25,LATAM,Client_LATAM_977,121355.36,Professional,Marcus Thorne,9/4/26
+9/5/25,LATAM,Quantum Logistics,36537.95,Starter,Hiroshi Tanaka,9/5/26
+9/6/25,LATAM,Client_LATAM_774,28262.42,Starter,Marcus Thorne,9/6/26
+9/6/25,LATAM,Nebula Cloud,47073.29,Starter,Hiroshi Tanaka,9/6/26
+9/6/25,NorthAm,Stellar Retail,126821.15,Professional,Aria Montgomery,9/6/26
+9/8/25,NorthAm,Client_NorthAm_819,33011.34,Starter,Lukas Weber,9/8/26
+9/8/25,APAC,Client_APAC_596,402827.11,Enterprise,Hiroshi Tanaka,9/8/26
+9/8/25,APAC,Client_APAC_442,119234.13,Professional,Aria Montgomery,9/8/26
+9/8/25,NorthAm,Client_NorthAm_478,452173.02,Enterprise,Hiroshi Tanaka,9/8/26
+9/9/25,EMEA,Client_EMEA_753,20114.47,Starter,Aria Montgomery,9/9/26
+9/9/25,NorthAm,Titan Manufacturing,108584.37,Professional,Aria Montgomery,9/9/26
+9/9/25,APAC,Client_APAC_865,49104.35,Starter,Aria Montgomery,9/9/26
+9/9/25,EMEA,Client_EMEA_568,239090.42,Professional,Hiroshi Tanaka,9/9/26
+9/9/25,LATAM,Solaris Energy,29663.35,Starter,Sarah Chen,9/9/26
+9/10/25,APAC,Client_APAC_723,21138.91,Starter,Hiroshi Tanaka,9/10/26
+9/10/25,NorthAm,Nebula Cloud,46617.78,Starter,Marcus Thorne,9/10/26
+9/10/25,EMEA,Client_EMEA_560,33040.29,Starter,Marcus Thorne,9/10/26
+9/10/25,EMEA,Client_EMEA_681,440120.56,Enterprise,Lukas Weber,9/10/26
+9/11/25,APAC,Client_APAC_628,103642.86,Professional,Aria Montgomery,9/11/26
+9/11/25,APAC,Stellar Retail,453391.51,Enterprise,Hiroshi Tanaka,9/11/26
+9/11/25,NorthAm,Client_NorthAm_610,316972.23,Enterprise,Sarah Chen,9/11/26
+9/11/25,NorthAm,Client_NorthAm_501,126993.98,Professional,Chloe Dubois,9/11/26
+9/12/25,EMEA,Client_EMEA_737,205071.52,Professional,Chloe Dubois,9/12/26
+9/12/25,LATAM,Client_LATAM_367,98670.45,Professional,Lukas Weber,9/12/26
+9/12/25,NorthAm,Client_NorthAm_869,32370.16,Starter,Hiroshi Tanaka,9/12/26
+9/13/25,NorthAm,Client_NorthAm_351,393761.86,Enterprise,Lukas Weber,9/13/26
+9/13/25,APAC,Zenith Labs,318356.22,Enterprise,Chloe Dubois,9/13/26
+9/14/25,LATAM,Client_LATAM_435,265570.32,Enterprise,Chloe Dubois,9/14/26
+9/14/25,LATAM,Client_LATAM_658,108159.42,Professional,Chloe Dubois,9/14/26
+9/15/25,NorthAm,Client_NorthAm_676,44130.14,Starter,Marcus Thorne,9/15/26
+9/16/25,LATAM,Client_LATAM_988,22888.96,Starter,Lukas Weber,9/16/26
+9/16/25,LATAM,Summit Ventures,474302.03,Enterprise,Hiroshi Tanaka,9/16/26
+9/16/25,EMEA,Client_EMEA_882,281101.21,Professional,Sarah Chen,9/16/26
+9/16/25,LATAM,Titan Manufacturing,86460.89,Professional,Sarah Chen,9/16/26
+9/16/25,EMEA,Client_EMEA_689,268707.62,Enterprise,Hiroshi Tanaka,9/16/26
+9/16/25,LATAM,Client_LATAM_864,85240.57,Professional,Marcus Thorne,9/16/26
+9/17/25,NorthAm,Client_NorthAm_355,83047.41,Professional,Hiroshi Tanaka,9/17/26
+9/17/25,APAC,Titan Manufacturing,41781.53,Starter,Aria Montgomery,9/17/26
+9/17/25,LATAM,Client_LATAM_313,118802.15,Professional,Lukas Weber,9/17/26
+9/18/25,NorthAm,OmniHealth,37851.05,Starter,Sarah Chen,9/18/26
+9/18/25,LATAM,Client_LATAM_921,100750.38,Professional,Sarah Chen,9/18/26
+9/18/25,LATAM,Client_LATAM_427,324947.64,Enterprise,Lukas Weber,9/18/26
+9/19/25,EMEA,Client_EMEA_660,29802.51,Starter,Lukas Weber,9/19/26
+9/19/25,APAC,Client_APAC_985,40567.73,Starter,Chloe Dubois,9/19/26
+9/20/25,EMEA,Client_EMEA_341,350997.43,Professional,Sarah Chen,9/20/26
+9/20/25,EMEA,Client_EMEA_374,45460.08,Starter,Marcus Thorne,9/20/26
+9/21/25,EMEA,Client_EMEA_425,245513.05,Professional,Lukas Weber,9/21/26
+9/21/25,LATAM,Client_LATAM_413,114815.92,Professional,Aria Montgomery,9/21/26
+9/21/25,EMEA,Client_EMEA_783,41287.08,Starter,Aria Montgomery,9/21/26
+9/22/25,LATAM,Horizon Fintech,26740.92,Starter,Marcus Thorne,9/22/26
+9/23/25,EMEA,Client_EMEA_395,219210.45,Professional,Marcus Thorne,9/23/26
+9/23/25,APAC,Client_APAC_967,144253.14,Professional,Hiroshi Tanaka,9/23/26
+9/24/25,APAC,Client_APAC_969,394657.86,Enterprise,Aria Montgomery,9/24/26
+9/24/25,LATAM,Client_LATAM_797,251836.89,Enterprise,Sarah Chen,9/24/26
+9/24/25,APAC,Client_APAC_837,425181.59,Enterprise,Lukas Weber,9/24/26
+9/24/25,APAC,Client_APAC_826,149683.07,Professional,Chloe Dubois,9/24/26
+9/24/25,NorthAm,Client_NorthAm_913,353982.81,Enterprise,Marcus Thorne,9/24/26
+9/25/25,APAC,Beacon Tech,443660.36,Enterprise,Lukas Weber,9/25/26
+9/25/25,APAC,Client_APAC_666,23807.92,Starter,Aria Montgomery,9/25/26
+9/26/25,APAC,Client_APAC_354,36322.46,Starter,Lukas Weber,9/26/26
+9/26/25,APAC,Client_APAC_502,352064.79,Enterprise,Hiroshi Tanaka,9/26/26
+9/26/25,EMEA,Client_EMEA_532,38593.43,Starter,Marcus Thorne,9/26/26
+9/27/25,APAC,Vortex Media,31857.9,Starter,Marcus Thorne,9/27/26
+9/29/25,EMEA,Client_EMEA_449,263122.78,Enterprise,Marcus Thorne,9/29/26
+9/29/25,EMEA,Client_EMEA_303,314199.69,Professional,Aria Montgomery,9/29/26
+9/30/25,APAC,Client_APAC_438,418967.14,Enterprise,Aria Montgomery,9/30/26
+9/30/25,LATAM,Client_LATAM_529,35882.53,Starter,Sarah Chen,9/30/26
+10/1/25,NorthAm,Global Maritime,119507.44,Professional,Lukas Weber,10/1/26
+10/1/25,APAC,Client_APAC_894,116591.1,Professional,Sarah Chen,10/1/26
+10/2/25,APAC,Nova Systems,277888.04,Enterprise,Aria Montgomery,10/2/26
+10/2/25,LATAM,Client_LATAM_914,26635.94,Starter,Aria Montgomery,10/2/26
+10/3/25,EMEA,Apex Solutions,203755.6,Professional,Hiroshi Tanaka,10/3/26
+10/3/25,LATAM,Client_LATAM_488,431964.54,Enterprise,Marcus Thorne,10/3/26
+10/3/25,APAC,Client_APAC_609,36969.51,Starter,Hiroshi Tanaka,10/3/26
+10/4/25,NorthAm,Vortex Media,24989.33,Starter,Marcus Thorne,10/4/26
+10/4/25,NorthAm,Summit Ventures,372151.43,Enterprise,Aria Montgomery,10/4/26
+10/4/25,NorthAm,Client_NorthAm_991,357874.21,Enterprise,Chloe Dubois,10/4/26
+10/4/25,NorthAm,Nebula Cloud,26937.84,Starter,Marcus Thorne,10/4/26
+10/4/25,EMEA,Client_EMEA_487,279658.29,Enterprise,Aria Montgomery,10/4/26
+10/4/25,APAC,Summit Ventures,39831.73,Starter,Sarah Chen,10/4/26
+10/5/25,NorthAm,Client_NorthAm_898,87173.6,Professional,Hiroshi Tanaka,10/5/26
+10/5/25,LATAM,Client_LATAM_762,388400.48,Enterprise,Marcus Thorne,10/5/26
+10/5/25,NorthAm,Client_NorthAm_483,20952.05,Starter,Hiroshi Tanaka,10/5/26
+10/5/25,APAC,Client_APAC_683,469299.65,Enterprise,Chloe Dubois,10/5/26
+10/6/25,LATAM,Client_LATAM_459,34040.62,Starter,Lukas Weber,10/6/26
+10/6/25,NorthAm,Client_NorthAm_713,105137.85,Professional,Chloe Dubois,10/6/26
+10/6/25,LATAM,Client_LATAM_490,455840.11,Enterprise,Hiroshi Tanaka,10/6/26
+10/6/25,APAC,Client_APAC_611,440001.03,Enterprise,Sarah Chen,10/6/26
+10/6/25,LATAM,Client_LATAM_363,132730.36,Professional,Sarah Chen,10/6/26
+10/6/25,LATAM,Client_LATAM_714,115167.53,Professional,Lukas Weber,10/6/26
+10/7/25,NorthAm,Vortex Media,257945.67,Enterprise,Hiroshi Tanaka,10/7/26
+10/7/25,EMEA,Client_EMEA_570,256729.03,Enterprise,Lukas Weber,10/7/26
+10/7/25,APAC,Client_APAC_937,324514.13,Enterprise,Marcus Thorne,10/7/26
+10/7/25,EMEA,Client_EMEA_655,194803.82,Professional,Sarah Chen,10/7/26
+10/7/25,EMEA,OmniHealth,237853.13,Professional,Marcus Thorne,10/7/26
+10/9/25,NorthAm,Nova Systems,102016.2,Professional,Sarah Chen,10/9/26
+10/9/25,EMEA,Nebula Cloud,338568.75,Professional,Lukas Weber,10/9/26
+10/10/25,LATAM,Client_LATAM_537,20283.51,Starter,Chloe Dubois,10/10/26
+10/10/25,EMEA,Client_EMEA_589,263630.06,Professional,Lukas Weber,10/10/26
+10/10/25,APAC,Client_APAC_959,368025.99,Enterprise,Lukas Weber,10/10/26
+10/10/25,NorthAm,Client_NorthAm_902,27540.23,Starter,Chloe Dubois,10/10/26
+10/11/25,NorthAm,Stellar Retail,278637.94,Enterprise,Chloe Dubois,10/11/26
+10/11/25,APAC,Client_APAC_751,324350.16,Enterprise,Aria Montgomery,10/11/26
+10/11/25,NorthAm,Client_NorthAm_556,446109.68,Enterprise,Lukas Weber,10/11/26
+10/11/25,APAC,Client_APAC_649,461973.03,Enterprise,Sarah Chen,10/11/26
+10/11/25,NorthAm,Client_NorthAm_339,462791.51,Enterprise,Lukas Weber,10/11/26
+10/11/25,LATAM,Client_LATAM_519,93733.42,Professional,Marcus Thorne,10/11/26
+10/11/25,APAC,Client_APAC_389,89083.99,Professional,Lukas Weber,10/11/26
+10/12/25,LATAM,Horizon Fintech,28901.23,Starter,Marcus Thorne,10/12/26
+10/13/25,NorthAm,Client_NorthAm_870,48895.14,Starter,Lukas Weber,10/13/26
+10/13/25,EMEA,Client_EMEA_581,257710.54,Professional,Aria Montgomery,10/13/26
+10/13/25,EMEA,Client_EMEA_500,356800.15,Enterprise,Chloe Dubois,10/13/26
+10/13/25,NorthAm,Client_NorthAm_929,477746.64,Enterprise,Marcus Thorne,10/13/26
+10/14/25,APAC,Beacon Tech,137050.46,Professional,Lukas Weber,10/14/26
+10/15/25,APAC,Client_APAC_447,38470.31,Starter,Sarah Chen,10/15/26
+10/15/25,EMEA,Client_EMEA_419,240485.09,Professional,Lukas Weber,10/15/26
+10/15/25,APAC,AeroDynamics,352702.16,Enterprise,Sarah Chen,10/15/26
+10/15/25,APAC,Client_APAC_732,37668.5,Starter,Chloe Dubois,10/15/26
+10/15/25,EMEA,Zenith Labs,425331.24,Enterprise,Chloe Dubois,10/15/26
+10/16/25,EMEA,Client_EMEA_518,254054.98,Enterprise,Marcus Thorne,10/16/26
+10/16/25,NorthAm,Client_NorthAm_475,47086.64,Starter,Lukas Weber,10/16/26
+10/16/25,LATAM,Client_LATAM_307,410747.96,Enterprise,Lukas Weber,10/16/26
+10/17/25,EMEA,OmniHealth,22369.05,Starter,Marcus Thorne,10/17/26
+10/18/25,APAC,Client_APAC_950,91804.77,Professional,Hiroshi Tanaka,10/18/26
+10/18/25,NorthAm,Client_NorthAm_944,411168.63,Enterprise,Hiroshi Tanaka,10/18/26
+10/18/25,NorthAm,AeroDynamics,34579.71,Starter,Chloe Dubois,10/18/26
+10/18/25,NorthAm,Client_NorthAm_772,43386.34,Starter,Lukas Weber,10/18/26
+10/18/25,NorthAm,Client_NorthAm_690,147495.28,Professional,Chloe Dubois,10/18/26
+10/19/25,EMEA,Client_EMEA_970,255591.11,Professional,Chloe Dubois,10/19/26
+10/19/25,EMEA,Nova Systems,259935.42,Enterprise,Lukas Weber,10/19/26
+10/19/25,LATAM,Client_LATAM_815,45871.82,Starter,Aria Montgomery,10/19/26
+10/20/25,LATAM,Client_LATAM_893,473466.5,Enterprise,Chloe Dubois,10/20/26
+10/21/25,EMEA,Client_EMEA_980,27747.79,Starter,Marcus Thorne,10/21/26
+10/21/25,APAC,Client_APAC_619,453795.23,Enterprise,Chloe Dubois,10/21/26
+10/21/25,EMEA,Client_EMEA_979,35379.28,Starter,Chloe Dubois,10/21/26
+10/21/25,LATAM,Client_LATAM_735,295520.44,Enterprise,Sarah Chen,10/21/26
+10/21/25,LATAM,OmniHealth,354423.49,Enterprise,Chloe Dubois,10/21/26
+10/21/25,NorthAm,Client_NorthAm_433,33231.16,Starter,Sarah Chen,10/21/26
+10/22/25,EMEA,OmniHealth,345994.62,Enterprise,Chloe Dubois,10/22/26
+10/23/25,EMEA,Client_EMEA_629,447075.91,Enterprise,Hiroshi Tanaka,10/23/26
+10/23/25,APAC,Client_APAC_412,34947.97,Starter,Marcus Thorne,10/23/26
+10/23/25,EMEA,Client_EMEA_860,379774.92,Enterprise,Aria Montgomery,10/23/26
+10/24/25,EMEA,Client_EMEA_431,395880.82,Enterprise,Sarah Chen,10/24/26
+10/25/25,APAC,Titan Manufacturing,117164.54,Professional,Lukas Weber,10/25/26
+10/25/25,LATAM,Client_LATAM_958,476575.89,Enterprise,Marcus Thorne,10/25/26
+10/26/25,EMEA,Apex Solutions,199027.25,Professional,Marcus Thorne,10/26/26
+10/26/25,NorthAm,Client_NorthAm_812,115033.42,Professional,Marcus Thorne,10/26/26
+10/27/25,LATAM,Titan Manufacturing,289358.18,Enterprise,Lukas Weber,10/27/26
+10/27/25,APAC,OmniHealth,117138.98,Professional,Lukas Weber,10/27/26
+10/28/25,NorthAm,Client_NorthAm_661,110624.02,Professional,Chloe Dubois,10/28/26
+10/28/25,EMEA,Client_EMEA_510,338071.61,Professional,Marcus Thorne,10/28/26
+10/28/25,NorthAm,Client_NorthAm_971,344082.2,Enterprise,Aria Montgomery,10/28/26
+10/28/25,LATAM,OmniHealth,36157.42,Starter,Hiroshi Tanaka,10/28/26
+10/28/25,EMEA,Client_EMEA_448,40095.02,Starter,Sarah Chen,10/28/26
+10/28/25,NorthAm,Client_NorthAm_597,139186.25,Professional,Aria Montgomery,10/28/26
+10/29/25,LATAM,Client_LATAM_647,102015.26,Professional,Hiroshi Tanaka,10/29/26
+10/29/25,APAC,Client_APAC_961,35033.7,Starter,Hiroshi Tanaka,10/29/26
+10/30/25,APAC,Summit Ventures,22991.35,Starter,Hiroshi Tanaka,10/30/26
+10/30/25,LATAM,Client_LATAM_855,359540.7,Enterprise,Chloe Dubois,10/30/26
+10/31/25,EMEA,OmniHealth,43174.43,Starter,Chloe Dubois,10/31/26
+10/31/25,EMEA,Client_EMEA_638,361266.72,Enterprise,Chloe Dubois,10/31/26
+11/1/25,APAC,Client_APAC_768,143992.18,Professional,Chloe Dubois,11/1/26
+11/2/25,LATAM,Stellar Retail,135049.97,Professional,Chloe Dubois,11/2/26
+11/2/25,LATAM,Client_LATAM_430,134803.28,Professional,Chloe Dubois,11/2/26
+11/2/25,NorthAm,Beacon Tech,149126.91,Professional,Marcus Thorne,11/2/26
+11/2/25,LATAM,Client_LATAM_416,80572.42,Professional,Lukas Weber,11/2/26
+11/3/25,APAC,Client_APAC_498,46287.75,Starter,Aria Montgomery,11/3/26
+11/3/25,NorthAm,Nebula Cloud,29042.58,Starter,Marcus Thorne,11/3/26
+11/4/25,LATAM,Client_LATAM_874,340823.64,Enterprise,Chloe Dubois,11/4/26
+11/4/25,EMEA,Client_EMEA_984,405802.93,Enterprise,Marcus Thorne,11/4/26
+11/4/25,APAC,Nebula Cloud,120454.3,Professional,Sarah Chen,11/4/26
+11/4/25,NorthAm,Client_NorthAm_794,38250.32,Starter,Aria Montgomery,11/4/26
+11/5/25,NorthAm,Client_NorthAm_509,44139.52,Starter,Marcus Thorne,11/5/26
+11/6/25,LATAM,Client_LATAM_315,489430.59,Enterprise,Marcus Thorne,11/6/26
+11/7/25,APAC,Zenith Labs,110951.19,Professional,Hiroshi Tanaka,11/7/26
+11/7/25,APAC,Client_APAC_472,118446.42,Professional,Chloe Dubois,11/7/26
+11/7/25,NorthAm,Client_NorthAm_955,142390.79,Professional,Marcus Thorne,11/7/26
+11/8/25,EMEA,Client_EMEA_886,353883.71,Professional,Hiroshi Tanaka,11/8/26
+11/8/25,EMEA,AeroDynamics,327687.53,Enterprise,Marcus Thorne,11/8/26
+11/9/25,LATAM,Client_LATAM_856,82017.14,Professional,Lukas Weber,11/9/26
+11/11/25,LATAM,Client_LATAM_748,357830.83,Enterprise,Sarah Chen,11/11/26
+11/11/25,EMEA,Client_EMEA_918,46569.8,Starter,Chloe Dubois,11/11/26
+11/11/25,NorthAm,Client_NorthAm_599,328296.44,Enterprise,Marcus Thorne,11/11/26
+11/13/25,APAC,Nova Systems,426142.96,Enterprise,Marcus Thorne,11/13/26
+11/13/25,EMEA,Client_EMEA_598,450153.35,Enterprise,Chloe Dubois,11/13/26
+11/13/25,NorthAm,Beacon Tech,318025.71,Enterprise,Sarah Chen,11/13/26
+11/13/25,LATAM,Nova Systems,272032.47,Enterprise,Aria Montgomery,11/13/26
+11/13/25,LATAM,Client_LATAM_916,252200.92,Enterprise,Chloe Dubois,11/13/26
+11/13/25,EMEA,Client_EMEA_331,288563.19,Enterprise,Hiroshi Tanaka,11/13/26
+11/14/25,APAC,Phoenix Biotech,411913.1,Enterprise,Marcus Thorne,11/14/26
+11/14/25,LATAM,Client_LATAM_903,41138.87,Starter,Chloe Dubois,11/14/26
+11/14/25,NorthAm,Titan Manufacturing,274808.39,Enterprise,Chloe Dubois,11/14/26
+11/15/25,NorthAm,Solaris Energy,457365.2,Enterprise,Chloe Dubois,11/15/26
+11/15/25,LATAM,Client_LATAM_350,45100.63,Starter,Sarah Chen,11/15/26
+11/15/25,NorthAm,Phoenix Biotech,26394.63,Starter,Lukas Weber,11/15/26
+11/15/25,EMEA,Client_EMEA_680,291404.08,Professional,Aria Montgomery,11/15/26
+11/16/25,APAC,Client_APAC_308,189332.49,Enterprise,Aria Montgomery,11/16/26
+11/16/25,NorthAm,Client_NorthAm_421,31817.11,Starter,Sarah Chen,11/16/26
+11/16/25,NorthAm,Client_NorthAm_832,415492.48,Enterprise,Sarah Chen,11/16/26
+11/17/25,APAC,Client_APAC_911,118511.21,Professional,Lukas Weber,11/17/26
+11/17/25,EMEA,Beacon Tech,283486.48,Professional,Sarah Chen,11/17/26
+11/18/25,EMEA,Client_EMEA_645,307343.12,Professional,Lukas Weber,11/18/26
+11/18/25,NorthAm,Client_NorthAm_669,115754.73,Professional,Hiroshi Tanaka,11/18/26
+11/19/25,EMEA,Client_EMEA_526,24530.89,Starter,Chloe Dubois,11/19/26
+11/20/25,APAC,Client_APAC_320,22835.18,Starter,Aria Montgomery,11/20/26
+11/21/25,NorthAm,Client_NorthAm_881,126091.97,Professional,Hiroshi Tanaka,11/21/26
+11/21/25,EMEA,Client_EMEA_552,329169.56,Enterprise,Hiroshi Tanaka,11/21/26
+11/22/25,LATAM,AeroDynamics,412309.86,Enterprise,Aria Montgomery,11/22/26
+11/23/25,NorthAm,Client_NorthAm_653,496720.63,Enterprise,Sarah Chen,11/23/26
+11/23/25,EMEA,Client_EMEA_387,229672.59,Professional,Lukas Weber,11/23/26
+11/23/25,APAC,Client_APAC_871,198527.03,Enterprise,Lukas Weber,11/23/26
+11/24/25,NorthAm,Phoenix Biotech,28250.88,Starter,Chloe Dubois,11/24/26
+11/24/25,EMEA,Client_EMEA_659,244064.36,Professional,Sarah Chen,11/24/26
+11/24/25,EMEA,AeroDynamics,460712.98,Enterprise,Aria Montgomery,11/24/26
+11/24/25,NorthAm,Nova Systems,27307.07,Starter,Aria Montgomery,11/24/26
+11/24/25,LATAM,Client_LATAM_731,293550.67,Enterprise,Aria Montgomery,11/24/26
+11/24/25,LATAM,Client_LATAM_591,131617.19,Professional,Sarah Chen,11/24/26
+11/25/25,LATAM,Client_LATAM_522,131294.06,Professional,Marcus Thorne,11/25/26
+11/25/25,LATAM,Client_LATAM_758,46564.78,Starter,Aria Montgomery,11/25/26
+11/27/25,EMEA,Client_EMEA_317,41228.65,Starter,Marcus Thorne,11/27/26
+11/27/25,NorthAm,Horizon Fintech,82335.52,Professional,Hiroshi Tanaka,11/27/26
+11/27/25,NorthAm,Client_NorthAm_781,26341.72,Starter,Hiroshi Tanaka,11/27/26
+11/27/25,EMEA,Client_EMEA_304,24393.33,Starter,Sarah Chen,11/27/26
+11/27/25,LATAM,Horizon Fintech,86513.73,Professional,Sarah Chen,11/27/26
+11/27/25,LATAM,Client_LATAM_485,111397.6,Professional,Hiroshi Tanaka,11/27/26
+11/27/25,LATAM,Client_LATAM_579,87416.12,Professional,Hiroshi Tanaka,11/27/26
+11/27/25,APAC,Client_APAC_376,146462.7,Professional,Hiroshi Tanaka,11/27/26
+11/28/25,EMEA,Summit Ventures,203996.85,Professional,Marcus Thorne,11/28/26
+11/28/25,APAC,Client_APAC_461,166816.85,Enterprise,Marcus Thorne,11/28/26
+11/28/25,APAC,Client_APAC_938,46243.01,Starter,Lukas Weber,11/28/26
+11/28/25,APAC,Client_APAC_904,285975.03,Enterprise,Lukas Weber,11/28/26
+11/28/25,LATAM,Client_LATAM_978,21294.33,Starter,Marcus Thorne,11/28/26
+11/29/25,NorthAm,Client_NorthAm_536,31377.92,Starter,Hiroshi Tanaka,11/29/26
+11/29/25,APAC,Client_APAC_345,21149.1,Starter,Marcus Thorne,11/29/26
+11/29/25,APAC,Client_APAC_633,22800.2,Starter,Aria Montgomery,11/29/26
+11/29/25,EMEA,Client_EMEA_891,423577.99,Enterprise,Lukas Weber,11/29/26
+11/29/25,EMEA,Client_EMEA_635,38768.13,Starter,Hiroshi Tanaka,11/29/26
+11/29/25,EMEA,Client_EMEA_644,313368.58,Professional,Aria Montgomery,11/29/26
+11/30/25,EMEA,Client_EMEA_922,205834.04,Professional,Lukas Weber,11/30/26
+11/30/25,EMEA,Client_EMEA_565,293339.49,Professional,Aria Montgomery,11/30/26
+11/30/25,NorthAm,Nebula Cloud,25980.82,Starter,Marcus Thorne,11/30/26
+11/30/25,EMEA,Beacon Tech,213209.37,Professional,Sarah Chen,11/30/26
+12/1/25,NorthAm,Beacon Tech,41846.41,Starter,Hiroshi Tanaka,12/1/26
+12/1/25,NorthAm,Client_NorthAm_833,23473.69,Starter,Chloe Dubois,12/1/26
+12/1/25,EMEA,Client_EMEA_749,289275.94,Enterprise,Hiroshi Tanaka,12/1/26
+12/1/25,EMEA,Client_EMEA_613,267555.03,Professional,Sarah Chen,12/1/26
+12/2/25,EMEA,Client_EMEA_947,38585.47,Starter,Aria Montgomery,12/2/26
+12/2/25,LATAM,Zenith Labs,112119.63,Professional,Chloe Dubois,12/2/26
+12/2/25,NorthAm,Client_NorthAm_306,34823.51,Starter,Chloe Dubois,12/2/26
+12/2/25,APAC,Client_APAC_521,147655.58,Professional,Hiroshi Tanaka,12/2/26
+12/2/25,EMEA,AeroDynamics,43445.76,Starter,Hiroshi Tanaka,12/2/26
+12/2/25,EMEA,Nova Systems,341199.29,Professional,Hiroshi Tanaka,12/2/26
+12/3/25,APAC,Client_APAC_885,233370.35,Enterprise,Hiroshi Tanaka,12/3/26
+12/3/25,EMEA,Client_EMEA_322,289900.24,Professional,Sarah Chen,12/3/26
+12/4/25,APAC,Client_APAC_949,189568.97,Enterprise,Lukas Weber,12/4/26
+12/4/25,LATAM,AeroDynamics,119615.03,Professional,Sarah Chen,12/4/26
+12/4/25,APAC,Client_APAC_400,300251.37,Enterprise,Sarah Chen,12/4/26
+12/4/25,APAC,Quantum Logistics,147481.83,Professional,Chloe Dubois,12/4/26
+12/4/25,EMEA,Horizon Fintech,238805.31,Professional,Aria Montgomery,12/4/26
+12/4/25,APAC,Client_APAC_650,38207.81,Starter,Lukas Weber,12/4/26
+12/5/25,APAC,Client_APAC_982,33476.1,Starter,Marcus Thorne,12/5/26
+12/5/25,LATAM,Summit Ventures,110943.09,Professional,Lukas Weber,12/5/26
+12/5/25,APAC,Client_APAC_370,122183.51,Professional,Hiroshi Tanaka,12/5/26
+12/5/25,EMEA,Client_EMEA_499,238225.86,Professional,Aria Montgomery,12/5/26
+12/6/25,APAC,Client_APAC_798,262175.58,Enterprise,Chloe Dubois,12/6/26
+12/7/25,APAC,Beacon Tech,273627.24,Enterprise,Aria Montgomery,12/7/26
+12/7/25,LATAM,Vortex Media,492099.66,Enterprise,Sarah Chen,12/7/26
+12/8/25,EMEA,Client_EMEA_664,41237.02,Starter,Sarah Chen,12/8/26
+12/8/25,NorthAm,Summit Ventures,141889.43,Professional,Lukas Weber,12/8/26
+12/8/25,LATAM,Client_LATAM_528,253932.94,Enterprise,Hiroshi Tanaka,12/8/26
+12/8/25,APAC,Zenith Labs,318953.99,Enterprise,Sarah Chen,12/8/26
+12/9/25,APAC,Client_APAC_917,143314.75,Professional,Marcus Thorne,12/9/26
+12/10/25,NorthAm,Client_NorthAm_326,355851.59,Enterprise,Chloe Dubois,12/10/26
+12/10/25,LATAM,Client_LATAM_872,137771.77,Professional,Aria Montgomery,12/10/26
+12/10/25,NorthAm,Client_NorthAm_843,40070.66,Starter,Lukas Weber,12/10/26
+12/12/25,LATAM,Global Maritime,272575.72,Enterprise,Aria Montgomery,12/12/26
+12/12/25,EMEA,Client_EMEA_899,390317.64,Enterprise,Chloe Dubois,12/12/26
+12/12/25,NorthAm,Quantum Logistics,394061.75,Enterprise,Aria Montgomery,12/12/26
+12/12/25,EMEA,Stellar Retail,350188.15,Professional,Sarah Chen,12/12/26
+12/12/25,LATAM,Client_LATAM_531,47541.47,Starter,Sarah Chen,12/12/26
+12/13/25,EMEA,Client_EMEA_588,378998.48,Enterprise,Marcus Thorne,12/13/26
+12/13/25,APAC,Client_APAC_699,82175.75,Professional,Marcus Thorne,12/13/26
+12/14/25,EMEA,Client_EMEA_582,273105.54,Professional,Sarah Chen,12/14/26
+12/14/25,LATAM,Client_LATAM_321,130661.36,Professional,Aria Montgomery,12/14/26
+12/14/25,APAC,Titan Manufacturing,46311.15,Starter,Sarah Chen,12/14/26
+12/14/25,LATAM,Client_LATAM_375,22017,Starter,Marcus Thorne,12/14/26
+12/15/25,EMEA,Client_EMEA_803,413850.14,Enterprise,Sarah Chen,12/15/26
+12/15/25,LATAM,Client_LATAM_813,353276.81,Enterprise,Aria Montgomery,12/15/26
+12/15/25,APAC,Client_APAC_439,196127.46,Enterprise,Hiroshi Tanaka,12/15/26
+12/15/25,EMEA,Quantum Logistics,475850.93,Enterprise,Sarah Chen,12/15/26
+12/16/25,NorthAm,Client_NorthAm_630,38785.39,Starter,Sarah Chen,12/16/26
+12/16/25,NorthAm,Client_NorthAm_793,125316.01,Professional,Marcus Thorne,12/16/26
+12/16/25,NorthAm,Client_NorthAm_906,42052.38,Starter,Marcus Thorne,12/16/26
+12/17/25,APAC,Client_APAC_541,272758.97,Enterprise,Lukas Weber,12/17/26
+12/17/25,NorthAm,Stellar Retail,336800.94,Enterprise,Sarah Chen,12/17/26
+12/17/25,EMEA,Client_EMEA_857,210973.5,Professional,Hiroshi Tanaka,12/17/26
+12/17/25,LATAM,Client_LATAM_925,36132.63,Starter,Marcus Thorne,12/17/26
+12/17/25,NorthAm,Client_NorthAm_779,29014.41,Starter,Marcus Thorne,12/17/26
+12/18/25,EMEA,Client_EMEA_744,22211.28,Starter,Hiroshi Tanaka,12/18/26
+12/18/25,APAC,Client_APAC_934,210809.62,Enterprise,Sarah Chen,12/18/26
+12/18/25,APAC,Client_APAC_469,269568.01,Enterprise,Sarah Chen,12/18/26
+12/18/25,LATAM,Client_LATAM_806,376828.71,Enterprise,Aria Montgomery,12/18/26
+12/18/25,NorthAm,Vortex Media,374181.82,Enterprise,Chloe Dubois,12/18/26
+12/18/25,NorthAm,Zenith Labs,44334.26,Starter,Marcus Thorne,12/18/26
+12/19/25,NorthAm,Client_NorthAm_861,130865.64,Professional,Chloe Dubois,12/19/26
+12/20/25,EMEA,Global Maritime,42158.14,Starter,Marcus Thorne,12/20/26
+12/20/25,EMEA,Global Maritime,458648.75,Enterprise,Sarah Chen,12/20/26
+12/21/25,LATAM,Client_LATAM_540,144691.15,Professional,Sarah Chen,12/21/26
+12/21/25,LATAM,Client_LATAM_576,447680.23,Enterprise,Sarah Chen,12/21/26
+12/22/25,EMEA,Zenith Labs,266057.21,Enterprise,Marcus Thorne,12/22/26
+12/22/25,EMEA,Client_EMEA_566,221843.06,Professional,Aria Montgomery,12/22/26
+12/22/25,EMEA,Client_EMEA_603,372410.51,Enterprise,Marcus Thorne,12/22/26
+12/23/25,NorthAm,Client_NorthAm_854,32480.83,Starter,Sarah Chen,12/23/26
+12/23/25,LATAM,Client_LATAM_586,101018.49,Professional,Sarah Chen,12/23/26
+12/23/25,NorthAm,Client_NorthAm_994,97816.26,Professional,Marcus Thorne,12/23/26
+12/23/25,LATAM,Global Maritime,27475.95,Starter,Lukas Weber,12/23/26
+12/23/25,LATAM,Quantum Logistics,431649.79,Enterprise,Chloe Dubois,12/23/26
+12/24/25,EMEA,Phoenix Biotech,275646.91,Enterprise,Hiroshi Tanaka,12/24/26
+12/24/25,APAC,Client_APAC_721,280218,Enterprise,Sarah Chen,12/24/26
+12/25/25,EMEA,Client_EMEA_636,207321.46,Professional,Chloe Dubois,12/25/26
+12/25/25,APAC,Client_APAC_888,306086.39,Enterprise,Lukas Weber,12/25/26
+12/25/25,LATAM,Vortex Media,117798.71,Professional,Lukas Weber,12/25/26
+12/26/25,NorthAm,Client_NorthAm_665,48590.49,Starter,Hiroshi Tanaka,12/26/26
+12/26/25,LATAM,Client_LATAM_926,436722.71,Enterprise,Sarah Chen,12/26/26
+12/26/25,EMEA,Client_EMEA_835,40572.2,Starter,Chloe Dubois,12/26/26
+12/27/25,EMEA,Client_EMEA_593,42569.76,Starter,Aria Montgomery,12/27/26
+12/27/25,APAC,Nebula Cloud,251510.74,Enterprise,Chloe Dubois,12/27/26
+12/28/25,LATAM,Apex Solutions,135467.56,Professional,Chloe Dubois,12/28/26
+12/28/25,LATAM,Nova Systems,277968.47,Enterprise,Sarah Chen,12/28/26
+12/30/25,NorthAm,Client_NorthAm_587,39439.1,Starter,Aria Montgomery,12/30/26
+12/30/25,NorthAm,Client_NorthAm_385,322590.57,Enterprise,Lukas Weber,12/30/26
+12/30/25,LATAM,Client_LATAM_607,85786.94,Professional,Marcus Thorne,12/30/26
+12/30/25,LATAM,Client_LATAM_616,24177.05,Starter,Lukas Weber,12/30/26
+12/30/25,EMEA,Client_EMEA_396,342347.55,Professional,Lukas Weber,12/30/26
+12/31/25,EMEA,Client_EMEA_889,38725.03,Starter,Marcus Thorne,12/31/26
+12/31/25,LATAM,Client_LATAM_543,24873.51,Starter,Aria Montgomery,12/31/26
+12/31/25,EMEA,Client_EMEA_698,278261.23,Professional,Hiroshi Tanaka,12/31/26

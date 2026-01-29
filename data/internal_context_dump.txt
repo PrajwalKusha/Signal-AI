@@ -1,0 +1,77 @@
+2025-01-10 [MEMO]: CEO Elena R. - 'Global Expansion' is our primary 2025 KPI.
+
+---
+
+2025-03-15 [SLACK]: #sales-west - Sarah Chen: Just closed a $450k deal with Phoenix Biotech!
+
+---
+
+2025-04-15 [EMAIL]: General Ops - Lost and found: Blue water bottle left in Conference Room B.
+
+---
+
+2025-04-28 [EMAIL]: General Ops - Lost and found: Blue water bottle left in Conference Room B.
+
+---
+
+2025-05-10 [EMAIL]: General Ops - Happy Hour moved to the 4th-floor terrace.
+
+---
+
+2025-05-22 [EMAIL]: General Ops - Lost and found: Blue water bottle left in Conference Room B.
+
+---
+
+2025-07-07 [EMAIL]: General Ops - New visitor parking policy effective immediately.
+
+---
+
+2025-07-09 [EMAIL]: General Ops - New visitor parking policy effective immediately.
+
+---
+
+2025-07-23 [EMAIL]: General Ops - IT Reminder: Mandatory password resets this Friday.
+
+---
+
+2025-09-05 [EMAIL]: General Ops - IT Reminder: Mandatory password resets this Friday.
+
+---
+
+2025-10-05 [MEMO]: Legal Dept - Announcing a 'Compliance Overhaul'. All NorthAm contracts now require 3-level manual review. Expect significant cycle-time friction.
+
+---
+
+2025-10-10 [EMAIL]: General Ops - New visitor parking policy effective immediately.
+
+---
+
+2025-10-12 [EMAIL]: General Ops - Lost and found: Blue water bottle left in Conference Room B.
+
+---
+
+2025-10-23 [EMAIL]: General Ops - Happy Hour moved to the 4th-floor terrace.
+
+---
+
+2025-11-12 [SLACK]: #apac-sales - Hiroshi Tanaka: Zenith Labs (our top channel partner) is ghosting our integration emails.
+
+---
+
+2025-11-18 [RED ALERT]: From: APAC Sales Director | To: ELT | Subj: Zenith Labs Acquisition. It's official. GlobalStack acquired Zenith Labs. They are cutting our API access and bundling Zenith with their 'StackFlow' suite.
+
+---
+
+2025-11-25 [SLACK]: #leadership - David V: APAC Enterprise pipeline for Dec just dropped. Clients jumping to GlobalStack's bundled offer.
+
+---
+
+2025-12-04 [EMAIL]: General Ops - Office snacks replenishment update.
+
+---
+
+2025-12-05 [MEMO]: CFO Sarah J: EMEA Professional tier growth is a massive outlier (+140%). We haven't even spent marketing budget there yet. We need an expansion strategy.
+
+---
+
+2025-12-15 [SLACK]: #product-roadmap - Can we accelerate the 'GlobalStack Switch-Kit'? Sales needs it yesterday.
