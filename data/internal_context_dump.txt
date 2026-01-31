@@ -74,4 +74,25 @@
 
 ---
 
-2025-12-15 [SLACK]: #product-roadmap - Can we accelerate the 'GlobalStack Switch-Kit'? Sales needs it yesterday.
+2025-12-15 [SLACK]: #product-roadmap - Hiroshi Tanaka: Can we accelerate the 'GlobalStack Switch-Kit'? Sales needs it yesterday.
+
+---
+
+2025-12-16 [SLACK]: #product-roadmap - Hiroshi Tanaka: Detailed proposal for GlobalStack Switch-Kit:
+
+CONTEXT: Since the Zenith acquisition (Nov 18), we've lost 5 APAC enterprise accounts worth $2.3M ARR. Exit interviews consistently show migration friction is the primary blocker preventing customers from returning to our platform.
+
+SOLUTION: Build an AI-powered migration toolkit with three core components:
+1. Auto-generate API migration scripts that map GlobalStack endpoints to our platform
+2. Provide a compatibility testing dashboard showing what will break and what works out-of-the-box
+3. Offer white-glove migration support for enterprise customers (dedicated engineer for 2 weeks)
+
+VALIDATION: I've personally spoken with 8 churned customers over the past month. 7 out of 8 said they would return if migration took less than 2 weeks instead of the current 3-month timeline. The main pain points they cited: manual API remapping (6-8 weeks), data transformation scripts (4 weeks), and testing/validation (2-3 weeks).
+
+ROI ESTIMATE: If we win back even 50% of churned accounts, that's $1.15M recovered ARR. Plus this prevents future churn - we have 12 more enterprise accounts at risk in Q1. Conservative estimate: $2M+ impact in first year.
+
+EFFORT: Based on our previous Zenith integration work, I estimate 8-week sprint with 4 engineers. Rough cost: $160k investment. We already have the API mapping logic from the old Zenith integration, so we're not starting from scratch.
+
+URGENCY: Q1 renewals are coming up in 6 weeks. If we don't have at least an MVP ready, we'll lose another wave of customers. The window to act is now.
+
+---

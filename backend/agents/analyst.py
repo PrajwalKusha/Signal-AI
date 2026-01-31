@@ -46,7 +46,8 @@ def analyst_agent(state: AgentState):
     if not api_key:
         return {"anomalies": []} # Fallback/Exit
 
-    llm = ChatOpenAI(temperature=0, model="gpt-4-turbo")
+    # Agent 1: Analyst - Interpreter (Fast, Logic-focused) -> gpt-4o-mini
+    llm = ChatOpenAI(temperature=0, model="gpt-4o-mini")
     python_repl = PythonREPL()
     
     # Define our goal for the coding agent

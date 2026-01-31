@@ -7,7 +7,8 @@
         "impact_usd": 2450000.0,
         "complexity_points": 40,
         "strategic_alignment": "CRITICAL",
-        "tech_spec": "RAG-based agent trained on competitor pricing models and migration friction."
+        "tech_spec": "RAG-based agent trained on competitor pricing models and migration friction.",
+        "author": "Sarah Chen, Director of Sales Ops"
     },
     {
         "id": "TRANS-014",
@@ -17,7 +18,8 @@
         "impact_usd": 850000.0,
         "complexity_points": 25,
         "strategic_alignment": "High",
-        "tech_spec": "LLM-based entity extraction and non-compete flagging to automate first-pass reviews."
+        "tech_spec": "LLM-based entity extraction and non-compete flagging to automate first-pass reviews.",
+        "author": "Marcus Thorne, Legal Tech Lead"
     },
     {
         "id": "TRANS-032",
@@ -27,7 +29,8 @@
         "impact_usd": 1200000.0,
         "complexity_points": 15,
         "strategic_alignment": "Medium",
-        "tech_spec": "Predictive analytics to identify and target lookalike accounts in the EU Professional segment."
+        "tech_spec": "Predictive analytics to identify and target lookalike accounts in the EU Professional segment.",
+        "author": "Jessica Wu, EMEA Growth Head"
     },
     {
         "id": "TRANS-004",
@@ -37,7 +40,8 @@
         "impact_usd": 84089.75,
         "complexity_points": 26,
         "strategic_alignment": "Low",
-        "tech_spec": "Modular AI automation to replace manual data entry."
+        "tech_spec": "Modular AI automation to replace manual data entry.",
+        "author": "Emily Zhang, Principal Engineer"
     },
     {
         "id": "TRANS-005",
@@ -47,7 +51,8 @@
         "impact_usd": 174331.24,
         "complexity_points": 5,
         "strategic_alignment": "High",
-        "tech_spec": "Modular AI automation to replace manual data entry."
+        "tech_spec": "Modular AI automation to replace manual data entry.",
+        "author": "Kevin Martinez, Operations Director"
     },
     {
         "id": "TRANS-006",
@@ -57,7 +62,8 @@
         "impact_usd": 34102.51,
         "complexity_points": 21,
         "strategic_alignment": "High",
-        "tech_spec": "Modular AI automation to replace manual data entry."
+        "tech_spec": "Modular AI automation to replace manual data entry.",
+        "author": "Emily Zhang, Principal Engineer"
     },
     {
         "id": "TRANS-007",
@@ -67,7 +73,8 @@
         "impact_usd": 135919.15,
         "complexity_points": 30,
         "strategic_alignment": "Low",
-        "tech_spec": "Modular AI automation to replace manual data entry."
+        "tech_spec": "Modular AI automation to replace manual data entry.",
+        "author": "Alex Rivera, CMO"
     },
     {
         "id": "TRANS-008",
@@ -77,7 +84,8 @@
         "impact_usd": 171314.54,
         "complexity_points": 16,
         "strategic_alignment": "Low",
-        "tech_spec": "Modular AI automation to replace manual data entry."
+        "tech_spec": "Modular AI automation to replace manual data entry.",
+        "author": "Rachel Thompson, Process Optimization Lead"
     },
     {
         "id": "TRANS-009",
@@ -87,7 +95,8 @@
         "impact_usd": 156090.82,
         "complexity_points": 38,
         "strategic_alignment": "Medium",
-        "tech_spec": "Modular AI automation to replace manual data entry."
+        "tech_spec": "Modular AI automation to replace manual data entry.",
+        "author": "Diana Reeves, Chief Legal Officer"
     },
     {
         "id": "TRANS-010",
@@ -97,7 +106,8 @@
         "impact_usd": 102530.18,
         "complexity_points": 19,
         "strategic_alignment": "Low",
-        "tech_spec": "Modular AI automation to replace manual data entry."
+        "tech_spec": "Modular AI automation to replace manual data entry.",
+        "author": "David Chen, VP of Engineering"
     },
     {
         "id": "TRANS-011",
@@ -107,7 +117,8 @@
         "impact_usd": 124803.06,
         "complexity_points": 15,
         "strategic_alignment": "High",
-        "tech_spec": "Modular AI automation to replace manual data entry."
+        "tech_spec": "Modular AI automation to replace manual data entry.",
+        "author": "James Wilson, DevOps Lead"
     },
     {
         "id": "TRANS-012",
@@ -117,7 +128,8 @@
         "impact_usd": 84872.15,
         "complexity_points": 17,
         "strategic_alignment": "Low",
-        "tech_spec": "Modular AI automation to replace manual data entry."
+        "tech_spec": "Modular AI automation to replace manual data entry.",
+        "author": "Priya Sharma, Marketing Analytics Lead"
     },
     {
         "id": "TRANS-013",
@@ -127,7 +139,8 @@
         "impact_usd": 65519.01,
         "complexity_points": 40,
         "strategic_alignment": "Low",
-        "tech_spec": "Modular AI automation to replace manual data entry."
+        "tech_spec": "Modular AI automation to replace manual data entry.",
+        "author": "Sophia Rodriguez, HR Tech Manager"
     },
     {
         "id": "TRANS-014",
@@ -137,7 +150,8 @@
         "impact_usd": 117018.15,
         "complexity_points": 17,
         "strategic_alignment": "Medium",
-        "tech_spec": "Modular AI automation to replace manual data entry."
+        "tech_spec": "Modular AI automation to replace manual data entry.",
+        "author": "Alex Rivera, CMO"
     },
     {
         "id": "TRANS-015",
@@ -147,7 +161,8 @@
         "impact_usd": 85141.54,
         "complexity_points": 11,
         "strategic_alignment": "Low",
-        "tech_spec": "Modular AI automation to replace manual data entry."
+        "tech_spec": "Modular AI automation to replace manual data entry.",
+        "author": "Marcus Thorne, Legal Tech Lead"
     },
     {
         "id": "TRANS-016",
@@ -157,7 +172,8 @@
         "impact_usd": 148470.76,
         "complexity_points": 21,
         "strategic_alignment": "Low",
-        "tech_spec": "Modular AI automation to replace manual data entry."
+        "tech_spec": "Modular AI automation to replace manual data entry.",
+        "author": "Amanda Foster, CHRO"
     },
     {
         "id": "TRANS-017",
@@ -167,7 +183,8 @@
         "impact_usd": 110106.98,
         "complexity_points": 20,
         "strategic_alignment": "Medium",
-        "tech_spec": "Modular AI automation to replace manual data entry."
+        "tech_spec": "Modular AI automation to replace manual data entry.",
+        "author": "Rachel Thompson, Process Optimization Lead"
     },
     {
         "id": "TRANS-018",
@@ -177,7 +194,8 @@
         "impact_usd": 97115.23,
         "complexity_points": 21,
         "strategic_alignment": "High",
-        "tech_spec": "Modular AI automation to replace manual data entry."
+        "tech_spec": "Modular AI automation to replace manual data entry.",
+        "author": "Diana Reeves, Chief Legal Officer"
     },
     {
         "id": "TRANS-019",
@@ -187,7 +205,8 @@
         "impact_usd": 85988.16,
         "complexity_points": 27,
         "strategic_alignment": "Low",
-        "tech_spec": "Modular AI automation to replace manual data entry."
+        "tech_spec": "Modular AI automation to replace manual data entry.",
+        "author": "Robert Kim, Compliance Manager"
     },
     {
         "id": "TRANS-020",
@@ -197,7 +216,8 @@
         "impact_usd": 65966.33,
         "complexity_points": 30,
         "strategic_alignment": "Low",
-        "tech_spec": "Modular AI automation to replace manual data entry."
+        "tech_spec": "Modular AI automation to replace manual data entry.",
+        "author": "Lisa Anderson, COO"
     },
     {
         "id": "TRANS-021",
@@ -207,7 +227,8 @@
         "impact_usd": 96248.87,
         "complexity_points": 27,
         "strategic_alignment": "High",
-        "tech_spec": "Modular AI automation to replace manual data entry."
+        "tech_spec": "Modular AI automation to replace manual data entry.",
+        "author": "Alex Rivera, CMO"
     },
     {
         "id": "TRANS-022",
@@ -217,7 +238,8 @@
         "impact_usd": 99839.89,
         "complexity_points": 17,
         "strategic_alignment": "High",
-        "tech_spec": "Modular AI automation to replace manual data entry."
+        "tech_spec": "Modular AI automation to replace manual data entry.",
+        "author": "Rachel Thompson, Process Optimization Lead"
     },
     {
         "id": "TRANS-023",
@@ -227,7 +249,8 @@
         "impact_usd": 52442.65,
         "complexity_points": 20,
         "strategic_alignment": "Low",
-        "tech_spec": "Modular AI automation to replace manual data entry."
+        "tech_spec": "Modular AI automation to replace manual data entry.",
+        "author": "David Chen, VP of Engineering"
     },
     {
         "id": "TRANS-024",
@@ -237,7 +260,8 @@
         "impact_usd": 167230.1,
         "complexity_points": 48,
         "strategic_alignment": "Low",
-        "tech_spec": "Modular AI automation to replace manual data entry."
+        "tech_spec": "Modular AI automation to replace manual data entry.",
+        "author": "Jessica Wu, EMEA Growth Head"
     },
     {
         "id": "TRANS-025",
@@ -247,7 +271,8 @@
         "impact_usd": 155681.7,
         "complexity_points": 28,
         "strategic_alignment": "Low",
-        "tech_spec": "Modular AI automation to replace manual data entry."
+        "tech_spec": "Modular AI automation to replace manual data entry.",
+        "author": "Robert Kim, Compliance Manager"
     },
     {
         "id": "TRANS-026",
@@ -257,7 +282,8 @@
         "impact_usd": 98528.86,
         "complexity_points": 37,
         "strategic_alignment": "Medium",
-        "tech_spec": "Modular AI automation to replace manual data entry."
+        "tech_spec": "Modular AI automation to replace manual data entry.",
+        "author": "Priya Sharma, Marketing Analytics Lead"
     },
     {
         "id": "TRANS-027",
@@ -267,7 +293,8 @@
         "impact_usd": 28663.71,
         "complexity_points": 32,
         "strategic_alignment": "Medium",
-        "tech_spec": "Modular AI automation to replace manual data entry."
+        "tech_spec": "Modular AI automation to replace manual data entry.",
+        "author": "Marcus Thorne, Legal Tech Lead"
     },
     {
         "id": "TRANS-028",
@@ -277,7 +304,8 @@
         "impact_usd": 82994.71,
         "complexity_points": 48,
         "strategic_alignment": "High",
-        "tech_spec": "Modular AI automation to replace manual data entry."
+        "tech_spec": "Modular AI automation to replace manual data entry.",
+        "author": "Rachel Thompson, Process Optimization Lead"
     },
     {
         "id": "TRANS-029",
@@ -287,7 +315,8 @@
         "impact_usd": 70504.2,
         "complexity_points": 5,
         "strategic_alignment": "High",
-        "tech_spec": "Modular AI automation to replace manual data entry."
+        "tech_spec": "Modular AI automation to replace manual data entry.",
+        "author": "Robert Kim, Compliance Manager"
     },
     {
         "id": "TRANS-030",
@@ -297,6 +326,7 @@
         "impact_usd": 72069.79,
         "complexity_points": 44,
         "strategic_alignment": "Medium",
-        "tech_spec": "Modular AI automation to replace manual data entry."
+        "tech_spec": "Modular AI automation to replace manual data entry.",
+        "author": "David Chen, VP of Engineering"
     }
 ]

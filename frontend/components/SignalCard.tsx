@@ -2,14 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronDown, ArrowRight, Zap, AlertTriangle, TrendingUp, AlertCircle } from "lucide-react";
-import { clsx } from "clsx";
-
-interface Metric {
-    label: string;
-    value: string;
-    trend?: "up" | "down" | "neutral";
-}
+import { ArrowRight, AlertTriangle, TrendingUp, AlertCircle, Clock } from "lucide-react";
 
 interface Recommendation {
     project_title: string;
@@ -27,20 +20,42 @@ interface Signal {
     status: "CRITICAL" | "OPPORTUNITY" | "WATCH" | "Green" | "Yellow" | string;
     impact: string;
     recommendation?: Recommendation | null;
+    summary?: string;
+    date?: string;
 }
 
 export function SignalCard({ signal }: { signal: Signal }) {
     const [expanded, setExpanded] = useState(false);
-    const [showAction, setShowAction] = useState(false);
 
-    // Map status to colors/icons
+    // Map status to colors/icons for Light Theme
     const statusConfig = {
-        CRITICAL: { color: "bg-red-500", icon: AlertCircle, label: "Revenue Leak" },
-        "Revenue Leak": { color: "bg-red-500", icon: AlertCircle, label: "Revenue Leak" },
-        OPPORTUNITY: { color: "bg-emerald-500", icon: TrendingUp, label: "Growth Opportunity" },
-        Green: { color: "bg-emerald-500", icon: TrendingUp, label: "Growth Opportunity" },
-        WATCH: { color: "bg-amber-500", icon: AlertTriangle, label: "Operational Bottleneck" },
-        Yellow: { color: "bg-amber-500", icon: AlertTriangle, label: "Operational Bottleneck" },
+        CRITICAL: {
+            bg: "bg-red-50", text: "text-red-700", border: "border-red-100", icon: AlertCircle, label: "Revenue Leak"
+        },
+        "Revenue Leak": {
+            bg: "bg-red-50", text: "text-red-700", border: "border-red-100", icon: AlertCircle, label: "Revenue Leak"
+        },
+        OPPORTUNITY: {
+            bg: "bg-[#E0F2F1]", text: "text-[#00796B]", border: "border-[#B2DFDB]", icon: TrendingUp, label: "Growth Opportunity"
+        },
+        Green: {
+            bg: "bg-[#E0F2F1]", text: "text-[#00796B]", border: "border-[#B2DFDB]", icon: TrendingUp, label: "Growth Opportunity"
+        },
+        WATCH: {
+            bg: "bg-amber-50", text: "text-amber-700", border: "border-amber-100", icon: AlertTriangle, label: "Operational Bottleneck"
+        },
+        Yellow: {
+            bg: "bg-amber-50", text: "text-amber-700", border: "border-amber-100", icon: AlertTriangle, label: "Operational Bottleneck"
+        },
+        high: {
+            bg: "bg-red-50", text: "text-red-700", border: "border-red-100", icon: AlertCircle, label: "High Priority"
+        },
+        medium: {
+            bg: "bg-amber-50", text: "text-amber-700", border: "border-amber-100", icon: AlertTriangle, label: "Medium Priority"
+        },
+        resolved: {
+            bg: "bg-emerald-50", text: "text-emerald-700", border: "border-emerald-100", icon: TrendingUp, label: "Resolved"
+        }
     };
 
     const config = statusConfig[signal.status as keyof typeof statusConfig] || statusConfig["WATCH"];
@@ -49,102 +64,84 @@ export function SignalCard({ signal }: { signal: Signal }) {
     return (
         <motion.div
             layout
-            className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden mb-6"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="bg-white rounded-xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group"
         >
-            {/* Header Card - Always Visible */}
-            <div className="p-6">
-                <div className="flex items-center justify-between mb-4">
-                    <div className="flex items-center gap-2">
-                        <span className={clsx("w-2 h-2 rounded-full", config.color)} />
-                        <span className="text-xs font-semibold uppercase tracking-wider text-slate-500">{config.label}</span>
+            <div className="p-5">
+                {/* Header Row */}
+                <div className="flex items-start justify-between gap-4 mb-3">
+                    <div className="flex-1">
+                        <div className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium border ${config.bg} ${config.text} ${config.border} mb-3`}>
+                            {config.label}
+                        </div>
+                        <h3 className="text-lg font-bold text-gray-900 leading-tight mb-2 group-hover:text-[#00897B] transition-colors">
+                            {signal.title}
+                        </h3>
+                        {signal.summary && (
+                            <p className="text-sm text-gray-500 line-clamp-2 leading-relaxed">
+                                {signal.summary}
+                            </p>
+                        )}
                     </div>
-                    <div className="text-right">
-                        <div className="text-xs text-slate-400 font-medium">EST. IMPACT</div>
-                        <div className="text-lg font-bold text-slate-900">{signal.impact}</div>
+
+                    {/* Impact Box - Removed Border as requested */}
+                    <div className="text-right flex-shrink-0 bg-gray-50 px-3 py-2 rounded-lg">
+                        <div className="text-xs text-gray-400 font-medium uppercase tracking-wider mb-0.5">Impact</div>
+                        <div className="text-sm font-bold text-gray-900 whitespace-nowrap">{signal.impact}</div>
                     </div>
                 </div>
 
-                <h3 className="text-xl font-semibold text-slate-900 mb-6">{signal.title}</h3>
+                {/* Footer Row */}
+                <div className="flex items-center justify-between pt-4 mt-2 border-t border-gray-100">
+                    <div className="flex items-center gap-4 text-xs text-gray-400">
+                        {signal.date && (
+                            <div className="flex items-center gap-1.5">
+                                <Clock size={14} />
+                                <span>{signal.date}</span>
+                            </div>
+                        )}
+                        <div className="flex items-center gap-1.5">
+                            <div className="flex -space-x-1.5">
+                                <div className="w-5 h-5 rounded-full bg-teal-100 border-2 border-white"></div>
+                                <div className="w-5 h-5 rounded-full bg-blue-100 border-2 border-white"></div>
+                            </div>
+                            <span>2 assigned</span>
+                        </div>
+                    </div>
 
-                <div className="flex items-center gap-3">
-                    <button
-                        onClick={() => setExpanded(!expanded)}
-                        className="flex-1 bg-slate-50 hover:bg-slate-100 text-slate-700 py-2.5 px-4 rounded-lg text-sm font-medium transition-colors flex items-center justify-center gap-2"
-                    >
-                        {expanded ? "Collapse Brief" : "Understand This"}
-                        <ChevronDown className={clsx("w-4 h-4 transition-transform", expanded && "rotate-180")} />
-                    </button>
-
-                    {signal.recommendation && (
+                    <div className="flex items-center gap-2">
                         <button
-                            onClick={() => setShowAction(!showAction)}
-                            className="flex-1 bg-slate-900 hover:bg-slate-800 text-white py-2.5 px-4 rounded-lg text-sm font-medium transition-colors flex items-center justify-center gap-2"
+                            onClick={() => setExpanded(!expanded)}
+                            className="text-xs font-medium text-gray-500 hover:text-gray-900 px-3 py-1.5 rounded-md hover:bg-gray-100 transition-colors"
                         >
-                            Act on This
-                            <ArrowRight className="w-4 h-4" />
+                            {expanded ? "Hide details" : "Show details"}
                         </button>
-                    )}
+
+                        <button className="flex items-center gap-1.5 bg-[#00897B] hover:bg-[#00796B] text-white text-xs font-medium px-3 py-1.5 rounded-md transition-colors shadow-sm">
+                            View Signal
+                            <ArrowRight size={14} />
+                        </button>
+                    </div>
                 </div>
             </div>
 
-            {/* Expanded Analysis (Understand This) */}
+            {/* Expanded Content */}
             <AnimatePresence>
                 {expanded && (
                     <motion.div
                         initial={{ height: 0, opacity: 0 }}
                         animate={{ height: "auto", opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}
-                        className="bg-slate-50 border-t border-slate-100"
+                        className="bg-gray-50 border-t border-gray-100"
                     >
-                        <div className="p-6 prose prose-slate max-w-none">
-                            <h4 className="text-sm font-semibold text-slate-500 uppercase tracking-wider mb-3">Analysis</h4>
-                            <p className="text-slate-700 leading-relaxed whitespace-pre-line">{signal.prose}</p>
-                        </div>
-                    </motion.div>
-                )}
-            </AnimatePresence>
-
-            {/* Action Panel (Act on This) */}
-            <AnimatePresence>
-                {showAction && signal.recommendation && (
-                    <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: "auto", opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        className="bg-slate-900 text-white border-t border-slate-800"
-                    >
-                        <div className="p-6">
-                            <div className="flex items-start justify-between mb-4">
-                                <div>
-                                    <div className="flex items-center gap-2 text-emerald-400 mb-1">
-                                        <Zap className="w-4 h-4" />
-                                        <span className="text-xs font-bold uppercase tracking-wider">Recommended Action</span>
-                                    </div>
-                                    <h4 className="text-lg font-semibold">{signal.recommendation.project_title}</h4>
-                                </div>
-                                <div className="text-right">
-                                    <div className="text-xs text-slate-400">ROI MULTIPLE</div>
-                                    <div className="font-bold text-emerald-400">{signal.recommendation.roi_metric}</div>
-                                </div>
-                            </div>
-
-                            <div className="bg-slate-800 p-4 rounded-lg mb-4 text-xs text-slate-300 font-mono">
-                                <div className="mb-2 text-slate-500 uppercase">Market Context (Live Search)</div>
-                                {signal.recommendation.market_context}
-                            </div>
-
-                            <p className="text-slate-300 text-sm leading-relaxed mb-6">
-                                {signal.recommendation.technical_spec}
+                        <div className="p-5">
+                            <h4 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-3">
+                                Signal Analysis
+                            </h4>
+                            <p className="text-sm text-gray-600 leading-relaxed whitespace-pre-line">
+                                {signal.prose}
                             </p>
-
-                            <div className="flex items-center justify-between border-t border-slate-800 pt-4">
-                                <div className="text-xs text-slate-500">
-                                    NET VALUE: <span className="text-emerald-400 ml-1 font-bold">${signal.recommendation.impact_usd?.toLocaleString()}</span>
-                                </div>
-                                <button className="bg-emerald-500 hover:bg-emerald-600 text-white text-xs font-bold py-2 px-4 rounded transition-colors">
-                                    APPROVE PROJECT
-                                </button>
-                            </div>
                         </div>
                     </motion.div>
                 )}

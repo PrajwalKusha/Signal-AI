@@ -1,0 +1,50 @@
+[
+  {
+    "name":"Aria Montgomery",
+    "total_revenue":29902415.0,
+    "deals_closed":164,
+    "avg_deal_size":182332.0,
+    "avg_cycle_days":54.0,
+    "win_rate":1.0
+  },
+  {
+    "name":"Chloe Dubois",
+    "total_revenue":32662588.0,
+    "deals_closed":174,
+    "avg_deal_size":187716.0,
+    "avg_cycle_days":57.0,
+    "win_rate":1.0
+  },
+  {
+    "name":"Hiroshi Tanaka",
+    "total_revenue":29670670.0,
+    "deals_closed":165,
+    "avg_deal_size":179822.0,
+    "avg_cycle_days":54.0,
+    "win_rate":1.0
+  },
+  {
+    "name":"Lukas Weber",
+    "total_revenue":27861914.0,
+    "deals_closed":154,
+    "avg_deal_size":180922.0,
+    "avg_cycle_days":54.0,
+    "win_rate":1.0
+  },
+  {
+    "name":"Marcus Thorne",
+    "total_revenue":31207649.0,
+    "deals_closed":183,
+    "avg_deal_size":170534.0,
+    "avg_cycle_days":55.0,
+    "win_rate":0.0
+  },
+  {
+    "name":"Sarah Chen",
+    "total_revenue":32775092.0,
+    "deals_closed":160,
+    "avg_deal_size":204844.0,
+    "avg_cycle_days":51.0,
+    "win_rate":1.0
+  }
+]

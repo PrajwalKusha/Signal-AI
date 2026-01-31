@@ -32,12 +32,13 @@ def investigator_agent(state: AgentState):
         print("No API Key. Returning empty insights.")
         return {"context_insights": []}
 
-    llm = ChatOpenAI(temperature=0, model="gpt-4-turbo")
+    # Agent 2: Investigator - Rich Context Matching -> gpt-4o
+    llm = ChatOpenAI(temperature=0, model="gpt-4o")
 
     # Group anomalies to ask in one go, or loop. Looping is safer for detailed retrieval.
     for signal in anomalies:
         prompt = f"""
-        You are an Investigator Agent. 
+        You are an Investigator Agent with a special focus on employee attribution.
         
         The Analyst has detected this anomaly:
         Type: {signal['type']}
@@ -45,23 +46,44 @@ def investigator_agent(state: AgentState):
         Segment: {signal['segment']}
         Metric Value: {signal['value']}
         
-        Search the following Internal Logs/Context for any specific events, meeting notes, or emails that explain WHY this is happening.
-        Focus on specific project names, acquisitions, or operational changes.
+        Search the following Internal Logs/Context for:
+        1. Specific events, meeting notes, or emails that explain WHY this is happening
+        2. Employee-submitted ideas or proposals that address this problem
+        3. The employee's name, department (if mentioned), and their proposed solution
+        
+        Focus on specific project names, acquisitions, operational changes, and employee contributions.
         
         Internal Logs:
         \"\"\"
-        {context_text[:10000]} 
+        {context_text[:15000]} 
         \"\"\"
-        (Note: Text truncated to first 10k chars for efficiency)
+        (Note: Text truncated to first 15k chars for efficiency)
 
-        If you find a relevant explanation, return a JSON object. If not, return null.
+        If you find a relevant explanation, return a JSON object with employee attribution when available.
+        
         Schema:
         {{
-            "source": "e.g. Slack #sales-news or Email from CEO",
+            "source": "e.g. Slack #product-roadmap or Email from CEO",
             "content": "One sentence summary of the finding.",
             "date": "YYYY-MM-DD (if found)",
-            "relevance_score": 0.95
+            "relevance_score": 0.95,
+            "employee_attribution": {{
+                "name": "Employee Name (if found in logs)",
+                "department": "Department or role (if mentioned, e.g., 'APAC Sales', 'Engineering')",
+                "proposal_summary": "Brief summary of their proposed solution (if they submitted one)",
+                "validation": "Any validation they provided (e.g., 'interviewed 8 customers')",
+                "submission_channel": "Where they submitted it (e.g., 'Slack #product-roadmap')",
+                "submission_date": "YYYY-MM-DD (when they submitted the idea)"
+            }}
         }}
+        
+        IMPORTANT: 
+        - If no employee attribution is found, set "employee_attribution" to null
+        - If you find an employee who flagged the issue OR proposed a solution, extract their details
+        - Look for patterns like "Name: message" or "From: Name" in Slack/email entries
+        - Extract detailed proposals that include problem statements, solutions, ROI estimates, etc.
+        
+        Return null if no relevant context is found at all.
         """
         
         try:

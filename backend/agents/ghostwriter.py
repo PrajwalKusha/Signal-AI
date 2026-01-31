@@ -18,28 +18,62 @@ def ghostwriter_agent(state: AgentState):
     api_key = os.getenv("OPENAI_API_KEY")
     
     if api_key:
+        # LLM Synthesis
         try:
-            llm = ChatOpenAI(temperature=0, model="gpt-4-turbo")
+            # Agent 4: Ghostwriter - Polished Narrative -> gpt-4o
+            llm = ChatOpenAI(temperature=0, model="gpt-4o")
             
             
             rec = recommendations[0] if recommendations else {}
+            ctx = context[0] if context else {}
+            employee_attr = ctx.get('employee_attribution', {}) if ctx else {}
+            
             prompt = f"""
             You are a Senior Strategic Advisor to the CEO.
-            Write a "Morning Brief" signal card analysis.
+            Write a "Transformation Investment Memo" - a decision-ready brief that recognizes employee contributions.
             
-            Signal: {anomalies[0]['description'] if anomalies else 'No major signal'}
-            Context: {context[0]['content'] if context else 'No context found.'}
+            **SIGNAL DETECTED:**
+            {anomalies[0]['description'] if anomalies else 'No major signal'}
             
-            Strategy Proposal:
-            Product: {rec.get('project_title', 'Generic Fix')}
+            **INTERNAL CONTEXT:**
+            {ctx.get('content', 'No context found.')}
+            
+            **EMPLOYEE CONTRIBUTION:**
+            {f"Name: {employee_attr.get('name', 'Unknown')}" if employee_attr else "No employee attribution found"}
+            {f"Department: {employee_attr.get('department', 'N/A')}" if employee_attr and employee_attr.get('department') else ""}
+            {f"Proposal: {employee_attr.get('proposal_summary', 'N/A')}" if employee_attr and employee_attr.get('proposal_summary') else ""}
+            {f"Validation: {employee_attr.get('validation', 'N/A')}" if employee_attr and employee_attr.get('validation') else ""}
+            
+            **STRATEGIC RESPONSE:**
+            Product: {rec.get('project_title', 'Investigation Pending')}
             Market Context: {rec.get('market_context', 'N/A')}
-            ROI: {rec.get('roi_metric', 'N/A')} ({rec.get('impact_usd', '0')} impact)
+            ROI: {rec.get('roi_metric', 'N/A')} (${rec.get('impact_usd', 0):,.0f} impact)
+            Feasibility: {rec.get('feasibility_score', 'N/A')}/10
             
-            Requirements:
-            - 2 Paragraphs maximum.
-            - Professional, "Mag7" consulting tone.
-            - No bullet points.
-            - Bold key entities.
+            **FORMAT REQUIREMENTS:**
+            Write 2-3 paragraphs in this structure:
+            
+            Paragraph 1 - THE PROBLEM:
+            - State the business impact clearly (use the signal data)
+            - Mention the root cause if known from context
+            - Keep it urgent but professional
+            
+            Paragraph 2 - THE SOLUTION & RECOGNITION:
+            - If an employee proposed a solution, CREDIT THEM BY NAME
+            - Example: "**Hiroshi Tanaka** (APAC Sales) identified this issue and proposed..."
+            - Summarize their solution approach
+            - Mention any validation they did (customer interviews, data analysis, etc.)
+            
+            Paragraph 3 - THE BUSINESS CASE:
+            - State the ROI and financial impact
+            - Reference the market context from Tavily research
+            - End with a clear recommendation (Approve/Investigate Further/Archive)
+            
+            **TONE:**
+            - Professional, "Mag7" consulting style
+            - Bold key entities (employee names, dollar amounts, company names)
+            - No bullet points in the prose
+            - Make the employee feel recognized and valued
             """
             
             response = llm.invoke([HumanMessage(content=prompt)])

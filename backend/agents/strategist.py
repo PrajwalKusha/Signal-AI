@@ -42,7 +42,8 @@ def strategist_agent(state: AgentState):
         return {"recommendations": []}
     
     # Initialize Tools
-    llm = ChatOpenAI(temperature=0, model="gpt-4-turbo")
+    # Agent 3: Strategist - Complex Reasoning & ROI -> gpt-4o
+    llm = ChatOpenAI(temperature=0, model="gpt-4o")
     tavily = TavilySearchResults(k=3) if tavily_key else None
     python_repl = PythonREPL()
 

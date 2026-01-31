@@ -53,5 +53,36 @@ def generate_csv():
     df.to_csv("data/nexusflow_sales_2025_full.csv", index=False)
     print("CSV Generated.")
 
+    # --- Pre-computation for Frontend 2.0 ---
+    
+    # 1. Customers View (Top 20 by Spend)
+    customers = df.groupby(['Account', 'Region', 'Class']).agg({
+        'Deal_Size': 'sum',
+        'Date': 'max' # Recent activity
+    }).reset_index()
+    
+    customers['Status'] = np.where(customers['Deal_Size'] > 100000, 'Strategic', 
+                          np.where(customers['Deal_Size'] > 50000, 'Active', 'Standard'))
+    
+    top_customers = customers.sort_values(by='Deal_Size', ascending=False).head(20)
+    top_customers.columns = ['name', 'region', 'segment', 'total_spend', 'last_active', 'status']
+    top_customers.to_json("data/customers_view.json", orient="records", indent=2)
+    print("Customers JSON Generated.")
+
+    # 2. Team View (Rep Stats)
+    team = df.groupby('Rep').agg({
+        'Deal_Size': ['sum', 'count', 'mean'],
+        'Cycle_Days': 'mean'
+    }).reset_index()
+    
+    # Flatten columns
+    team.columns = ['name', 'total_revenue', 'deals_closed', 'avg_deal_size', 'avg_cycle_days']
+    team['win_rate'] = np.random.uniform(0.3, 0.7, size=len(team)) # Simulated metric
+    team['win_rate'] = team['win_rate'].round(2)
+    team = team.round(0)
+    
+    team.to_json("data/team_view.json", orient="records", indent=2)
+    print("Team JSON Generated.")
+
 if __name__ == "__main__":
     generate_csv()

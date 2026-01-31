@@ -1,20 +1,11 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 245, 245, 247; /* Apple-like light grey */
-  --background-end-rgb: 255, 255, 255;
+    --background: #F3F4F6;
+    --foreground: #111827;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-  font-family: 'Inter', sans-serif; /* Default Next.js font */
+    background: var(--background);
+    color: var(--foreground);
 }
