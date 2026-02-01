@@ -87,34 +87,138 @@ def ghostwriter_agent(state: AgentState):
         final_prose = fallback_prose()
 
     # Construct the final report object for the UI
+    from datetime import datetime
+    
     report = []
-    if anomalies:
-        report.append({
-            "signal_id": anomalies[0]["id"],
-            "title": "Revenue Leak Detected: APAC Enterprise",
-            "prose": final_prose,
-            "status": anomalies[0]["severity"],
-            "impact": anomalies[0]["value"],
-            "recommendation": recommendations[0] if recommendations else None
-        })
+    
+    # Deduplication: Group anomalies by classification and region
+    grouped_anomalies = {}
+    
+    for idx, anom in enumerate(anomalies):
+        segment = anom.get('segment', 'UNKNOWN')
+        region = segment.split()[0] if segment else 'UNKNOWN'
         
-        # Add the other two signals with static content for the demo
-        report.append({
-            "signal_id": "SIG-002",
-            "title": "Growth Opportunity: EMEA Professional",
-            "prose": "Market analysis indicates a substantial uptake in EMEA Professional services, driven by the recent regulatory changes in the EU. This represents a +139.8% outlier against projected forecasts, suggesting an immediate need to reallocate sales engineering resources to capitalize on this momentum.",
-            "status": "Green",
-            "impact": "+139.8%",
-            "recommendation": None
+        # Determine classification (reuse logic or simplify for grouping key)
+        value_str = anom.get('value', '0')
+        is_negative = '-' in value_str
+        
+        signal_type = anom.get('type', 'Signal')
+        if not is_negative and 'growth' in signal_type.lower():
+            classification = "Growth Opportunity"
+        elif is_negative and ('legal' in segment.lower() or 'compliance' in segment.lower()):
+            classification = "Operational Bottleneck"
+        elif is_negative:
+            classification = "Revenue Leak"
+        else:
+            classification = signal_type
+
+        # Group key: Region + Classification (e.g., "APAC_Revenue Leak")
+        key = f"{region}_{classification}"
+        
+        if key not in grouped_anomalies:
+            grouped_anomalies[key] = []
+        
+        # Store anomaly with its original index to map back to recommendations/context
+        grouped_anomalies[key].append({
+            "data": anom,
+            "index": idx,
+            "classification": classification,
+            "region": region,
+            "segment": segment
         })
+
+    # Process grouped anomalies
+    for key, group in grouped_anomalies.items():
+        # If group has multiple items, create a Master Signal. If single, treat normally.
+        is_master_signal = len(group) > 1
+        
+        # Use the first item as the "primary" for metadata
+        primary_item = group[0]
+        idx = primary_item["index"]
+        anom = primary_item["data"]
+        classification = primary_item["classification"]
+        region = primary_item["region"]
+        
+        # Context/Recs from primary item (could be aggregated in future)
+        rec = recommendations[idx] if idx < len(recommendations) else {}
+        ctx = next((c for c in context if c.get('signal_id') == anom.get('id')), {}) if context else {}
+        employee_attr = ctx.get('employee_attribution', {}) if ctx else {}
+        
+        # Determine context string
+        event_context = ""
+        if ctx and 'content' in ctx:
+            content_lower = ctx['content'].lower()
+            if 'acquisition' in content_lower or 'zenith' in content_lower:
+                event_context = " - Post-Acquisition Impact"
+            elif 'q4' in content_lower or 'quarter' in content_lower:
+                event_context = " - Quarterly Trend Shift"
+            
+        # Titles & Summaries
+        if is_master_signal:
+            # Aggregate impact
+            total_impact_usd = sum(float(item["data"].get("impact_usd", 0)) for item in group)
+            impact_display = f"${total_impact_usd/1000000:.2f}M" if total_impact_usd > 1000000 else f"${total_impact_usd/1000:.0f}k"
+            
+            # Combine segments string
+            segments_str = ", ".join([item["segment"] for item in group])
+            
+            if classification == "Revenue Leak":
+                title_prefix = "Cross-Segment Contraction"
+                severity_override = "critical"
+                prose = f"A cascading {classification} of {impact_display} has been identified across {len(group)} segments ({segments_str}) in {region}. This appears to be a systemic issue linked to recent structural changes."
+            else:
+                title_prefix = f"Regional {classification}"
+                severity_override = "medium"
+                prose = f"Multiple {classification}s detected across {segments_str}, totaling {impact_display} impact."
+                
+            contextual_title = f"{title_prefix}: {impact_display} Impact in {region}{event_context}"
+            summary = f"Aggregated {classification} across {len(group)} segments in {region}."
+            
+            # Use aggregated impact for the signal
+            signal_impact = impact_display
+            
+        else:
+            # Single Signal Logic
+            # ... (Existing logic for single items, simplified here for new structure) ...
+            title_prefix = f"Critical {classification}" if classification == "Revenue Leak" else f"Strategic {classification}"
+            severity_override = "critical" if classification == "Revenue Leak" else "medium"
+            contextual_title = f"{title_prefix}: {anom.get('description', 'Anomaly Detected')}{event_context}"
+            summary = f"{classification} detected in {primary_item['segment']}."
+            signal_impact = anom.get('value', 'Unknown')
+            
+            if api_key and idx == 0 and not is_master_signal:
+                 prose = final_prose # Use LLM prose if it's the very first one and not a master signal
+            else:
+                 prose = f"A {classification} has been detected in {primary_item['segment']}."
+
+        # Create signal object
+        signal_id = f"SIG-{region.upper()}-{datetime.now().strftime('%Y%m%d%H%M')}-{idx+1:02d}"
         
         report.append({
-            "signal_id": "SIG-003",
-            "title": "Friction Warning: NorthAm Sales Cycle",
-            "prose": "Deal velocity in North America has decelerated by 12 days on average, correlating with the introduction of the new compliance module. Early feedback suggests the validation step is overly burdensome, creating a bottleneck that threatens Q4 close rates.",
-            "status": "Yellow",
-            "impact": "+12 Days",
-            "recommendation": None
+            "signal_id": signal_id,
+            "title": contextual_title,
+            "summary": summary,
+            "prose": prose,
+            "severity": severity_override,
+            "date": datetime.now().strftime('%Y-%m-%d'),
+            "status": severity_override,
+            "impact": signal_impact, # Now can be USD string
+            "context_source": ctx.get('source', 'Internal Data Analysis'),
+            "recommendation": {
+                "project_title": rec.get('project_title', 'Investigation Pending'),
+                "roi_metric": rec.get('roi_metric', 'TBD'),
+                "impact_usd": rec.get('impact_usd', 0),
+                "market_context": rec.get('market_context', 'Market analysis pending'),
+                "feasibility_score": rec.get('feasibility_score', 5),
+                "technical_spec": rec.get('technical_spec', 'Technical specification pending')
+            } if rec else None,
+            "employee_attribution": {
+                "name": employee_attr.get('name', 'Unknown'),
+                "department": employee_attr.get('department', 'N/A'),
+                "proposal_quote": employee_attr.get('proposal_summary', 'No proposal available'),
+                "submission_date": employee_attr.get('submission_date', datetime.now().strftime('%Y-%m-%d')),
+                "submission_channel": employee_attr.get('submission_channel', 'Internal System')
+            } if employee_attr and employee_attr.get('name') else None
         })
 
     return {"final_report": report}

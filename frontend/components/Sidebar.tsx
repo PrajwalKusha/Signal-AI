@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import {
     LayoutDashboard,
@@ -21,23 +22,19 @@ export function Sidebar() {
             <div className="h-16 flex items-center px-4 lg:px-6 bg-[#00796B]">
                 <Link href="/" className="flex items-center gap-3 group w-full">
                     {/* Logo Icon */}
-                    <div className="h-8 w-8 bg-white/20 rounded-lg flex items-center justify-center text-white backdrop-blur-sm shadow-sm group-hover:bg-white/30 transition-colors">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeWidth="3"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            className="w-5 h-5"
-                        >
-                            <path d="M12 2v20M2 12h20" />
-                        </svg>
+                    <div className="h-9 w-9 bg-white/10 rounded-lg flex items-center justify-center backdrop-blur-sm shadow-sm group-hover:bg-white/20 transition-all p-1.5">
+                        <Image
+                            src="/signal.svg"
+                            alt="Signals Logo"
+                            width={32}
+                            height={32}
+                            className="w-full h-full drop-shadow-sm"
+                        />
                     </div>
                     <span className="font-bold text-xl tracking-tight text-white hidden lg:block opacity-100 transition-opacity">Signals</span>
                 </Link>
             </div>
+
 
             <nav className="flex-1 py-6 space-y-1 px-3">
                 <SidebarItem
@@ -84,7 +81,7 @@ export function Sidebar() {
                     <span className="hidden lg:block">Sign Out</span>
                 </button>
             </div>
-        </aside>
+        </aside >
     );
 }
 

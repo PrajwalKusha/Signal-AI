@@ -90,9 +90,16 @@ def analyst_agent(state: AgentState):
         
         Requirements:
         - Use 'pd.read_csv("{csv_path}")' to load the data.
-        - Handle dates correctly.
+        - Convert date columns using: pd.to_datetime(df['Date'], format='%m/%d/%y')
+        - When calculating time differences, use .dt.days on the timedelta, not .days directly
+        - Use .iloc[] for positional indexing, not bracket notation
+        - Always use .values[0] or .iloc[0] to extract scalar values from Series
+        - Calculate 'impact_usd' as the exact dollar difference between the current period and the baseline
+        - Use a 3-month rolling average or previous period as the baseline
         - Output ONLY valid JSON to stdout (print).
+        - JSON must include: id, type, metric, value (percentage), impact_usd (number), segment, description, severity
         - Do not output markdown blocks or explanations, ONLY the code.
+        - Focus on revenue trends by region and product tier
         """
         
         try:

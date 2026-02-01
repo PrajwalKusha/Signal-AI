@@ -55,27 +55,47 @@ def strategist_agent(state: AgentState):
         system_prompt = """You are a Senior Strategic Transformation Architect.
 Your goal is to align operational problems with the most high-leverage digital transformation initiatives from the backlog.
 You generally favor 'Platform' solutions over point solutions if the problem is systemic.
-Verify that the solution directly addresses the root cause described in the context."""
+Verify that the solution directly addresses the root cause described in the context.
+
+MATCHING RULES:
+- For revenue drops in a specific region, look for transformations that address that region or competitive issues
+- For customer churn, look for retention or migration-related transformations
+- For operational bottlenecks, look for automation or process improvement transformations
+- Prioritize transformations with CRITICAL strategic alignment
+"""
 
         human_prompt = f"""
-        Signal: {signal['description']} ({signal['value']} impact).
+        Signal Detected: {signal['description']} ({signal['value']} impact in {signal.get('segment', 'Unknown')} segment).
         {context_str}
         
-        Backlog: {backlog_str}
+        Available Transformation Projects:
+        {backlog_str}
         
-        Select the best project to solve this. Return JSON with 'project_id' and 'complexity_points'.
+        Task: Select the BEST project from the backlog that directly solves this signal.
+        
+        Return ONLY valid JSON with this exact format:
+        {{"project_id": "TRANS-XXX", "complexity_points": <number>}}
+        
+        Example: {{"project_id": "TRANS-001", "complexity_points": 40}}
         """
         match_res = llm.invoke([
             SystemMessage(content=system_prompt),
             HumanMessage(content=human_prompt)
         ]).content
         try:
-            match_json = json.loads(re.search(r'\{.*\}', match_res, re.DOTALL).group())
+            # Extract JSON from response
+            json_match = re.search(r'\{.*?\}', match_res, re.DOTALL)
+            if not json_match:
+                print(f"No JSON found in LLM response: {match_res[:200]}")
+                continue
+                
+            match_json = json.loads(json_match.group())
             project_id = match_json.get("project_id")
             complexity = match_json.get("complexity_points", 5)
             selected_project = next((p for p in backlog_data if p["id"] == project_id), None)
             if not selected_project: continue
-        except:
+        except Exception as e:
+            print(f"Error parsing LLM response for signal '{signal['description']}': {e}. Response: {match_res[:200]}")
             continue
 
         # 2. Market Research (Validation Phase)
@@ -88,57 +108,27 @@ Verify that the solution directly addresses the root cause described in the cont
             except Exception as e:
                 print(f"Tavily error: {e}")
 
-        # 3. Deterministic ROI Logic (Math Phase)
-        # We construct a Python script to solve the ROI equation.
-        # TAP (Total Addressable Problem) = Estimate from signal value (parsing string to number)
+        # 3. ROI Calculation using backlog's impact_usd
+        # Use the pre-defined impact from the backlog
+        impact_usd = selected_project.get('impact_usd', 0)
+        cost_usd = complexity * 20_000  # $20k per complexity point
         
-        # Heuristic parsing of signal value
-        val_str = signal['value'].replace("%", "").replace("$", "").replace(",", "")
-        try:
-            val_float = float(val_str)
-        except:
-            val_float = 0
-            
-        # If percentage (e.g. 34.2), assume base revenue of $10M for the segment to get TAP
-        tap_base = 10_000_000 
-        tap_value = (val_float / 100) * tap_base if "%" in signal['value'] else 1_000_000 # default fallback
+        # Calculate ROI multiple
+        roi_multiple = impact_usd / cost_usd if cost_usd > 0 else 0
+        net_strategic_value = impact_usd - cost_usd
         
-        python_script = f"""
-def calculate_roi(tap, complexity, feasibility_factor=0.8):
-    # Cost Basis: $20k per complexity point
-    cost = complexity * 20_000
-    
-    # Recovery: We expect to recover 'feasibility_factor' of the TAP
-    gross_impact = tap * feasibility_factor
-    
-    net_value = gross_impact - cost
-    roi_multiple = gross_impact / cost if cost > 0 else 0
-    
-    return {{
-        "impact_usd": round(gross_impact, 2),
-        "cost_usd": cost,
-        "net_strategic_value": round(net_value, 2),
-        "roi_str": f"{{round(roi_multiple, 1)}}x"
-    }}
-
-result = calculate_roi(tap={tap_value}, complexity={complexity})
-print(json.dumps(result))
-"""
-        math_output = python_repl.run(python_script)
-        try:
-            math_json = json.loads(math_output)
-        except:
-            math_json = {"impact_usd": 0, "net_strategic_value": 0, "roi_str": "N/A"}
+        # Format ROI string
+        roi_str = f"{roi_multiple:.1f}x" if roi_multiple > 0 else "N/A"
 
         # 4. Final Synthesis
         recommendations.append({
             "project_title": selected_project['title'],
-            "impact_usd": math_json.get("impact_usd"),
-            "feasibility_score": 8, # Simplified for now
-            "market_context": market_context[:300] + "...",
-            "technical_spec": selected_project.get("description", ""),
-            "roi_metric": math_json.get("roi_str"),
-            "net_strategic_value": math_json.get("net_strategic_value")
+            "impact_usd": int(impact_usd),  # Use backlog's impact
+            "feasibility_score": 8,  # Could be calculated based on complexity
+            "market_context": market_context[:1500],
+            "technical_spec": selected_project.get("tech_spec", selected_project.get("description", "")),
+            "roi_metric": roi_str,  # Properly formatted ROI
+            "net_strategic_value": net_strategic_value
         })
 
     # Sort by Net Strategic Value

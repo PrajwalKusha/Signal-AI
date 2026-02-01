@@ -17,8 +17,13 @@ import {
     TrendingUp,
     Clock,
     DollarSign,
-    Zap
+    Database,
+    Zap,
+    ChevronDown,
+    ChevronUp
 } from "lucide-react";
+import ReactMarkdown from 'react-markdown';
+import { useState } from 'react';
 
 // Mock signal data (will be replaced with actual data fetching)
 const mockSignals = [
@@ -81,8 +86,20 @@ export default function SignalDetailPage() {
     const router = useRouter();
     const signalId = params.signal_id as string;
 
-    // Find the signal by ID
-    const signal = mockSignals.find(s => s.signal_id === signalId);
+    // Try to find signal in sessionStorage first (for backend-generated signals)
+    let signal = null;
+    if (typeof window !== 'undefined') {
+        const storedSignals = sessionStorage.getItem('signals');
+        if (storedSignals) {
+            const allSignals = JSON.parse(storedSignals);
+            signal = allSignals.find((s: any) => s.signal_id === signalId);
+        }
+    }
+
+    // Fallback to mock signals if not found in sessionStorage
+    if (!signal) {
+        signal = mockSignals.find(s => s.signal_id === signalId);
+    }
 
     if (!signal) {
         return (
@@ -154,6 +171,17 @@ export default function SignalDetailPage() {
                             <TrendingUp size={14} />
                             <span>Impact: {signal.impact}</span>
                         </div>
+                        <div className="flex items-center gap-2 ml-2 pl-4 border-l border-gray-300">
+                            <div className="flex items-center gap-1.5 text-gray-500">
+                                <Database size={14} />
+                                <span className="text-xs font-medium uppercase tracking-wide">Analyzed:</span>
+                            </div>
+                            <div className="flex gap-1.5">
+                                <span className="bg-blue-50 text-blue-700 px-2 py-0.5 rounded text-xs border border-blue-100 font-medium font-mono">sales_2025.csv</span>
+                                <span className="bg-purple-50 text-purple-700 px-2 py-0.5 rounded text-xs border border-purple-100 font-medium font-mono">internal_context.txt</span>
+                                <span className="bg-gray-100 text-gray-600 px-2 py-0.5 rounded text-xs border border-gray-200 font-medium font-mono">backlog.json</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -167,8 +195,15 @@ export default function SignalDetailPage() {
                                 <FileText size={18} className="text-[#00897B]" />
                                 <h2 className="text-sm font-bold text-gray-900 uppercase tracking-wide">Executive Briefing</h2>
                             </div>
-                            <div className="bg-gray-50 p-4 rounded-lg border border-gray-100 text-sm leading-relaxed text-gray-700 whitespace-pre-wrap">
-                                {signal.prose}
+                            <div className="bg-gray-50 p-4 rounded-lg border border-gray-100 text-sm leading-relaxed text-gray-700">
+                                <ReactMarkdown
+                                    components={{
+                                        strong: ({ node, ...props }) => <span className="font-bold text-gray-900" {...props} />,
+                                        p: ({ node, ...props }) => <p className="mb-3 last:mb-0" {...props} />,
+                                    }}
+                                >
+                                    {signal.prose}
+                                </ReactMarkdown>
                             </div>
                         </section>
 
@@ -247,7 +282,13 @@ export default function SignalDetailPage() {
                                 <div className="grid grid-cols-3 gap-3 mb-4">
                                     <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-3 rounded-lg border border-green-100">
                                         <div className="text-xs font-bold text-green-700 uppercase mb-1">Projected Impact</div>
-                                        <div className="text-xl font-bold text-gray-900">${(signal.recommendation.impact_usd / 1000).toFixed(0)}k</div>
+                                        <div className="text-xl font-bold text-gray-900">
+                                            {typeof signal.recommendation.impact_usd === 'number'
+                                                ? (signal.recommendation.impact_usd > 1000000
+                                                    ? `$${(signal.recommendation.impact_usd / 1000000).toFixed(2)}M`
+                                                    : `$${(signal.recommendation.impact_usd / 1000).toFixed(0)}k`)
+                                                : signal.recommendation.impact_usd}
+                                        </div>
                                         <div className="text-xs text-gray-600">Annual</div>
                                     </div>
                                     <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-3 rounded-lg border border-blue-100">
@@ -279,19 +320,7 @@ export default function SignalDetailPage() {
 
                         {/* Market Intelligence */}
                         {signal.recommendation?.market_context && (
-                            <section className="bg-white rounded-lg p-4 shadow-sm border border-gray-200">
-                                <div className="flex items-center gap-2 mb-3">
-                                    <Search size={18} className="text-amber-600" />
-                                    <h2 className="text-sm font-bold text-gray-900 uppercase tracking-wide">Market Intelligence</h2>
-                                </div>
-                                <div className="bg-amber-50 p-4 rounded-lg border border-amber-100">
-                                    <p className="text-sm text-gray-700 leading-relaxed">{signal.recommendation.market_context}</p>
-                                    <div className="flex items-center gap-2 mt-2 text-xs text-amber-700">
-                                        <ExternalLink size={12} />
-                                        <span>Source: Tavily Market Research</span>
-                                    </div>
-                                </div>
-                            </section>
+                            <MarketIntelligenceSection context={signal.recommendation.market_context} />
                         )}
 
                         {/* Internal Context */}
@@ -386,5 +415,42 @@ export default function SignalDetailPage() {
                 </div>
             </div>
         </div>
+    );
+}
+
+function MarketIntelligenceSection({ context }: { context: string }) {
+    const [isExpanded, setIsExpanded] = useState(false);
+    const shouldTruncate = context.length > 300;
+
+    return (
+        <section className="bg-white rounded-lg p-4 shadow-sm border border-gray-200">
+            <div className="flex items-center gap-2 mb-3">
+                <Search size={18} className="text-amber-600" />
+                <h2 className="text-sm font-bold text-gray-900 uppercase tracking-wide">Market Intelligence</h2>
+            </div>
+            <div className="bg-amber-50 p-4 rounded-lg border border-amber-100">
+                <div className={`text-sm text-gray-700 leading-relaxed ${!isExpanded && shouldTruncate ? 'line-clamp-3' : ''}`}>
+                    {context}
+                </div>
+
+                {shouldTruncate && (
+                    <button
+                        onClick={() => setIsExpanded(!isExpanded)}
+                        className="flex items-center gap-1 text-xs font-bold text-amber-700 mt-2 hover:text-amber-800 transition-colors"
+                    >
+                        {isExpanded ? (
+                            <>Show Less <ChevronUp size={14} /></>
+                        ) : (
+                            <>Read More <ChevronDown size={14} /></>
+                        )}
+                    </button>
+                )}
+
+                <div className="flex items-center gap-2 mt-3 text-xs text-amber-700 pt-2 border-t border-amber-200/50">
+                    <ExternalLink size={12} />
+                    <span>Source: Tavily Market Research</span>
+                </div>
+            </div>
+        </section>
     );
 }

@@ -84,6 +84,25 @@ export default function Dashboard() {
     const [logs, setLogs] = useState<string[]>([]);
     const [loading, setLoading] = useState(false);
 
+    // Load signals from sessionStorage on mount
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            const storedSignals = sessionStorage.getItem('signals');
+            if (storedSignals) {
+                try {
+                    const allSignals = JSON.parse(storedSignals);
+                    // Separate today's signals from previous signals
+                    if (allSignals.length > 0) {
+                        setSignals(allSignals);
+                        setSignalsGenerated(true);
+                    }
+                } catch (e) {
+                    console.error('Error loading signals from sessionStorage:', e);
+                }
+            }
+        }
+    }, []); // Run once on mount
+
     // Poll for logs when running
     useEffect(() => {
         let interval: NodeJS.Timeout;
@@ -109,44 +128,92 @@ export default function Dashboard() {
         return () => clearInterval(interval);
     }, [loading]);
 
-    const handleGatherSignals = () => {
+    const handleGatherSignals = async () => {
         setGatheringSignals(true);
         setLoading(true);
         setLogs([]);
+        setSignals([]); // Clear previous signals
 
-        setTimeout(() => {
-            setLoading(false);
-            setSignalsGenerated(true);
-            setSignals([
-                {
-                    signal_id: "SIG-APAC-" + Date.now(),
-                    title: "APAC Revenue Decline - Immediate Action Required",
-                    summary: "Critical 32% revenue drop detected in APAC region for Q1 2025. Analysis indicates competitive pressure from Zenith Labs acquisition.",
-                    prose: "A critical 32% revenue drop has been detected in the APAC region for Q1 2025. \n\n**Key Findings:**\n- **Primary Cause:** Zenith Labs acquisition has led to aggressive pricing strategies by competitors.\n- **Impact:** $2.45M potential revenue loss in Q2 if unaddressed.\n- **Correlation:** Customer churn increased by 15% in the same period.",
-                    severity: "critical",
-                    date: new Date().toISOString().split('T')[0],
-                    status: "CRITICAL",
-                    impact: "$2.45M potential revenue loss",
-                    context_source: "Slack #sales-engineering (pinned message)",
-                    recommendation: {
-                        project_title: "AI Competitive Switch-Kit (TRANS-001)",
-                        roi_metric: "4.5x",
-                        impact_usd: 2450000,
-                        market_context: "Competitor 'Zenith Labs' has captured 12% market share in APAC within 6 months post-acquisition. Their AI-powered migration tool reduces customer switching costs by 80%, making it easier for customers to leave legacy platforms.",
-                        feasibility_score: 8,
-                        technical_spec: "Build automated migration toolkit with AI-assisted data transformation"
-                    },
-                    employee_attribution: {
-                        name: "Hiroshi Tanaka",
-                        department: "APAC Sales Engineering",
-                        proposal_quote: "Build an AI-powered migration toolkit to reduce customer switching friction from 3 months to 2 weeks. I've interviewed 8 churned customers and 7 said they'd return if migration was easier.",
-                        submission_date: "2025-12-16",
-                        submission_channel: "Slack #product-roadmap"
+        try {
+            const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
+
+            const response = await fetch(`${API_URL}/api/audit`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({}) // Can pass custom file names here if needed
+            });
+
+            if (!response.ok) {
+                throw new Error(`Backend error: ${response.status} ${response.statusText}`);
+            }
+
+            if (!response.body) {
+                throw new Error("No response body received");
+            }
+
+            // Stream Reader
+            const reader = response.body.getReader();
+            const decoder = new TextDecoder();
+            let buffer = '';
+
+            while (true) {
+                const { done, value } = await reader.read();
+                if (done) break;
+
+                buffer += decoder.decode(value, { stream: true });
+                const lines = buffer.split('\n');
+
+                // Process all complete lines
+                buffer = lines.pop() || ''; // Keep the last incomplete line in buffer
+
+                for (const line of lines) {
+                    if (!line.trim()) continue;
+
+                    try {
+                        const event = JSON.parse(line);
+
+                        if (event.type === 'log') {
+                            setLogs(prev => {
+                                // Keep only last 8 logs
+                                const newLogs = [...prev, event.message];
+                                return newLogs.slice(-8);
+                            });
+                        } else if (event.type === 'result') {
+                            const signalsArray = event.data;
+                            setSignals(signalsArray);
+                            setSignalsGenerated(true);
+
+                            // Save to sessionStorage
+                            if (typeof window !== 'undefined') {
+                                const storedSignals = sessionStorage.getItem('signals');
+                                const prevSignals = storedSignals ? JSON.parse(storedSignals) : [];
+                                // Deduplicate by ID
+                                const newSignalIds = new Set(signalsArray.map((s: any) => s.signal_id));
+                                const merged = [...prevSignals.filter((s: any) => !newSignalIds.has(s.signal_id)), ...signalsArray];
+                                sessionStorage.setItem('signals', JSON.stringify(merged));
+                            }
+                        } else if (event.type === 'error') {
+                            throw new Error(event.message);
+                        }
+                    } catch (e) {
+                        console.error("Error parsing stream line:", line, e);
                     }
                 }
-            ]);
-        }, 5000);
+            }
+
+        } catch (error) {
+            console.error('Failed to gather signals:', error);
+            setLoading(false);
+            setSignalsGenerated(false);
+            setLogs(prev => [...prev, `❌ Error: ${error instanceof Error ? error.message : 'Unknown error'}`]);
+        } finally {
+            setLoading(false);
+            setGatheringSignals(false);
+        }
     };
+
 
     return (
         <div className="space-y-6">
