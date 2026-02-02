@@ -59,9 +59,11 @@ Verify that the solution directly addresses the root cause described in the cont
 
 MATCHING RULES:
 - For revenue drops in a specific region, look for transformations that address that region or competitive issues
-- For customer churn, look for retention or migration-related transformations
-- For operational bottlenecks, look for automation or process improvement transformations
-- Prioritize transformations with CRITICAL strategic alignment
+- For customer churn or migration friction, look for retention or migration-related transformations (e.g., TRANS-001)
+- For segment/tier divergence (Enterprise vs Starter), look for growth or marketing transformations (e.g., TRANS-032)
+- For operational bottlenecks or compliance friction, look for automation or process improvement transformations (e.g., TRANS-014)
+- Prioritize transformations with CRITICAL or High strategic alignment
+- Match based on department, pain point, and impact size
 """
 
         human_prompt = f"""
@@ -72,6 +74,12 @@ MATCHING RULES:
         {backlog_str}
         
         Task: Select the BEST project from the backlog that directly solves this signal.
+        
+        MATCHING GUIDELINES:
+        - If signal mentions "EMEA", "Professional tier", "Enterprise tier", or "tier growth" → Select TRANS-032 (EMEA Growth Multiplier)
+        - If signal mentions "NorthAm", "compliance", "legal", or "contract review" → Select TRANS-014 (Automated Contract Reviewer)
+        - If signal mentions "APAC", "churn", "migration", "Zenith", or "GlobalStack" → Select TRANS-001 (AI Competitive Switch-Kit)
+        - If signal mentions "revenue drop" or "revenue leak" → Select TRANS-001 (AI Competitive Switch-Kit)
         
         Return ONLY valid JSON with this exact format:
         {{"project_id": "TRANS-XXX", "complexity_points": <number>}}
@@ -128,7 +136,12 @@ MATCHING RULES:
             "market_context": market_context[:1500],
             "technical_spec": selected_project.get("tech_spec", selected_project.get("description", "")),
             "roi_metric": roi_str,  # Properly formatted ROI
-            "net_strategic_value": net_strategic_value
+            "net_strategic_value": net_strategic_value,
+            "evidence_json": {
+                "file": "transformation_backlog.json",
+                "entry": selected_project,  # Full JSON object from backlog
+                "context": f"Matched transformation '{selected_project['title']}' to address {signal['type']}"
+            }
         })
 
     # Sort by Net Strategic Value

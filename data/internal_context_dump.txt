@@ -96,3 +96,31 @@ EFFORT: Based on our previous Zenith integration work, I estimate 8-week sprint 
 URGENCY: Q1 renewals are coming up in 6 weeks. If we don't have at least an MVP ready, we'll lose another wave of customers. The window to act is now.
 
 ---
+2025-06-15 [SLACK]: #product-strategy - Jessica Wu (EMEA Growth Head): EMEA Professional tier is absolutely crushing it - up 47% QoQ while our Starter tier is bleeding customers. We need to double down on mid-market Enterprise deals and stop wasting resources on low-value Starter accounts. I've drafted a proposal (TRANS-032) to reallocate $1.2M in marketing spend to EMEA Professional lookalike targeting. The data is crystal clear: Professional tier customers have 3x higher LTV and 40% lower churn than Starter. We're leaving money on the table by not capitalizing on this momentum.
+
+---
+
+2025-08-20 [EMAIL]: Marcus Thorne (Legal Tech Lead) to Sales Leadership - RE: October Compliance Impact:
+
+Subject: Urgent: Legal Bottleneck Will Cost Us $850k/Quarter
+
+Team,
+
+The October compliance overhaul is going to hurt badly. Legal is now requiring 3-level manual review for ALL NorthAm contracts (previously only Enterprise tier). Based on our current staffing of 2 contract reviewers, this adds 8-12 days to every deal cycle.
+
+IMPACT ANALYSIS:
+- Average NorthAm deal cycle: Currently 18 days → Will become 28 days
+- Q4 pipeline at risk: $850k in delayed revenue
+- Customer frustration: Already seeing complaints about "slow legal"
+
+PROPOSED SOLUTION (TRANS-014):
+I'm proposing an Automated Contract Reviewer using LLMs for first-pass reviews. This could cut review time down to 2-3 days by:
+1. Auto-extracting entities and flagging non-compete clauses
+2. Identifying compliance risks before human review
+3. Routing low-risk contracts to expedited approval
+
+Without this automation, we're looking at permanent 40% slowdown in NorthAm sales velocity. The window to act is NOW before Q4 renewals hit.
+
+- Marcus
+
+---

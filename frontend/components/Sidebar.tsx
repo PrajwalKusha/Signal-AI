@@ -20,7 +20,16 @@ export function Sidebar() {
     return (
         <aside className="w-16 lg:w-64 bg-[#00897B] flex flex-col transition-all duration-300 shadow-xl z-20">
             <div className="h-16 flex items-center px-4 lg:px-6 bg-[#00796B]">
-                <Link href="/" className="flex items-center gap-3 group w-full">
+                <Link
+                    href="/"
+                    className="flex items-center gap-3 group w-full"
+                    onClick={() => {
+                        // Clear session storage when navigating to landing page
+                        sessionStorage.removeItem('hasScanned');
+                        sessionStorage.removeItem('visibleSignalsCount');
+                        sessionStorage.removeItem('allSignals');
+                    }}
+                >
                     {/* Logo Icon */}
                     <div className="h-9 w-9 bg-white/10 rounded-lg flex items-center justify-center backdrop-blur-sm shadow-sm group-hover:bg-white/20 transition-all p-1.5">
                         <Image
@@ -76,7 +85,18 @@ export function Sidebar() {
                     href="/dashboard/settings"
                     active={pathname === "/dashboard/settings"}
                 />
-                <button className="flex items-center gap-3 w-full px-3 py-2.5 rounded-lg text-white/70 hover:bg-white/10 hover:text-white transition-all text-sm font-bold mt-1">
+                <button
+                    className="flex items-center gap-3 w-full px-3 py-2.5 rounded-lg text-white/70 hover:bg-white/10 hover:text-white transition-all text-sm font-bold mt-1"
+                    onClick={() => {
+                        // Clear session storage on logout
+                        sessionStorage.removeItem('hasScanned');
+                        sessionStorage.removeItem('visibleSignalsCount');
+                        sessionStorage.removeItem('allSignals');
+                        sessionStorage.removeItem('signals');
+                        // Navigate to login
+                        window.location.href = '/login';
+                    }}
+                >
                     <LogOut size={20} />
                     <span className="hidden lg:block">Sign Out</span>
                 </button>

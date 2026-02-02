@@ -24,6 +24,7 @@ import {
 } from "lucide-react";
 import ReactMarkdown from 'react-markdown';
 import { useState } from 'react';
+import { EvidenceTrail } from '@/components/EvidenceTrail';
 
 // Mock signal data (will be replaced with actual data fetching)
 const mockSignals = [
@@ -334,6 +335,9 @@ export default function SignalDetailPage() {
                                 <p className="text-sm text-gray-700">{signal.context_source}</p>
                             </div>
                         </section>
+
+                        {/* Evidence Trail */}
+                        <EvidenceTrail signal={signal} />
                     </div>
 
                     {/* Sidebar - 1/3 width */}

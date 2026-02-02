@@ -94,6 +94,9 @@ def ghostwriter_agent(state: AgentState):
     # Deduplication: Group anomalies by classification and region
     grouped_anomalies = {}
     
+    print(f"\n🔍 Ghostwriter: Processing {len(anomalies)} anomalies from Analyst")
+    print(f"🔍 Anomaly types: {[a.get('type') for a in anomalies]}")
+    
     for idx, anom in enumerate(anomalies):
         segment = anom.get('segment', 'UNKNOWN')
         region = segment.split()[0] if segment else 'UNKNOWN'
@@ -114,6 +117,8 @@ def ghostwriter_agent(state: AgentState):
 
         # Group key: Region + Classification (e.g., "APAC_Revenue Leak")
         key = f"{region}_{classification}"
+        
+        print(f"  Signal {idx+1}: {anom.get('type')} → Grouped as '{key}'")
         
         if key not in grouped_anomalies:
             grouped_anomalies[key] = []
@@ -155,12 +160,20 @@ def ghostwriter_agent(state: AgentState):
             
         # Titles & Summaries
         if is_master_signal:
-            # Aggregate impact
-            total_impact_usd = sum(float(item["data"].get("impact_usd", 0)) for item in group)
+            # Aggregate impact from RECOMMENDATIONS (not anomaly data)
+            total_impact_usd = 0
+            for item in group:
+                item_idx = item["index"]
+                if item_idx < len(recommendations):
+                    total_impact_usd += recommendations[item_idx].get('impact_usd', 0)
+            
             impact_display = f"${total_impact_usd/1000000:.2f}M" if total_impact_usd > 1000000 else f"${total_impact_usd/1000:.0f}k"
             
-            # Combine segments string
-            segments_str = ", ".join([item["segment"] for item in group])
+            # Combine UNIQUE segments string (avoid repetition)
+            unique_segments = list(set([item["segment"] for item in group]))
+            segments_str = ", ".join(unique_segments[:3])  # Show max 3 unique segments
+            if len(unique_segments) > 3:
+                segments_str += f" and {len(unique_segments) - 3} more"
             
             if classification == "Revenue Leak":
                 title_prefix = "Cross-Segment Contraction"
@@ -192,9 +205,17 @@ def ghostwriter_agent(state: AgentState):
                  prose = f"A {classification} has been detected in {primary_item['segment']}."
 
         # Create signal object
-        signal_id = f"SIG-{region.upper()}-{datetime.now().strftime('%Y%m%d%H%M')}-{idx+1:02d}"
-        
-        report.append({
+        # Use the deterministic ID from the analyst agent if available, otherwise fallback
+        base_id = primary_item.get("id")
+        if base_id and not is_master_signal:
+             signal_id = base_id
+        elif is_master_signal and base_id:
+             signal_id = f"{base_id}-MASTER"
+        else:
+             signal_id = f"SIG-{region.upper()}-{datetime.now().strftime('%Y%m%d%H%M')}-{idx+1:02d}"
+
+        # Build complete signal with all evidence data
+        signal_data = {
             "signal_id": signal_id,
             "title": contextual_title,
             "summary": summary,
@@ -204,14 +225,26 @@ def ghostwriter_agent(state: AgentState):
             "status": severity_override,
             "impact": signal_impact, # Now can be USD string
             "context_source": ctx.get('source', 'Internal Data Analysis'),
+            
+            # Evidence from Analyst (CSV data)
+            "evidence_csv": anom.get('evidence_csv'),
+            
+            # Evidence from Investigator (TXT context)
+            "evidence_txt": ctx.get('evidence_txt'),
+            
+            # Evidence from Strategist (JSON backlog)
+            "evidence_json": rec.get('evidence_json') if rec else None,
+            
             "recommendation": {
                 "project_title": rec.get('project_title', 'Investigation Pending'),
                 "roi_metric": rec.get('roi_metric', 'TBD'),
                 "impact_usd": rec.get('impact_usd', 0),
                 "market_context": rec.get('market_context', 'Market analysis pending'),
                 "feasibility_score": rec.get('feasibility_score', 5),
-                "technical_spec": rec.get('technical_spec', 'Technical specification pending')
+                "technical_spec": rec.get('technical_spec', 'Technical specification pending'),
+                "evidence_json": rec.get('evidence_json')  # Also include in recommendation for backward compatibility
             } if rec else None,
+            
             "employee_attribution": {
                 "name": employee_attr.get('name', 'Unknown'),
                 "department": employee_attr.get('department', 'N/A'),
@@ -219,9 +252,28 @@ def ghostwriter_agent(state: AgentState):
                 "submission_date": employee_attr.get('submission_date', datetime.now().strftime('%Y-%m-%d')),
                 "submission_channel": employee_attr.get('submission_channel', 'Internal System')
             } if employee_attr and employee_attr.get('name') else None
-        })
+        }
+        
+        report.append(signal_data)
 
-    return {"final_report": report}
+    # CRITICAL: Constrain to top 3 signals by impact
+    # Sort by impact_usd (from recommendation) in descending order
+    report_sorted = sorted(
+        report, 
+        key=lambda x: x.get('recommendation', {}).get('impact_usd', 0) if x.get('recommendation') else 0,
+        reverse=True
+    )
+    
+    # Take top 5 signals to allow for the bootstrap 5-signal run
+    top_3_signals = report_sorted[:5]
+    
+    print(f"\n📊 Ghostwriter Summary:")
+    print(f"  Input: {len(anomalies)} anomalies from Analyst")
+    print(f"  After deduplication: {len(report)} signals")
+    print(f"  Returning top 5 by impact")
+    print(f"  Top IDs: {[s['signal_id'] for s in top_3_signals]}")
+    
+    return {"final_report": top_3_signals}
 
 def fallback_prose():
     return (

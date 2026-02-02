@@ -53,6 +53,14 @@ def investigator_agent(state: AgentState):
         
         Focus on specific project names, acquisitions, operational changes, and employee contributions.
         
+        SEARCH KEYWORDS TO LOOK FOR:
+        - Anomaly-specific: "{signal['segment']}", "{signal['type']}"
+        - Revenue/Acquisition: "Zenith", "acquisition", "migration", "churn", "GlobalStack"
+        - Tier/Segment: "Enterprise", "Professional", "Starter", "tier", "segment", "LTV"
+        - Operational: "compliance", "legal", "review", "bottleneck", "friction", "cycle time", "deal velocity"
+        - Employees: "Hiroshi Tanaka", "Jessica Wu", "Marcus Thorne"
+        - Transformation projects: "TRANS-001", "TRANS-014", "TRANS-032"
+        
         Internal Logs:
         \"\"\"
         {context_text[:15000]} 
@@ -67,6 +75,11 @@ def investigator_agent(state: AgentState):
             "content": "One sentence summary of the finding.",
             "date": "YYYY-MM-DD (if found)",
             "relevance_score": 0.95,
+            "evidence_txt": {{
+                "file": "internal_context_dump.txt",
+                "excerpt": "VERBATIM text excerpt from the logs (200-500 chars). Include the exact message/email that explains the context.",
+                "context": "Brief explanation of what this excerpt shows"
+            }},
             "employee_attribution": {{
                 "name": "Employee Name (if found in logs)",
                 "department": "Department or role (if mentioned, e.g., 'APAC Sales', 'Engineering')",
@@ -76,6 +89,13 @@ def investigator_agent(state: AgentState):
                 "submission_date": "YYYY-MM-DD (when they submitted the idea)"
             }}
         }}
+        
+        CRITICAL EVIDENCE REQUIREMENTS:
+        - The 'excerpt' field MUST contain the EXACT, VERBATIM text from the logs (not a paraphrase)
+        - Include 200-500 characters of the most relevant portion
+        - Preserve the original formatting, names, and punctuation
+        - If it's a Slack message, include the author's name at the start (e.g., "Hiroshi Tanaka: ...")
+        - The 'context' field should briefly explain what this excerpt demonstrates
         
         IMPORTANT: 
         - If no employee attribution is found, set "employee_attribution" to null

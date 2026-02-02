@@ -1,195 +1,195 @@
 "use client";
 
-import React from "react";
-import { motion } from "framer-motion";
-import { ArrowRight, Zap, Brain, TrendingUp } from "lucide-react";
-import Link from "next/link";
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ArrowRight, Zap, Brain, TrendingUp, Lock, AlertCircle } from "lucide-react";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 
 export default function LandingPage() {
+  const router = useRouter();
+  const [showInput, setShowInput] = useState(false);
+  const [accessCode, setAccessCode] = useState("");
+  const [error, setError] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+  const handleUnlock = (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+    setTimeout(() => {
+      if (accessCode === "1010") {
+        router.push("/dashboard");
+      } else {
+        setError(true);
+        setLoading(false);
+      }
+    }, 800);
+  };
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
-      {/* Subtle grid overlay */}
+    <div className="h-screen w-full bg-[#f1f5f9] relative overflow-hidden flex flex-col font-sans text-slate-900 selection:bg-teal-100 selection:text-teal-900">
+
+      {/* 1. Technical Background: Dot Pattern + Vignette */}
       <div
-        className="fixed inset-0 opacity-[0.02]"
+        className="absolute inset-0 z-0 opacity-[0.3]"
         style={{
-          backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.5) 1px, transparent 1px),
-                           linear-gradient(90deg, rgba(255, 255, 255, 0.5) 1px, transparent 1px)`,
-          backgroundSize: '64px 64px'
+          backgroundImage: 'radial-gradient(#94a3b8 1px, transparent 1px)',
+          backgroundSize: '32px 32px'
         }}
       />
+      {/* Soft gradient overlay to soften the grid */}
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-50/40 to-slate-200/80 pointer-events-none" />
 
-      <div className="relative">
-        {/* Hero Section */}
-        <section className="min-h-screen flex items-center justify-center px-6">
-          <div className="max-w-5xl mx-auto text-center">
-            {/* Logo */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="mb-12 flex justify-center"
-            >
-              <div className="w-20 h-20">
-                <Image
-                  src="/signal.svg"
-                  alt="Signals"
-                  width={80}
-                  height={80}
-                  className="w-full h-full"
-                />
-              </div>
-            </motion.div>
+      {/* Dynamic Orbs - adjusted for Grey background */}
+      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-teal-200/40 rounded-full blur-3xl -translate-y-1/2 translate-x-1/4 animate-pulse-slow mix-blend-multiply" />
+      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-indigo-200/40 rounded-full blur-3xl translate-y-1/3 -translate-x-1/4 mix-blend-multiply" />
 
-            {/* Main Title */}
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-7xl md:text-8xl font-bold mb-6 tracking-tight"
-              style={{ fontFamily: 'var(--font-geist-sans)' }}
-            >
-              <span className="bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent">
-                Signals
-              </span>
-            </motion.h1>
-
-            {/* Tagline */}
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-xl md:text-2xl text-slate-400 mb-4 font-light tracking-wide"
-            >
-              Transform data into actionable intelligence
-            </motion.p>
-
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="text-base md:text-lg text-slate-500 mb-12 max-w-2xl mx-auto"
-            >
-              AI-powered analysis that uncovers patterns, predicts trends, and drives smarter decisions
-            </motion.p>
-
-            {/* CTA Button */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-            >
-              <Link href="/login">
-                <button className="group relative inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-teal-500 text-white px-8 py-4 rounded-lg font-medium text-lg transition-all duration-300 hover:shadow-lg hover:shadow-emerald-500/25 hover:scale-105">
-                  Get Started
-                  <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-                </button>
-              </Link>
-            </motion.div>
+      {/* 2. Header */}
+      <nav className="relative z-10 flex items-center justify-between px-8 py-6">
+        <div className="flex items-center gap-3">
+          <div className="w-8 h-8 relative">
+            <Image src="/signal.svg" alt="Signals" fill className="object-contain" />
           </div>
-        </section>
+          <span className="font-bold text-xl tracking-tight text-slate-800">Signals</span>
+        </div>
+        <div className="px-3 py-1 bg-white/50 border border-slate-200 rounded-full text-xs font-medium text-slate-500 backdrop-blur-sm">
+          v2.0.1
+        </div>
+      </nav>
 
-        {/* Features Section */}
-        <section className="py-24 px-6">
-          <div className="max-w-6xl mx-auto">
-            {/* Section Title */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-                Built for Intelligence
-              </h2>
-              <p className="text-lg text-slate-400">
-                Everything you need to turn raw data into insights
-              </p>
-            </motion.div>
+      {/* 3. Main Content - Centered & Compact */}
+      <main className="flex-1 relative z-10 flex flex-col items-center justify-center px-4 sm:px-6">
 
-            {/* Feature Cards */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <FeatureCard
-                icon={<Zap className="w-8 h-8" />}
-                title="Real-time Analysis"
-                description="Process data instantly with AI agents that work 24/7"
-                delay={0}
-              />
-              <FeatureCard
-                icon={<Brain className="w-8 h-8" />}
-                title="Smart Predictions"
-                description="Machine learning models that forecast what's coming next"
-                delay={0.1}
-              />
-              <FeatureCard
-                icon={<TrendingUp className="w-8 h-8" />}
-                title="Actionable Insights"
-                description="Clear recommendations that drive better business decisions"
-                delay={0.2}
-              />
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-24 px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="max-w-4xl mx-auto text-center"
+        {/* Hero Text */}
+        <div className="text-center max-w-3xl mx-auto mb-10">
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-5xl md:text-7xl font-bold tracking-tight text-slate-900 mb-6"
           >
-            <div className="bg-gradient-to-br from-slate-900/50 to-slate-800/50 backdrop-blur-sm border border-slate-800 rounded-2xl p-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Ready to unlock your data's potential?
-              </h2>
-              <p className="text-lg text-slate-400 mb-8">
-                Join teams making smarter decisions with AI-powered insights
-              </p>
-              <Link href="/login">
-                <button className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-teal-500 text-white px-8 py-4 rounded-lg font-medium text-lg transition-all duration-300 hover:shadow-lg hover:shadow-emerald-500/25 hover:scale-105">
-                  Start Analyzing
-                  <ArrowRight className="w-5 h-5" />
-                </button>
-              </Link>
-            </div>
-          </motion.div>
-        </section>
-      </div>
+            Intelligence, <br className="hidden md:block" />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-blue-600">
+              Decoded.
+            </span>
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+            className="text-lg text-slate-500 max-w-lg mx-auto leading-relaxed"
+          >
+            The enterprise command center for real-time strategic signals.
+          </motion.p>
+        </div>
+
+        {/* Interaction Zone (Code Input) */}
+        <div className="h-24 mb-12 flex justify-center items-center w-full">
+          <AnimatePresence mode="wait">
+            {!showInput ? (
+              <motion.button
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.9 }}
+                transition={{ delay: 0.2 }}
+                onClick={() => setShowInput(true)}
+                className="group flex items-center gap-3 bg-slate-900 text-white pl-8 pr-6 py-4 rounded-full font-semibold shadow-2xl hover:shadow-[0_20px_40px_-10px_rgba(0,0,0,0.3)] hover:scale-105 transition-all duration-300"
+              >
+                <span>Initialize System</span>
+                <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center group-hover:bg-white/30 transition-colors">
+                  <ArrowRight size={16} />
+                </div>
+              </motion.button>
+            ) : (
+              <motion.form
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                onSubmit={handleUnlock}
+                className="relative"
+              >
+                <div className={`flex items-center gap-2 bg-white/80 backdrop-blur-md p-2 rounded-2xl shadow-2xl border-2 transition-colors ${error ? 'border-red-100 ring-2 ring-red-50' : 'border-white ring-1 ring-slate-200'}`}>
+                  <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-slate-50 text-slate-400">
+                    <Lock size={20} />
+                  </div>
+                  <input
+                    autoFocus
+                    type="password"
+                    placeholder="CODE"
+                    className="bg-transparent border-none w-32 text-center text-2xl font-bold tracking-[0.2em] text-slate-800 placeholder:text-slate-300 focus:ring-0"
+                    value={accessCode}
+                    onChange={(e) => {
+                      setAccessCode(e.target.value);
+                      setError(false);
+                    }}
+                    maxLength={4}
+                  />
+                  <button
+                    type="submit"
+                    disabled={loading || accessCode.length < 4}
+                    className={`h-12 px-6 rounded-xl font-bold text-sm transition-all flex items-center gap-2 ${loading ? 'bg-slate-100 text-slate-400' : 'bg-teal-600 text-white hover:bg-teal-700 shadow-md'
+                      }`}
+                  >
+                    {loading ? '...' : <ArrowRight size={18} />}
+                  </button>
+                </div>
+                {error && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="absolute -bottom-8 left-0 right-0 text-center text-xs font-semibold text-red-500 flex items-center justify-center gap-1"
+                  >
+                    <AlertCircle size={12} /> Invalid Access Code
+                  </motion.div>
+                )}
+              </motion.form>
+            )}
+          </AnimatePresence>
+        </div>
+
+        {/* Features - Integrated Horizontal Grid */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3, duration: 0.6 }}
+          className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full max-w-4xl px-4"
+        >
+          <FeatureCard
+            icon={<Zap size={20} />}
+            title="Real-Time Analysis"
+            desc="Instant processing of market data streams"
+            color="bg-amber-50 text-amber-600"
+          />
+          <FeatureCard
+            icon={<Brain size={20} />}
+            title="Agentic Reasoning"
+            desc="Autonomous logic that verifies signals"
+            color="bg-purple-50 text-purple-600"
+          />
+          <FeatureCard
+            icon={<TrendingUp size={20} />}
+            title="Strategic Impact"
+            desc="Quantifiable USD ROI calculation"
+            color="bg-teal-50 text-teal-600"
+          />
+        </motion.div>
+
+      </main>
+
+
+
     </div>
   );
 }
 
-// Feature Card Component
-function FeatureCard({
-  icon,
-  title,
-  description,
-  delay,
-}: {
-  icon: React.ReactNode;
-  title: string;
-  description: string;
-  delay: number;
-}) {
+function FeatureCard({ icon, title, desc, color }: { icon: any, title: string, desc: string, color: string }) {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.6, delay }}
-      className="group relative bg-gradient-to-br from-slate-900/50 to-slate-800/50 backdrop-blur-sm border border-slate-800 rounded-xl p-8 transition-all duration-300 hover:border-emerald-500/50 hover:shadow-lg hover:shadow-emerald-500/10"
-    >
-      {/* Icon */}
-      <div className="inline-flex items-center justify-center w-14 h-14 rounded-lg bg-gradient-to-br from-emerald-500/10 to-teal-500/10 text-emerald-400 mb-6 transition-transform duration-300 group-hover:scale-110">
+    <div className="bg-white/40 backdrop-blur-sm border border-white/60 p-5 rounded-2xl shadow-sm hover:shadow-lg hover:bg-white/60 transition-all duration-300 flex flex-col items-center text-center md:items-start md:text-left gap-3 group">
+      <div className={`w-10 h-10 rounded-xl flex items-center justify-center ${color} group-hover:scale-110 transition-transform`}>
         {icon}
       </div>
-
-      {/* Content */}
-      <h3 className="text-xl font-semibold text-white mb-3">{title}</h3>
-      <p className="text-slate-400 leading-relaxed">{description}</p>
-    </motion.div>
-  );
+      <div>
+        <h3 className="font-bold text-slate-800 text-sm mb-1">{title}</h3>
+        <p className="text-xs text-slate-500 leading-relaxed">{desc}</p>
+      </div>
+    </div>
+  )
 }

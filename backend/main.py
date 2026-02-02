@@ -10,6 +10,7 @@ load_dotenv()
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from graph import create_graph
+from storage import SignalStorage
 
 app = FastAPI()
 
@@ -26,9 +27,29 @@ app.add_middleware(
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_DIR = os.path.join(BASE_DIR, "data")
 
+# Initialize signal storage
+STORAGE_PATH = os.path.join(DATA_DIR, "signals_history.json")
+signal_storage = SignalStorage(STORAGE_PATH)
+
 @app.get("/")
 def read_root():
     return {"status": "Signals Backend Operational"}
+
+@app.get("/api/signals")
+def get_signals():
+    """
+    Retrieve all stored signals from persistent storage.
+    Returns signals sorted by last_updated (newest first).
+    """
+    try:
+        signals = signal_storage.get_all_signals()
+        return {
+            "status": "success",
+            "count": len(signals),
+            "signals": signals
+        }
+    except Exception as e:
+        return {"status": "error", "message": str(e), "signals": []}
 
 from fastapi import UploadFile, File
 import shutil
@@ -146,6 +167,15 @@ async def run_audit(data: dict = None):
             state.update(ghostwriter_agent(state))
             final_report = state.get("final_report", [])
             yield json.dumps({"type": "log", "message": f"[Ghostwriter] Generated {len(final_report)} executive brief(s)."}) + "\n"
+            
+            # Save to persistent storage
+            if final_report:
+                yield json.dumps({"type": "log", "message": "[Storage] Saving signals to persistent storage..."}) + "\n"
+                storage_stats = signal_storage.add_signals(final_report)
+                yield json.dumps({
+                    "type": "log", 
+                    "message": f"[Storage] ✓ Saved {storage_stats['added']} new, updated {storage_stats['updated']} existing. Total: {storage_stats['total']} signals."
+                }) + "\n"
             
             # Yield Result
             yield json.dumps({"type": "result", "data": final_report}) + "\n"

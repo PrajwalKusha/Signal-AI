@@ -45,8 +45,8 @@ const config: Config = {
                 },
             },
             fontFamily: {
-                sans: ['var(--font-geist-sans)'],
-                mono: ['var(--font-geist-mono)'],
+                sans: ['var(--font-sans)'], // Maps to Inter
+                mono: ['var(--font-mono)'], // Maps to JetBrains Mono
             },
             animation: {
                 'ping-slow': 'ping 3s cubic-bezier(0, 0, 0.2, 1) infinite',
