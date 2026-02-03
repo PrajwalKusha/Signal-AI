@@ -18,8 +18,8 @@ export function Sidebar() {
     const pathname = usePathname();
 
     return (
-        <aside className="w-16 lg:w-64 bg-[#00897B] flex flex-col transition-all duration-300 shadow-xl z-20">
-            <div className="h-16 flex items-center px-4 lg:px-6 bg-[#00796B]">
+        <aside className="w-16 lg:w-64 bg-slate-900 flex flex-col transition-all duration-300 shadow-xl z-20">
+            <div className="h-16 flex items-center px-4 lg:px-6 bg-slate-900 border-b border-slate-800">
                 <Link
                     href="/"
                     className="flex items-center gap-3 group w-full"
@@ -70,15 +70,9 @@ export function Sidebar() {
                     href="/dashboard/team"
                     active={pathname === "/dashboard/team"}
                 />
-                <SidebarItem
-                    icon={<FileText size={20} />}
-                    label="Documents"
-                    href="/dashboard/knowledge"
-                    active={pathname === "/dashboard/knowledge"}
-                />
             </nav>
 
-            <div className="p-3 mt-auto border-t border-white/10">
+            <div className="p-3 mt-auto border-t border-slate-800">
                 <SidebarItem
                     icon={<Settings size={20} />}
                     label="Settings"
@@ -94,7 +88,7 @@ export function Sidebar() {
                         sessionStorage.removeItem('allSignals');
                         sessionStorage.removeItem('signals');
                         // Navigate to login
-                        window.location.href = '/login';
+                        window.location.href = '/';
                     }}
                 >
                     <LogOut size={20} />

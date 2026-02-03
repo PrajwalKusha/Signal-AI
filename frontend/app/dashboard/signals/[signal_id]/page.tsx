@@ -90,7 +90,7 @@ export default function SignalDetailPage() {
     // Try to find signal in sessionStorage first (for backend-generated signals)
     let signal = null;
     if (typeof window !== 'undefined') {
-        const storedSignals = sessionStorage.getItem('signals');
+        const storedSignals = sessionStorage.getItem('allSignals');
         if (storedSignals) {
             const allSignals = JSON.parse(storedSignals);
             signal = allSignals.find((s: any) => s.signal_id === signalId);

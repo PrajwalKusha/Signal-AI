@@ -9,3 +9,4 @@ tiktoken
 langchain-experimental
 langchain-community
 tavily-python
+python-multipart

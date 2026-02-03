@@ -3,6 +3,9 @@
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { SignalCard } from "@/components/SignalCard";
+import { SystemHealthCode } from "@/components/SystemHealthCode";
+import { ImpactTicker } from "@/components/ImpactTicker";
+import { AgentNetwork } from "@/components/AgentNetwork";
 import {
     Terminal,
     CheckCircle2,
@@ -22,7 +25,25 @@ export default function Dashboard() {
     const [showPrompt, setShowPrompt] = useState(false);
     const [hasScanned, setHasScanned] = useState(false);
     const [showNoMoreSignals, setShowNoMoreSignals] = useState(false);
+    const [showNewTags, setShowNewTags] = useState(false);
     const promptTimerRef = useRef<NodeJS.Timeout | null>(null);
+
+    // Check for new tag visibility on mount/update
+    useEffect(() => {
+        if (hasScanned) {
+            const storedTs = sessionStorage.getItem('scanTimestamp');
+            if (storedTs) {
+                const timePassed = Date.now() - parseInt(storedTs);
+                if (timePassed < 120000) { // 2 minutes
+                    setShowNewTags(true);
+                    const timer = setTimeout(() => setShowNewTags(false), 120000 - timePassed);
+                    return () => clearTimeout(timer);
+                } else {
+                    setShowNewTags(false);
+                }
+            }
+        }
+    }, [hasScanned]);
 
     // Detailed agent logs for theatrical effect
     const AGENT_LOGS = [
@@ -77,10 +98,11 @@ export default function Dashboard() {
                     if (sessionHasScanned) {
                         // Restore previous session state
                         setHasScanned(true);
-                        setVisibleSignals(data.signals.slice(0, sessionVisibleCount));
+                        setVisibleSignals(data.signals);
                     } else {
-                        // First time - show 5 signals
-                        setVisibleSignals(data.signals.slice(0, 5));
+                        // First time - show OLDER signals (simulating that we haven't found new ones yet)
+                        // Assuming signals come in Newest -> Oldest, we skip the first 5
+                        setVisibleSignals(data.signals.slice(5));
                         sessionStorage.setItem('visibleSignalsCount', '5');
 
                         // Start timer to show prompt after 60 seconds
@@ -89,7 +111,7 @@ export default function Dashboard() {
                             if (stillNotScanned) {
                                 setShowPrompt(true);
                             }
-                        }, 60000); // 60 seconds
+                        }, 15000); // 15 seconds
                     }
                 }
             } catch (error) {
@@ -129,22 +151,28 @@ export default function Dashboard() {
             } else {
                 clearInterval(logInterval);
 
-                // After logs complete, reveal remaining signals
+                // After logs complete, reveal ALL signals (New ones will be at top)
                 setTimeout(() => {
                     setVisibleSignals(allSignals);
                     setHasScanned(true);
                     setGatheringSignals(false);
+                    setShowNewTags(true);
 
                     // Persist to sessionStorage
+                    const now = Date.now();
+                    sessionStorage.setItem('scanTimestamp', now.toString());
                     sessionStorage.setItem('hasScanned', 'true');
                     sessionStorage.setItem('visibleSignalsCount', allSignals.length.toString());
+
+                    // Auto-hide tags after 2 mins
+                    setTimeout(() => setShowNewTags(false), 120000);
                 }, 500);
             }
         }, 300); // 300ms between each log line
     };
 
     return (
-        <div className="space-y-8 min-h-screen pb-20">
+        <div className="space-y-8 min-h-screen pb-20 relative">
             {/* 1. Hero / Header Area */}
             <div className="flex flex-col md:flex-row items-end justify-between gap-6 pt-4">
                 <div>
@@ -166,10 +194,10 @@ export default function Dashboard() {
                         onClick={runTheatricalScan}
                         disabled={gatheringSignals}
                         className={`group relative flex items-center gap-3 px-8 py-4 rounded-full font-bold shadow-xl transition-all hover:scale-105 ${gatheringSignals
-                                ? 'bg-slate-100 text-slate-400 cursor-wait'
-                                : showPrompt
-                                    ? 'bg-teal-600 text-white hover:bg-teal-700 animate-pulse'
-                                    : 'bg-slate-900 text-white hover:bg-slate-800'
+                            ? 'bg-slate-100 text-slate-400 cursor-wait'
+                            : showPrompt
+                                ? 'bg-teal-600 text-white hover:bg-teal-700 animate-pulse'
+                                : 'bg-slate-900 text-white hover:bg-slate-800'
                             }`}
                     >
                         {gatheringSignals ? (
@@ -266,32 +294,46 @@ export default function Dashboard() {
                 )}
             </AnimatePresence>
 
-            {/* 3. Signal Grid */}
-            <div className="grid grid-cols-1 gap-6">
-                <AnimatePresence mode="popLayout">
-                    {visibleSignals.map((signal, index) => (
-                        <motion.div
-                            key={signal.signal_id}
-                            layout
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: index * 0.1 }}
-                        >
-                            <Link href={`/dashboard/signals/${signal.signal_id}`}>
-                                <SignalCard signal={signal} />
-                            </Link>
-                        </motion.div>
-                    ))}
-                </AnimatePresence>
-            </div>
+            {/* MAIN GRID LAYOUT */}
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
 
-            {/* 4. Empty State Fallback */}
-            {visibleSignals.length === 0 && !gatheringSignals && (
-                <div className="text-center py-20 text-slate-400">
-                    <Sparkles className="w-12 h-12 mx-auto mb-4 text-slate-200" />
-                    <p>System Idle. Initialize scan to begin.</p>
+                {/* LEFT COLUMN: SIGNALS */}
+                <div className="lg:col-span-2">
+                    <AnimatePresence mode="popLayout">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            {visibleSignals.map((signal, index) => (
+                                <motion.div
+                                    key={signal.signal_id}
+                                    layout
+                                    initial={{ opacity: 0, scale: 0.95 }}
+                                    animate={{ opacity: 1, scale: 1 }}
+                                    transition={{ delay: index * 0.05 }}
+                                >
+                                    <Link href={`/dashboard/signals/${signal.signal_id}`} className="block h-full">
+                                        <SignalCard signal={signal} isNew={index < 5 && showNewTags} />
+                                    </Link>
+                                </motion.div>
+                            ))}
+                        </div>
+                    </AnimatePresence>
+
+                    {/* Empty State Fallback */}
+                    {visibleSignals.length === 0 && !gatheringSignals && (
+                        <div className="text-center py-20 text-slate-400">
+                            <Sparkles className="w-12 h-12 mx-auto mb-4 text-slate-200" />
+                            <p>System Idle. Initialize scan to begin.</p>
+                        </div>
+                    )}
                 </div>
-            )}
+
+                {/* RIGHT COLUMN: STATS & VISUALS */}
+                <div className="bg-slate-50 rounded-2xl p-6 space-y-6 border border-slate-100 h-fit">
+                    <SystemHealthCode />
+                    <ImpactTicker />
+                    <AgentNetwork />
+                </div>
+
+            </div>
         </div>
     );
 }
