@@ -195,6 +195,7 @@ export default function Dashboard() {
                     <div
                         onMouseEnter={() => setIsHovered(true)}
                         onMouseLeave={() => setIsHovered(false)}
+                        className="relative"
                     >
                         <RainbowButton
                             onClick={runTheatricalScan}
@@ -211,11 +212,6 @@ export default function Dashboard() {
                                     <Clock className="mr-2" size={16} />
                                     No more signals
                                 </>
-                            ) : isHovered ? (
-                                <>
-                                    <Sparkles className="mr-2" size={16} />
-                                    New signals found
-                                </>
                             ) : (
                                 <>
                                     <Zap className="mr-2 fill-current" size={16} />
@@ -223,6 +219,25 @@ export default function Dashboard() {
                                 </>
                             )}
                         </RainbowButton>
+
+                        {/* Subtle Hover Tooltip */}
+                        <AnimatePresence>
+                            {(isHovered && !gatheringSignals && !showNoMoreSignals) && (
+                                <motion.div
+                                    initial={{ opacity: 0, y: 5 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    exit={{ opacity: 0, y: 5 }}
+                                    className="absolute bottom-full left-1/2 -translate-x-1/2 mb-3 bg-slate-900/90 backdrop-blur-sm text-white px-3 py-1.5 rounded-lg shadow-xl text-xs font-medium whitespace-nowrap z-20 pointer-events-none"
+                                >
+                                    <div className="flex items-center gap-1.5">
+                                        <Sparkles size={12} className="text-teal-400" />
+                                        New signals detected
+                                    </div>
+                                    {/* Arrow */}
+                                    <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-slate-900/90 transform rotate-45"></div>
+                                </motion.div>
+                            )}
+                        </AnimatePresence>
                     </div>
                 </div>
             </div>
