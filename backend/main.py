@@ -24,8 +24,13 @@ app.add_middleware(
 )
 
 # Paths to data
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DATA_DIR = os.path.join(BASE_DIR, "data")
+# Paths to data
+# Handle both Docker (flat /app structure) and Local (nested /backend structure)
+current_dir = os.path.dirname(os.path.abspath(__file__))
+if os.path.exists(os.path.join(current_dir, "data")):
+    DATA_DIR = os.path.join(current_dir, "data")
+else:
+    DATA_DIR = os.path.join(os.path.dirname(current_dir), "data")
 
 # Initialize signal storage
 STORAGE_PATH = os.path.join(DATA_DIR, "signals_history.json")

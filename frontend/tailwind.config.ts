@@ -50,6 +50,13 @@ const config: Config = {
             },
             animation: {
                 'ping-slow': 'ping 3s cubic-bezier(0, 0, 0.2, 1) infinite',
+                'rainbow': 'rainbow var(--speed, 2s) infinite linear',
+            },
+            keyframes: {
+                rainbow: {
+                    '0%': { 'background-position': '0%' },
+                    '100%': { 'background-position': '200%' },
+                },
             },
         },
     },

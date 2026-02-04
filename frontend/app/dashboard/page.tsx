@@ -5,7 +5,7 @@ import Link from "next/link";
 import { SignalCard } from "@/components/SignalCard";
 import { SystemHealthCode } from "@/components/SystemHealthCode";
 import { ImpactTicker } from "@/components/ImpactTicker";
-import { AgentNetwork } from "@/components/AgentNetwork";
+import { RainbowButton } from "@/components/magicui/rainbow-button";
 import {
     Terminal,
     CheckCircle2,
@@ -26,6 +26,7 @@ export default function Dashboard() {
     const [hasScanned, setHasScanned] = useState(false);
     const [showNoMoreSignals, setShowNoMoreSignals] = useState(false);
     const [showNewTags, setShowNewTags] = useState(false);
+    const [isHovered, setIsHovered] = useState(false);
     const promptTimerRef = useRef<NodeJS.Timeout | null>(null);
 
     // Check for new tag visibility on mount/update
@@ -190,71 +191,38 @@ export default function Dashboard() {
 
                 {/* Primary Action - Scan Button */}
                 <div className="relative">
-                    <button
-                        onClick={runTheatricalScan}
-                        disabled={gatheringSignals}
-                        className={`group relative flex items-center gap-3 px-8 py-4 rounded-full font-bold shadow-xl transition-all hover:scale-105 ${gatheringSignals
-                            ? 'bg-slate-100 text-slate-400 cursor-wait'
-                            : showPrompt
-                                ? 'bg-teal-600 text-white hover:bg-teal-700 animate-pulse'
-                                : 'bg-slate-900 text-white hover:bg-slate-800'
-                            }`}
+                    <div
+                        onMouseEnter={() => setIsHovered(true)}
+                        onMouseLeave={() => setIsHovered(false)}
                     >
-                        {gatheringSignals ? (
-                            <>
-                                <Loader2 className="animate-spin" size={20} />
-                                Scanning...
-                            </>
-                        ) : (
-                            <>
-                                <Zap className={showPrompt ? "fill-current animate-bounce" : "fill-current"} size={20} />
-                                <span>Scan for Intelligence</span>
-                            </>
-                        )}
-
-                        {/* Notification badge */}
-                        {showPrompt && !gatheringSignals && (
-                            <span className="absolute -top-2 -right-2 w-6 h-6 bg-red-500 text-white rounded-full text-xs flex items-center justify-center animate-bounce">
-                                <Bell size={14} />
-                            </span>
-                        )}
-                    </button>
-
-                    {/* Tooltip prompt */}
-                    <AnimatePresence>
-                        {showPrompt && !gatheringSignals && (
-                            <motion.div
-                                initial={{ opacity: 0, y: -10 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                exit={{ opacity: 0, y: -10 }}
-                                className="absolute top-full mt-3 right-0 bg-slate-900 text-white px-4 py-3 rounded-lg shadow-2xl text-sm font-medium whitespace-nowrap z-10"
-                            >
-                                <div className="flex items-center gap-2">
-                                    <Sparkles size={16} className="text-teal-400" />
-                                    New signals detected! Click to refresh
-                                </div>
-                                {/* Arrow */}
-                                <div className="absolute -top-2 right-6 w-4 h-4 bg-slate-900 transform rotate-45"></div>
-                            </motion.div>
-                        )}
-
-                        {/* "No more signals" message */}
-                        {showNoMoreSignals && (
-                            <motion.div
-                                initial={{ opacity: 0, y: -10 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                exit={{ opacity: 0, y: -10 }}
-                                className="absolute top-full mt-3 right-0 bg-slate-900 text-white px-4 py-3 rounded-lg shadow-2xl text-sm font-medium whitespace-nowrap z-10"
-                            >
-                                <div className="flex items-center gap-2">
-                                    <Clock size={16} className="text-amber-400" />
-                                    No more signals for now. Check back later!
-                                </div>
-                                {/* Arrow */}
-                                <div className="absolute -top-2 right-6 w-4 h-4 bg-slate-900 transform rotate-45"></div>
-                            </motion.div>
-                        )}
-                    </AnimatePresence>
+                        <RainbowButton
+                            onClick={runTheatricalScan}
+                            disabled={gatheringSignals}
+                            className={gatheringSignals ? "opacity-80 cursor-wait" : ""}
+                        >
+                            {gatheringSignals ? (
+                                <>
+                                    <Loader2 className="animate-spin mr-2" size={16} />
+                                    Scanning...
+                                </>
+                            ) : showNoMoreSignals ? (
+                                <>
+                                    <Clock className="mr-2" size={16} />
+                                    No more signals
+                                </>
+                            ) : isHovered ? (
+                                <>
+                                    <Sparkles className="mr-2" size={16} />
+                                    New signals found
+                                </>
+                            ) : (
+                                <>
+                                    <Zap className="mr-2 fill-current" size={16} />
+                                    Scan for Intelligence
+                                </>
+                            )}
+                        </RainbowButton>
+                    </div>
                 </div>
             </div>
 
