@@ -22,7 +22,7 @@ export function RainbowButton({
             <span className="absolute inset-0 animate-rainbow bg-gradient-to-r from-[#00C9FF] via-[#92FE9D] to-[#00C9FF] bg-[length:200%] rounded-xl opacity-100" />
 
             {/* Inner Content Layer */}
-            <span className="relative z-10 inline-flex h-full w-full items-center justify-center rounded-[9px] bg-slate-950 px-8 py-2 font-medium text-white backdrop-blur-3xl">
+            <span className="relative z-10 inline-flex h-full w-full items-center justify-center rounded-[9px] bg-white px-8 py-2 font-medium text-black backdrop-blur-3xl">
                 {children}
             </span>
         </button>
