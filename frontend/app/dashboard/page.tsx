@@ -5,6 +5,7 @@ import Link from "next/link";
 import { SignalCard } from "@/components/SignalCard";
 import { SystemHealthCode } from "@/components/SystemHealthCode";
 import { ImpactTicker } from "@/components/ImpactTicker";
+import { AgentNetwork } from "@/components/AgentNetwork";
 import { RainbowButton } from "@/components/magicui/rainbow-button";
 import {
     Terminal,
