@@ -222,7 +222,7 @@ export default function Dashboard() {
 
                         {/* Subtle Hover Tooltip */}
                         <AnimatePresence>
-                            {(isHovered && !gatheringSignals && !showNoMoreSignals) && (
+                            {(isHovered && !gatheringSignals && !showNoMoreSignals && visibleSignals.length < allSignals.length) && (
                                 <motion.div
                                     initial={{ opacity: 0, y: 5 }}
                                     animate={{ opacity: 1, y: 0 }}

@@ -18,8 +18,8 @@ export function RainbowButton({
             )}
             {...props}
         >
-            {/* Rainbow Gradient Border Layer - Always visible now */}
-            <span className="absolute inset-0 -z-10 animate-rainbow bg-gradient-to-r from-[#00C9FF] via-[#92FE9D] to-[#00C9FF] bg-[length:200%] rounded-xl" />
+            {/* Rainbow Gradient Border Layer - Hidden by default, lights up on hover */}
+            <span className="absolute inset-0 -z-10 animate-rainbow bg-gradient-to-r from-[#00C9FF] via-[#92FE9D] to-[#00C9FF] bg-[length:200%] rounded-xl opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
 
             {/* Inner Content Layer */}
             <span className="inline-flex h-full w-full items-center justify-center rounded-[9px] bg-slate-950 px-8 py-2 font-medium text-white backdrop-blur-3xl">
