@@ -1,96 +1,61 @@
-# Signals: Enterprise Intelligence Command Center
+# Signals: Proactive Transformation Intelligence
 
-**Signals** is a real-time strategic anomaly detection platform powered by an autonomous agent swarm. It ingests revenue data, internal context, and market trends to generate actionable business intelligence for executives.
+**Signals** is a high-stakes executive command center that shifts the enterprise from reactive reporting to proactive intervention. Powered by the **Nexus Swarm**—a stateful multi-agent orchestration—it identifies revenue leaks, operational bottlenecks, and growth opportunities in real-time.
 
-![Signals Dashboard Preview](/public/dashboard-preview.png)
-
----
-
-## 🚀 Concept
-Modern enterprises are drowning in data but starved for liquidity in decision-making. **Signals** solves this by deploying a team of specialized AI agents that continuously monitor, analyze, and synthesize disparate data streams into high-fidelity "Signals"—strategic alerts that require immediate attention.
-
-### The Agent Swarm
-Our architecture utilizes a multi-agent system (MAS) powered by **LangGraph**:
-
-1.  **🕵️ Analyst Agent**: Scans raw revenue data (CSV) for statistical anomalies (dips, spikes, churn).
-2.  **🔍 Investigator Agent**: Cross-references anomalies with internal context (Wikis, Slack dumps, Jira) to find root causes.
-3.  **♟️ Strategist Agent**: Calculates financial impact and pulls real-time market data (via Tavily API) to recommend solutions.
-4.  **✍️ Ghostwriter Agent**: Synthesizes all findings into a concise, executive-level briefing.
+![Signals Landing Page](frontend/public/landing-page.png)
+![Signals Dashboard Preview](frontend/public/dashboard-preview.png)
 
 ---
 
-## 🛠️ Tech Stack
+## 💎 The Value Proposition
+Traditional BI tells you *what* happened last quarter. **Signals** tells you *why* it's happening right now and *how* to fix it. 
 
-### Frontend
--   **Framework**: [Next.js 15 (App Router)](https://nextjs.org/)
--   **Styling**: Tailwind CSS v4 + Motion (Framer Motion)
--   **Components**: Custom "Nexus" Design System (Glassmorphism, Dark UI)
--   **Visualization**: Recharts for data trends
+By synthesizing structured financial data with unstructured human context (Slack, Email, Memos), Signals bridges the **"Incentive Gap"** in AI transformation. It doesn't just find problems; it identifies **Employee Champions**—the internal innovators already working on solutions—and provides an ROI-backed roadmap for the CEO to approve builds instantly.
 
-### Backend
--   **Runtime**: Python 3.9+ / FastAPI
--   **Orchestration**: [LangGraph](https://langchain-ai.github.io/langgraph/) (Stateful multi-agent workflows)
--   **AI Models**: OpenAI GPT-4o
--   **Tools**: Tavily (Search), Pandas (Data Analysis)
--   **Deployment**: Docker + AWS Lightsail Container Services
+---
+
+## 🧠 The Nexus Swarm (Architecture)
+Built on **LangGraph**, our system uses a stateful, multi-agent "Swarm" to ensure deterministic outcomes and audit-ready math.
+
+![Nexus Architecture Diagram](frontend/public/architecture-diagram.png)
+
+1. **🕵️ Analyst Agent ("The Quant")**: Uses a **Python Code Interpreter** to execute rigorous statistical analysis on raw CSV data. It finds the "Truth" in the numbers.
+2. **🔍 Investigator Agent ("The Insider")**: Performs semantic RAG across internal context silos. It discovers the **"Why"** and attributes innovation to specific employees.
+3. **♟️ Strategist Agent ("The Architect")**: Calculates **Risk-Adjusted ROI** using a deterministic math engine and Tavily-powered market research.
+4. **✍️ Ghostwriter Agent ("The Chief of Staff")**: Synthesizes a Tier-1 consulting-style executive brief, collapsing multiple data points into a single "Master Signal."
+
+---
+
+## 🛠️ Tech Stack & Trade-offs
+
+### Why this Stack?
+- **LangGraph over Linear Chains**: We chose LangGraph to manage complex state transitions. This allows our agents to "hand off" specific context (like row numbers and employee names) without data loss or hallucinations.
+- **Python REPL for Math**: We don't trust LLMs with arithmetic. The Analyst writes and executes transient Python code to ensure all percentages and USD impacts are 100% accurate.
+- **Glassmorphism UI**: Designed for the "Time-Poor Executive," focusing on high-density data and clear call-to-actions.
+
+---
+
+## 📊 Data Narrative
+Signals uses three distinct data modalities to simulate a real-world enterprise:
+- **`sales_2025.csv`**: 1,000+ rows of transactional revenue data.
+- **`internal_context.txt`**: A messy dump of Slack, Jira, and Email logs to be filtered and attributed.
+- **`transformation_backlog.json`**: A library of strategic initiatives mapped to real-world pain points.
 
 ---
 
 ## 📂 Project Structure
-
 ```bash
 signals/
-├── backend/                 # FastAPI + LangGraph Agent Server
-│   ├── agents/              # Agent definitions (Analyst, Investigator, Strategist...)
-│   ├── graph.py             # Agent workflow orchestration
-│   ├── main.py              # API Entrypoint
-│   └── Dockerfile           # Production container config
-├── frontend/                # Next.js Dashboard Client
-│   ├── app/                 # App Router pages
-│   ├── components/          # UI Components (SignalCard, Sidebar, etc.)
-│   └── public/              # Static assets
-├── data/                    # Sample data for simulation
-└── README.md                # You are here
+├── backend/                # FastAPI + LangGraph Agent Server
+│   ├── agents/             # The "Swarm" (Analyst, Investigator, Strategist...)
+│   ├── graph.py            # Stateful workflow orchestration
+│   └── storage.py          # Persistent JSON "Signals Vault" logic
+├── frontend/               # Next.js 15 Command Center
+├── data/                   # The "Synthetic Truth" dataset
+└── README.md
 ```
 
 ---
-
-## ⚡ Getting Started
-
-### Prerequisites
--   Python 3.10+
--   Node.js 18+
--   Docker (optional, for containerization)
--   OpenAI API Key & Tavily API Key
-
-### 1. Backend Setup
-```bash
-cd backend
-python -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-
-# Create .env file with your keys
-# OPENAI_API_KEY=...
-# TAVILY_API_KEY=...
-
-# Run Server
-python main.py
-```
-*Backend runs on `http://localhost:8000`*
-
-### 2. Frontend Setup
-```bash
-cd frontend
-npm install
-
-# Run Client
-npm run dev
-```
-*Frontend runs on `http://localhost:3000`*
-
----
-
 ## ☁️ Deployment
 
 ### Backend (AWS Lightsail)
@@ -106,7 +71,6 @@ The frontend is a static/serverless Next.js app optimized for Vercel deployment.
 -   Set `NEXT_PUBLIC_API_URL` to your Lightsail endpoint.
 
 ---
-
 ## 🔮 Roadmap
 -   [x] **mvp**: Single-player agent loop
 -   [x] **ui**: Glassmorphic "Minority Report" interface
@@ -115,5 +79,4 @@ The frontend is a static/serverless Next.js app optimized for Vercel deployment.
 -   [ ] **collab**: Multi-user workspaces
 
 ---
-
-© 2026 NexusFlow Inc. Built for the Future of Work.
+© 2026 NexusFlow Inc. | Built for the Tenex Build First Application.
