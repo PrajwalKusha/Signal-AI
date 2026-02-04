@@ -58,6 +58,9 @@ const config: Config = {
                     '100%': { 'background-position': '200%' },
                 },
             },
+            backgroundImage: {
+                'rainbow-gradient': "linear-gradient(90deg, #00C9FF 0%, #92FE9D 50%, #00C9FF 100%)",
+            },
         },
     },
     plugins: [],
